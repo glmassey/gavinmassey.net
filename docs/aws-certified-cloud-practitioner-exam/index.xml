@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws-Certified-Cloud-Practitioner-Exams on gavinmassey.net</title>
+    <link>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/</link>
+    <description>Recent content in Aws-Certified-Cloud-Practitioner-Exams on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://gavinmassey.net/aws-certified-cloud-practitioner-exam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-in-scope-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-in-scope-services/</guid>
+      <description>In-scope AWS Services and Features Analytics Amazon Athena AWS Data Exchange Amazon EMR AWS Glue Amazon Kinesis Amazon Managed Streaming for Apache Kafka (Amazon MSK) Amazon OpenSearch Service Amazon QuickSight Amazon Redshift Application Integration Amazon EventBridge Amazon Simple Notification Service (Amazon SNS) Amazon Simple Queue Service (Amazon SQS) AWS Step Functions Business Applications Amazon Connect Amazon Simple Email Service (Amazon SES) Cloud Financial Management AWS Billing Conductor AWS Budgets AWS Cost and Usage Report AWS Cost Explorer AWS Marketplace Compute AWS Batch Amazon EC2 AWS Elastic Beanstalk Amazon Lightsail AWS Local Zones AWS Outposts AWS Wavelength Containers Amazon Elastic Container Registry (Amazon ECR) Amazon Elastic Container Service (Amazon ECS) Amazon Elastic Kubernetes Service (Amazon EKS) Customer Engagement AWS Activate for Startups AWS IQ AWS Managed Services (AMS) AWS Support Database Amazon Aurora Amazon DynamoDB Amazon MemoryDB for Redis Amazon Neptune Amazon RDS Developer Tools AWS AppConfig AWS CLI AWS Cloud9 AWS CloudShell AWS CodeArtifact AWS CodeBuild AWS CodeCommit AWS CodeDeploy AWS CodePipeline AWS CodeStar AWS X-Ray End User Computing Amazon AppStream 2.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-knowledge-of/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-knowledge-of/</guid>
+      <description>AWS Cloud Practitioners Exam Knowledge of Value proposition of the AWS Cloud AWS Well-Architected Framework Cloud adoption strategies Resources to support the cloud migration journey Aspects of cloud economics Cost savings of moving to the cloud AWS shared responsibility model AWS compliance and governance concepts Benefits of cloud security (for example encryption) Where to capture and locate logs that are associated with cloud security Identity and access management (for example, AWS Identity and Access Management [IAM]) Importance of protecting the AWS root user account Principle of least privilege AWS IAM Identity Center (AWS Single Sign-On) Security capabilities that AWS provides Security##related documentation that AWS provides Different ways of provisioning and operating in the AWS Cloud Different ways to access AWS services Types of cloud deployment models Connectivity options AWS Regions, Availability Zones, and edge locations High availability Use of multiple Regions Benefits of edge locations AWS Wavelength Zones and AWS Local Zones AWS compute services AWS database services Database migration AWS network services AWS storage services AWS AI/ML services AWS analytics services Application integration services of Amazon EventBridge, Amazon Simple Notification Service (Amazon SNS), and Amazon Simple Queue Service (Amazon SQS) Business application services of Amazon Connect and Amazon Simple Email Service (Amazon SES) Customer engagement services of AWS Activate for Startups, AWS IQ, AWS Managed Services (AMS), and AWS Support Developer tool services and capabilities of AWS AppConfig, AWS Cloud9, AWS CloudShell, AWS CodeArtifact, AWS CodeBuild, AWS CodeCommit, AWS CodeDeploy, AWS CodePipeline, AWS CodeStar, and AWS X-Ray End-user computing services of Amazon AppStream 2.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-skills-in/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-skills-in/</guid>
+      <description>AWS Certified Cloud Practitioner Exam Skills Understanding the economies of scale (for example, cost savings) Economies of scale refer to the cost advantage that arises with increased output of a product. In the context of AWS and cloud computing, this means that as AWS grows and serves more customers, they can operate more efficiently. This efficiency translates into lower operational costs per unit, which AWS can pass on to its customers in the form of lower prices.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-technologies-and-concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/aws-clf-c02-technologies-and-concepts/</guid>
+      <description>Technologies and Concepts APIs Benefits of migrating to the AWS Cloud AWS Cloud Adoption Framework (AWS CAF) AWS Compliance Compute Cost management Databases Amazon EC2 instance types (for example, Reserved, On-Demand, Spot) AWS global infrastructure (for example, AWS Regions, Availability Zones) Infrastructure as code (IaC) AWS Knowledge Center Machine learning Management and governance Migration and data transfer Network services AWS Partner Network AWS Prescriptive Guidance AWS Pricing Calculator AWS Professional Services AWS re:Post AWS SDKs Security AWS Security Blog AWS Security Center AWS shared responsibility model AWS Solutions Architects Storage AWS Support Center AWS Support plans AWS Well-Architected Framework </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/exam-guide-clf-c02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/aws-certified-cloud-practitioner-exam/exam-guide-clf-c02/</guid>
+      <description>AWS Certified Cloud Practitioner Exam Domain 1: Cloud Concepts Task Statement 1.1: Define the benefits of the AWS Cloud Knowledge of Value proposition of the AWS Cloud Skills in Understanding the economies of scale (for example, cost savings)&#xA;Understanding the benefits of global infrastructure (for example, speed of deployment, global reach)&#xA;Understanding the advantages of high availability, elasticity, and agility&#xA;Task Statement 1.2: Identify design principles of the AWS Cloud Knowledge of AWS Well-Architected Framework Skills in Understanding the pillars of the Well-Architected Framework (for example, operational excellence, security, reliability, performance efficiency, cost optimization, sustainability) Identifying differences between the pillars of the Well-Architected Framework Task Statement 1.</description>
+    </item>
+  </channel>
+</rss>

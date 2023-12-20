@@ -142,6 +142,13 @@
       <description>In the realm of modern network infrastructures, where high-bandwidth connections like 10 Gbps are common, it might seem that the configuration of traditional Active Directory (AD) sites and subnets is less relevant. However, this perception overlooks the myriad of benefits that a well-configured AD environment can bring, even in high-bandwidth scenarios. Here are several key reasons why configuring AD sites remains a crucial practice:&#xA;Enhanced Authentication and Resource Access: By defining AD sites, you ensure that client authentication occurs at the nearest domain controller.</description>
     </item>
     <item>
+      <title>Understanding AWS CloudFormation Template Syntax</title>
+      <link>https://gavinmassey.net/articles/2023/aws-cloud-formation-syntax/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-cloud-formation-syntax/</guid>
+      <description>Introduction AWS CloudFormation is a powerful service for provisioning and managing AWS infrastructure as code (IAC). To effectively use CloudFormation, it&amp;rsquo;s crucial to understand the syntax of CloudFormation templates, as they serve as the blueprints for your infrastructure. In this guide, we&amp;rsquo;ll explore the essential elements and syntax of CloudFormation templates.&#xA;Format Version&#xA;The AWSTemplateFormatVersion field at the beginning of the template specifies the CloudFormation template version you are using. Example:</description>
+    </item>
+    <item>
       <title>Understanding Static vs. Instance Methods and Members in PowerShell</title>
       <link>https://gavinmassey.net/articles/2023/accessing-static-methods-and-members-with-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>

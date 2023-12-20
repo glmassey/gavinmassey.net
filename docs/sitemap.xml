@@ -62,6 +62,9 @@
     <loc>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-cloud-formation-syntax/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gavinmassey.net/articles/2023/accessing-static-methods-and-members-with-powershell/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -104,7 +107,7 @@
     <loc>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/example-scripts/setting-up-server-core-dc/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell-scripts/setting-up-server-core-dc/</loc>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
   </url><url>

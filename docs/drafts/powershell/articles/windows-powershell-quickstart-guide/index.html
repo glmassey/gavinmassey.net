@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="PowerShell Quickstart Guide PowerShell Quickstart Guide 1. Introduction PowerShell is Microsoft&rsquo;s task automation framework, combining command-line speed, the flexibility of scripting, and the power of a GUI-based admin tool. Whether you&rsquo;re automating tasks, extracting and processing data, or managing systems, PowerShell is a versatile tool to know.
+2. Launching PowerShell You can find PowerShell by searching for it in the Windows start menu. For administrative tasks, it&rsquo;s advisable to run PowerShell as an administrator (right-click the application and select &ldquo;Run as administrator&rdquo;).">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="powershell-quickstart-guide">PowerShell Quickstart Guide</h1>
+<h2 id="powershell-quickstart-guide-1"><strong>PowerShell Quickstart Guide</strong></h2>
+<h3 id="1-introduction"><strong>1. Introduction</strong></h3>
+<p>PowerShell is Microsoft&rsquo;s task automation framework, combining command-line speed, the flexibility of scripting, and the power of a GUI-based admin tool. Whether you&rsquo;re automating tasks, extracting and processing data, or managing systems, PowerShell is a versatile tool to know.</p>
+<h3 id="2-launching-powershell"><strong>2. Launching PowerShell</strong></h3>
+<p>You can find PowerShell by searching for it in the Windows start menu. For administrative tasks, it&rsquo;s advisable to run PowerShell as an administrator (right-click the application and select &ldquo;Run as administrator&rdquo;).</p>
+<h3 id="3-the-basics"><strong>3. The Basics</strong></h3>
+<p>When you launch PowerShell, you&rsquo;re presented with a command prompt where you can start typing commands, known as <em>cmdlets</em> (pronounced &ldquo;command-lets&rdquo;).</p>
+<p>Cmdlets use a <code>Verb-Noun</code> format, describing the action and the target, respectively. Examples include:</p>
+<ul>
+<li><code>Get-Help</code></li>
+<li><code>Start-Service</code></li>
+<li><code>New-Item</code></li>
+</ul>
+<h3 id="4-exploring-cmdlets"><strong>4. Exploring Cmdlets</strong></h3>
+<p>To list all available cmdlets:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Command
+</span></span></code></pre></div><p>To find cmdlets related to a specific noun (e.g., Service):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Command -Noun Service
+</span></span></code></pre></div><h3 id="5-getting-help"><strong>5. Getting Help</strong></h3>
+<p>Before diving deep, familiarize yourself with the <code>Get-Help</code> cmdlet. It&rsquo;s a lifeline!</p>
+<p>For detailed information on a cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Help Set-ExecutionPolicy -Detailed
+</span></span></code></pre></div><p>For examples of how to use a cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Help New-Item -Examples
+</span></span></code></pre></div><h3 id="6-basic-commands"><strong>6. Basic Commands</strong></h3>
+<p><strong>Navigating Directories</strong>: Much like the old DOS command prompt or UNIX shell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd C:\Users
+</span></span></code></pre></div><p><strong>Listing Items in a Directory</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ChildItem   <span style="color:#75715e"># Equivalent to &#39;dir&#39; in command prompt</span>
+</span></span></code></pre></div><p><strong>Creating a New Folder</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-Item -Path <span style="color:#e6db74">&#34;C:\Users\YourName&#34;</span> -Name <span style="color:#e6db74">&#34;NewFolder&#34;</span> -ItemType Directory
+</span></span></code></pre></div><h3 id="7-working-with-processes-and-services"><strong>7. Working with Processes and Services</strong></h3>
+<p><strong>View Running Processes</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Process
+</span></span></code></pre></div><p><strong>Start and Stop a Service</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Start-Service -Name <span style="color:#e6db74">&#34;wuauserv&#34;</span>
+</span></span><span style="display:flex;"><span>Stop-Service -Name <span style="color:#e6db74">&#34;wuauserv&#34;</span>
+</span></span></code></pre></div><h3 id="8-scripting"><strong>8. Scripting</strong></h3>
+<p>For automation, you can write a series of cmdlets in a <code>.ps1</code> file.</p>
+<p><strong>Example</strong>: A script to list all processes consuming more than 100MB of RAM:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$highMemProcesses = Get-Process | Where-Object { $_.WS <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">100</span>MB }
+</span></span><span style="display:flex;"><span>$highMemProcesses | Format-Table Name, WS -AutoSize
+</span></span></code></pre></div><p>To run a script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\path\to\script.ps1
+</span></span></code></pre></div><p><strong>Important</strong>: By default, Windows may not allow script execution for security reasons. Adjust this with <code>Set-ExecutionPolicy</code> (consult its help before changing).</p>
+<h3 id="9-beyond-the-basics"><strong>9. Beyond the Basics</strong></h3>
+<p>This guide is just the tip of the iceberg. PowerShell&rsquo;s real power is unlocked through its object-oriented nature, pipelines, advanced scripting capabilities, and integration with .NET.</p>
+<h3 id="10-final-tips"><strong>10. Final Tips</strong></h3>
+<ul>
+<li>
+<p><strong>Tab Completion</strong>: Start typing a cmdlet, then press <code>Tab</code> to cycle through cmdlets that match.</p>
+</li>
+<li>
+<p><strong>Pipelines</strong>: Use the <code>|</code> character to send the output of one cmdlet as input to another, chaining operations.</p>
+</li>
+<li>
+<p><strong>Stay Updated</strong>: Microsoft continually evolves PowerShell, with new cmdlets and features. Regularly check for updates.</p>
+</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="1. Download VyOS ISO Visit VyOS Download Page: Go to VyOS download page. Select Version: Choose the latest stable release or a version that suits your needs. Download ISO: Click on the download link for the ISO image and save it to your computer. 2. Create a New Virtual Machine in VMware Open VMware Workstation Pro: Launch the VMware Workstation Pro application. Create New Virtual Machine: Select &ldquo;Create a New Virtual Machine&rdquo; or use &ldquo;File&rdquo; &gt; &ldquo;New Virtual Machine.">  
+
+  <title>
+    
+      How to Set Up VyOS on VMware Workstation Pro
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>How to Set Up VyOS on VMware Workstation Pro</h1>
+
+    
+
+    <h2 id="1-download-vyos-iso">1. Download VyOS ISO</h2>
+<ol>
+<li><strong>Visit VyOS Download Page:</strong> Go to <a href="https://support.vyos.io/en/support/solutions/103000152091">VyOS download page</a>.</li>
+<li><strong>Select Version:</strong> Choose the latest stable release or a version that suits your needs.</li>
+<li><strong>Download ISO:</strong> Click on the download link for the ISO image and save it to your computer.</li>
+</ol>
+<h2 id="2-create-a-new-virtual-machine-in-vmware">2. Create a New Virtual Machine in VMware</h2>
+<ol>
+<li><strong>Open VMware Workstation Pro:</strong> Launch the VMware Workstation Pro application.</li>
+<li><strong>Create New Virtual Machine:</strong> Select &ldquo;Create a New Virtual Machine&rdquo; or use &ldquo;File&rdquo; &gt; &ldquo;New Virtual Machine.&rdquo;</li>
+<li><strong>Installation Method:</strong> Choose &ldquo;Installer disc image file (iso)&rdquo; and browse to the VyOS ISO file.</li>
+<li><strong>Guest Operating System:</strong> Select &ldquo;Linux&rdquo; and &ldquo;Other Linux 3.x kernel 64-bit.&rdquo;</li>
+<li><strong>Name and Location:</strong> Name your VM and choose a storage location for VM files.</li>
+<li><strong>Disk Capacity:</strong> Allocate disk space (8 GB is typically sufficient) and choose single or multiple file storage.</li>
+<li><strong>Customize Hardware:</strong> Adjust RAM (512 MB is usually enough) and CPU settings based on your system&rsquo;s capabilities.</li>
+<li><strong>Complete Setup:</strong> Review settings and complete the VM creation.</li>
+</ol>
+<h2 id="3-install-vyos">3. Install VyOS</h2>
+<ol>
+<li><strong>Start VM:</strong> Power on the VM, and it should boot from the ISO.</li>
+<li><strong>Install VyOS:</strong> Log in (default <code>vyos/vyos</code>), type <code>install image</code>, and follow prompts to install.</li>
+<li><strong>Reboot and Eject ISO:</strong> After installation, reboot the VM and disconnect the ISO from the virtual drive.</li>
+</ol>
+<h2 id="4-configure-network-settings-in-vyos">4. Configure Network Settings in VyOS</h2>
+<ol>
+<li>
+<p><strong>Log into VyOS:</strong> Use the credentials <code>vyos/vyos</code>.</p>
+</li>
+<li>
+<p><strong>Enter Configuration Mode:</strong> Type <code>configure</code>.</p>
+</li>
+<li>
+<p><strong>Configure Interfaces:</strong> For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set interfaces ethernet eth0 address <span style="color:#e6db74">&#39;10.0.0.1/30&#39;</span>
+</span></span><span style="display:flex;"><span>set interfaces ethernet eth1 address <span style="color:#e6db74">&#39;192.168.10.1/24&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Commit and Save:</strong> Type <code>commit</code> and <code>save</code>.</p>
+</li>
+</ol>
+<h2 id="5-install-vmware-tools-on-vyos">5. Install VMware Tools on VyOS</h2>
+<ol>
+<li>
+<p><strong>Ensure Internet Access:</strong> Adjust network settings if necessary for internet access.</p>
+</li>
+<li>
+<p><strong>Update and Install:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install open-vm-tools
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Reboot VM:</strong> After installation, reboot the VM.</p>
+</li>
+</ol>
+<h2 id="6-change-default-username-and-password">6. Change Default Username and Password</h2>
+<ol>
+<li>
+<p><strong>Log into VyOS:</strong> Use <code>vyos/vyos</code> to access the CLI.</p>
+</li>
+<li>
+<p><strong>Enter Configuration Mode:</strong> Type <code>configure</code>.</p>
+</li>
+<li>
+<p><strong>Change Password:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set system login user vyos authentication plaintext-password <span style="color:#e6db74">&#39;YourNewPassword&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>(Optional) Create New User:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set system login user newusername authentication plaintext-password <span style="color:#e6db74">&#39;NewUserPassword&#39;</span>
+</span></span><span style="display:flex;"><span>set system login user newusername level admin
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Commit and Save:</strong> Use <code>commit</code> and <code>save</code>.</p>
+</li>
+<li>
+<p><strong>Exit and Test:</strong> Log out and test the new credentials.</p>
+</li>
+</ol>
+<h2 id="7-finalize-configuration">7. Finalize Configuration</h2>
+<ul>
+<li><strong>Additional Configurations:</strong> Set up routing, firewall rules, NAT, etc., as needed.</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Ensure you use a strong and secure password.</li>
+<li>Document the new credentials securely.</li>
+<li>Test new user access and privileges before discontinuing the default account.</li>
+<li>Adjust firewall and network settings based on your specific requirements and security policies.</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

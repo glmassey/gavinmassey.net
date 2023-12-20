@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="PowerShell Remoting is a powerful feature for administering remote computers, allowing system administrators to run commands and manage systems from a distance. This guide presents practical exercises to help you leverage PowerShell Remoting for effective network management.
+Exercise 1: Gathering Network Adapter Information Remotely Task: Retrieve Network Adapters from Multiple Computers Initiate from SLC-PC1 VM:
+Begin by logging into the SLC-PC1 virtual machine. Discovering the Command:
+Use the help *adapter* command on SLC-PC1 to find a relevant command for listing network adapters, identifying Get-NetAdapter.">  
+
+  <title>
+    
+      PowerShell Remoting: A Practical Guide for Remote Administration
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>PowerShell Remoting: A Practical Guide for Remote Administration</h1>
+
+    
+
+    <p>PowerShell Remoting is a powerful feature for administering remote computers, allowing system administrators to run commands and manage systems from a distance. This guide presents practical exercises to help you leverage PowerShell Remoting for effective network management.</p>
+<h2 id="exercise-1-gathering-network-adapter-information-remotely">Exercise 1: Gathering Network Adapter Information Remotely</h2>
+<h3 id="task-retrieve-network-adapters-from-multiple-computers">Task: Retrieve Network Adapters from Multiple Computers</h3>
+<ol>
+<li>
+<p><strong>Initiate from SLC-PC1 VM</strong>:</p>
+<ul>
+<li>Begin by logging into the SLC-PC1 virtual machine.</li>
+</ul>
+</li>
+<li>
+<p><strong>Discovering the Command</strong>:</p>
+<ul>
+<li>Use the <code>help *adapter*</code> command on SLC-PC1 to find a relevant command for listing network adapters, identifying <code>Get-NetAdapter</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Executing Remotely</strong>:</p>
+<ul>
+<li>
+<p>Run <code>Get-NetAdapter -Physical</code> remotely on SLC-DC1 and SLC-SRV using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -ComputerName SLC-DC1,SLC-SRV -ScriptBlock { Get-NetAdapter -Physical }
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="task-comparing-local-and-remote-command-outputs">Task: Comparing Local and Remote Command Outputs</h3>
+<ol>
+<li>
+<p><strong>Local Process Members</strong>:</p>
+<ul>
+<li>
+<p>Examine the members of a local Process object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Process | Get-Member
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Remote Process Members</strong>:</p>
+<ul>
+<li>
+<p>View the members of a remote Process object and observe the limited MemberTypes due to deserialization:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -ComputerName SLC-DC1 -ScriptBlock { Get-Process } | Get-Member
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="exercise-2-implementing-implicit-remoting">Exercise 2: Implementing Implicit Remoting</h2>
+<h3 id="task-establishing-a-persistent-remoting-connection">Task: Establishing a Persistent Remoting Connection</h3>
+<ol>
+<li>
+<p><strong>Creating a Session on SLC-PC1</strong>:</p>
+<ul>
+<li>
+<p>Open PowerShell as an administrator on SLC-PC1 and establish a persistent connection to SLC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$dc = New-PSSession -ComputerName SLC-DC1
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Confirming the Connection</strong>:</p>
+<ul>
+<li>Verify the established session with <code>$dc</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="task-importing-a-module-for-remote-use">Task: Importing a Module for Remote Use</h3>
+<ol>
+<li>
+<p><strong>Viewing Modules on the Remote Server</strong>:</p>
+<ul>
+<li>
+<p>List available modules on SLC-DC1 using <code>$dc</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Module -ListAvailable -PSSession $dc
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Importing a Specific Module</strong>:</p>
+<ul>
+<li>
+<p>Import the SMBShare module from SLC-DC1, adding a &ldquo;DC&rdquo; prefix to its commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Import-Module -PSSession $dc -Name SMBShare -Prefix DC
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Using the Imported Module</strong>:</p>
+<ul>
+<li>Compare the SMB shares on SLC-DC1 (<code>Get-DCSMBShare</code>) and the local computer (<code>Get-SMBShare</code>).</li>
+</ul>
+</li>
+</ol>
+<h3 id="task-closing-remote-connections">Task: Closing Remote Connections</h3>
+<ul>
+<li>
+<p>End all remoting sessions using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-PSSession | Remove-PSSession
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="exercise-3-managing-multiple-computers">Exercise 3: Managing Multiple Computers</h2>
+<h3 id="task-establish-connections-to-multiple-computers">Task: Establish Connections to Multiple Computers</h3>
+<ol>
+<li>
+<p><strong>Open PowerShell on SLC-PC1</strong>:</p>
+<ul>
+<li>Ensure you&rsquo;re still logged into SLC-PC1.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Multiple Sessions</strong>:</p>
+<ul>
+<li>
+<p>Establish PSSessions to SLC-SRV and SLC-DC1, saving them in <code>$computers</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$computers = New-PSSession -ComputerName SLC-SRV,SLC-DC1
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Verify Connections</strong>:</p>
+<ul>
+<li>Check that both connections are listed as Available in <code>$computers</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="task-generating-a-windows-firewall-report">Task: Generating a Windows Firewall Report</h3>
+<ol>
+<li>
+<p><strong>Finding the Right Module</strong>:</p>
+<ul>
+<li>
+<p>Locate the NetSecurity module capable of managing network security:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Module *security* -ListAvailable
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Load Module Remotely</strong>:</p>
+<ul>
+<li>
+<p>Load NetSecurity on SLC-SRV and SLC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Import-Module NetSecurity }
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Display Firewall Rules</strong>:</p>
+<ul>
+<li>
+<p>List enabled firewall rules on both computers, focusing on their names and hostnames:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Get-NetFirewallRule -Enabled True } | Select-Object Name, PSComputerName
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Unload Module</strong>:</p>
+<ul>
+<li>Remove the NetSecurity module from both remote computers.</li>
+</ul>
+</li>
+</ol>
+<h3 id="task-creating-an-html-report-of-disk-information">Task: Creating an HTML Report of Disk Information</h3>
+<ol>
+<li><strong>Gathering Disk Data</strong>:
+<ul>
+<li>
+<p>Run a command to list local drives, filtered by drive type, on both remote computers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Get-WmiObject -Class Win
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

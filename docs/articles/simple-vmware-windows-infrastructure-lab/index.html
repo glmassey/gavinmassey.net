@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Objective This guide provides step-by-step instructions to set up a virtual environment using PowerShell. It includes configuring one Virtual Machine as a Domain Controller (DC), another as an Application Server (APP server), and a Windows 10 Client.
+1. Configure Server2022 as DC To set up the Domain Controller, execute the following commands in PowerShell:
+# Configuring IP address for &#39;Ethernet&#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &#34;Ethernet0&#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # Set DNS client server address post AD DS installation Set-DnsClientServerAddress -InterfaceAlias &#34;Ethernet0&#34; -ServerAddresses 127.">  
+
+  <title>
+    
+      Simple VMware Windows Infrastructure Lab
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-19 00:00:00 &#43;0000 UTC">
+            2023-12-19
+        </time>
+    </p>
+
+    <h1>Simple VMware Windows Infrastructure Lab</h1>
+
+    
+
+    <h2 id="objective">Objective</h2>
+<p>This guide provides step-by-step instructions to set up a virtual environment using PowerShell. It includes configuring one Virtual Machine as a Domain Controller (DC), another as an Application Server (APP server), and a Windows 10 Client.</p>
+<h3 id="1-configure-server2022-as-dc">1. Configure Server2022 as DC</h3>
+<p>To set up the Domain Controller, execute the following commands in PowerShell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Configuring IP address for &#39;Ethernet&#39; interface</span>
+</span></span><span style="display:flex;"><span>New-NetIPAddress -IPAddress <span style="color:#ae81ff">10.0</span>.0.2 -InterfaceAlias <span style="color:#e6db74">&#34;Ethernet0&#34;</span> -PrefixLength <span style="color:#ae81ff">24</span> -DefaultGateway <span style="color:#ae81ff">10.0</span>.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set DNS client server address post AD DS installation</span>
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceAlias <span style="color:#e6db74">&#34;Ethernet0&#34;</span> -ServerAddresses <span style="color:#ae81ff">127.0</span>.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Rename the computer to &#39;DC&#39; and restart</span>
+</span></span><span style="display:flex;"><span>Rename-Computer -NewName <span style="color:#e6db74">&#34;DC&#34;</span>
+</span></span><span style="display:flex;"><span>Restart-Computer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install AD DS role</span>
+</span></span><span style="display:flex;"><span>Install-WindowsFeature -Name AD-Domain-Services, DHCP -IncludeManagementTools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install AD DS Forest</span>
+</span></span><span style="display:flex;"><span>Install-ADDSForest -DomainName <span style="color:#e6db74">&#34;corp.docodo.io&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configure DHCP server with new scope</span>
+</span></span><span style="display:flex;"><span>Add-DhcpServerv4Scope -Name <span style="color:#e6db74">&#34;Docodo-Network&#34;</span> -StartRange <span style="color:#ae81ff">10.0</span>.0.50 -EndRange <span style="color:#ae81ff">10.0</span>.0.100 -SubnetMask <span style="color:#ae81ff">255.255</span>.255.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set DHCP options</span>
+</span></span><span style="display:flex;"><span>Set-DhcpServerv4OptionValue -DnsDomain <span style="color:#e6db74">&#34;corp.docodo.io&#34;</span> -DnsServer <span style="color:#ae81ff">10.0</span>.0.2 -Router <span style="color:#ae81ff">10.0</span>.0.1 -ScopeId <span style="color:#ae81ff">10.0</span>.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add DHCP server in DC</span>
+</span></span><span style="display:flex;"><span>Add-DhcpServerInDC
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new AD user &#39;SysAdmin&#39;</span>
+</span></span><span style="display:flex;"><span>New-ADUser -SamAccountName <span style="color:#e6db74">&#34;SysAdmin&#34;</span> -AccountPassword (Read-Host <span style="color:#e6db74">&#34;Set user password&#34;</span> -AsSecureString) -Name <span style="color:#e6db74">&#34;SysAdmin&#34;</span> -Enabled $true -PasswordNeverExpires $true -ChangePasswordAtLogon $false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add &#39;SysAdmin&#39; to groups</span>
+</span></span><span style="display:flex;"><span>Add-ADPrincipalGroupMembership -Identity <span style="color:#e6db74">&#34;SysAdmin&#34;</span> -MemberOf <span style="color:#e6db74">&#34;CN=Enterprise Admins,CN=Users,DC=corp,DC=packtlab,DC=com&#34;</span>, <span style="color:#e6db74">&#34;CN=Domain Admins,CN=Users,DC=corp,DC=packtlab,DC=com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve group membership</span>
+</span></span><span style="display:flex;"><span>Get-ADPrincipalGroupMembership -Identity <span style="color:#e6db74">&#34;SysAdmin&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set DNS client server address</span>
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceAlias <span style="color:#e6db74">&#34;Ethernet0&#34;</span> -ServerAddresses <span style="color:#ae81ff">10.0</span>.0.2
+</span></span></code></pre></div><h3 id="2-configure-server-2022-as-app">2. Configure Server 2022 as APP</h3>
+<p>For the Application Server, run these commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Set IP Address</span>
+</span></span><span style="display:flex;"><span>New-NetIPAddress -IPAddress <span style="color:#ae81ff">10.0</span>.0.3 -InterfaceAlias <span style="color:#e6db74">&#34;Ethernet0&#34;</span> -PrefixLength <span style="color:#ae81ff">24</span> -DefaultGateway <span style="color:#ae81ff">10.0</span>.0.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set DNS Client Server Address</span>
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceAlias <span style="color:#e6db74">&#34;Ethernet0&#34;</span> -ServerAddresses <span style="color:#ae81ff">10.0</span>.0.2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add computer to domain</span>
+</span></span><span style="display:flex;"><span>Add-Computer -NewName <span style="color:#e6db74">&#34;APP&#34;</span> -DomainName <span style="color:#e6db74">&#34;corp.docodo.io&#34;</span>
+</span></span><span style="display:flex;"><span>Restart-Computer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install web server feature</span>
+</span></span><span style="display:flex;"><span>Install-WindowsFeature web-webserver -IncludeManagementTools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create directory and test file</span>
+</span></span><span style="display:flex;"><span>New-Item -Path <span style="color:#e6db74">&#34;c:\networkfiles&#34;</span> -ItemType <span style="color:#e6db74">&#34;directory&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;This is a test network file.&#34;</span> | Out-File -FilePath <span style="color:#e6db74">&#34;c:\networkfiles\test.txt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create SMB share</span>
+</span></span><span style="display:flex;"><span>New-SmbShare -Name <span style="color:#e6db74">&#34;files&#34;</span> -Path <span style="color:#e6db74">&#34;c:\networkfiles&#34;</span> -ChangeAccess <span style="color:#e6db74">&#34;CORP\SysAdmin&#34;</span>
+</span></span></code></pre></div><h3 id="3-configure-client-and-test">3. Configure CLIENT and Test</h3>
+<p>For the CLIENT machine, use these commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Add computer to domain</span>
+</span></span><span style="display:flex;"><span>Add-Computer -NewName <span style="color:#e6db74">&#34;CLIENT&#34;</span> -DomainName <span style="color:#e6db74">&#34;corp.docodo.io&#34;</span>
+</span></span><span style="display:flex;"><span>Restart-Computer
+</span></span></code></pre></div><h2 id="instructions-for-manual-actions">Instructions for Manual Actions</h2>
+<ol>
+<li>Log into CLIENT as SysAdmin.</li>
+<li>Open file explorer and navigate to <code>\\app\</code>.</li>
+<li>Access the folder &ldquo;Files&rdquo; and open &ldquo;test.txt&rdquo;.</li>
+</ol>
+<h3 id="additional-notes">Additional Notes</h3>
+<p>Similar commands can be used to add more virtual machines, with adjustments to IP addresses and hostnames as required.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

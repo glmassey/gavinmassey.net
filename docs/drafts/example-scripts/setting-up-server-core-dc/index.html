@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Configure Windows Server Core Domain Controller # Install vmware tools if not installed setup64.exe /s /v&#34;/qn REBOOT=R&#34; # Change the hostname and reboot Rename-Computer -NewName &#39;NewComputerName&#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &#39;Ethernet0&#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &#39;Ethernet0&#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &#39;Ethernet0&#39; ` -IPAddress &#39;10.0.77.104&#39; ` -PrefixLength 24 ` -DefaultGateway &#39;10.">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="configure-windows-server-core-domain-controller">Configure Windows Server Core Domain Controller</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Install vmware tools if not installed</span>
+</span></span><span style="display:flex;"><span>setup64.exe /s /v<span style="color:#e6db74">&#34;/qn REBOOT=R&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Change the hostname and reboot</span>
+</span></span><span style="display:flex;"><span>Rename-Computer -NewName <span style="color:#e6db74">&#39;NewComputerName&#39;</span>
+</span></span><span style="display:flex;"><span>Restart-Computer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove the old ip address</span>
+</span></span><span style="display:flex;"><span>Remove-NetIPAddress -InterfaceAlias <span style="color:#e6db74">&#39;Ethernet0&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Also you might have to remove the default gateway</span>
+</span></span><span style="display:flex;"><span>Remove-NetRoute -InterfaceAlias <span style="color:#e6db74">&#39;Ethernet0&#39;</span> -NextHop <span style="color:#ae81ff">10.0</span>.0.2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now you can add the new IP Address</span>
+</span></span><span style="display:flex;"><span>New-NetIPAddress `
+</span></span><span style="display:flex;"><span>-InterfaceAlias <span style="color:#e6db74">&#39;Ethernet0&#39;</span> `
+</span></span><span style="display:flex;"><span>-IPAddress <span style="color:#e6db74">&#39;10.0.77.104&#39;</span> `
+</span></span><span style="display:flex;"><span>-PrefixLength <span style="color:#ae81ff">24</span> `
+</span></span><span style="display:flex;"><span>-DefaultGateway <span style="color:#e6db74">&#39;10.0.77.1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># You will also need to set the DNS address</span>
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress `
+</span></span><span style="display:flex;"><span>-InterfaceAlias <span style="color:#e6db74">&#39;Ethernet0&#39;</span> `
+</span></span><span style="display:flex;"><span>-ServerAddresses <span style="color:#e6db74">&#39;10.0.77.2&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set the timezone</span>
+</span></span><span style="display:flex;"><span>Set-TimeZone -Id <span style="color:#e6db74">&#39;Mountain Standard Time&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add to domain</span>
+</span></span><span style="display:flex;"><span>Add-Computer `
+</span></span><span style="display:flex;"><span>-DomainName <span style="color:#e6db74">&#39;docodo.local&#39;</span> `
+</span></span><span style="display:flex;"><span>-Credential <span style="color:#e6db74">&#39;docodo.local\gmassey&#39;</span> -Restart
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Enable Remote Management</span>
+</span></span><span style="display:flex;"><span>Enable-PSRemoting -Force
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Enable PowerShell</span>
+</span></span><span style="display:flex;"><span>Set-ExecutionPolicy RemoteSigned
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Enable Remote Desktop</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command sets the registry to enable Remote Desktop</span>
+</span></span><span style="display:flex;"><span>Set-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\System\CurrentControlSet\Control\Terminal Server&#39;</span> -name <span style="color:#e6db74">&#34;fDenyTSConnections&#34;</span> -Value <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Configure the Windows Firewall to Allow Remote Desktop</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command enables the necessary firewall rule for Remote Desktop</span>
+</span></span><span style="display:flex;"><span>Enable-NetFirewallRule -DisplayGroup <span style="color:#e6db74">&#34;Remote Desktop&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Optional: Enable Network Level Authentication for extra security</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command sets the registry to enable NLA for Remote Desktop</span>
+</span></span><span style="display:flex;"><span>Set-ItemProperty -Path <span style="color:#e6db74">&#39;HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp&#39;</span> -name <span style="color:#e6db74">&#34;UserAuthentication&#34;</span> -Value <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Restart the Remote Desktop Services to apply changes</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command restarts the TermService to apply the above changes</span>
+</span></span><span style="display:flex;"><span>Restart-Service -Name TermService -Force
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download and install updates</span>
+</span></span><span style="display:flex;"><span>Install-Module -Name PSWindowsUpdate -Force
+</span></span><span style="display:flex;"><span>Import-Module PSWindowsUpdate
+</span></span><span style="display:flex;"><span>Get-WindowsUpdate -Install -AcceptAll -AutoReboot
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make sure to install the AD DS role before setting DNS server addresses</span>
+</span></span><span style="display:flex;"><span>Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install the AD DS Forest with the domain name &#39;docodo.io&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This is only for the first domain controller, if you are </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Adding a second one, use the next command</span>
+</span></span><span style="display:flex;"><span>Install-ADDSForest -DomainName <span style="color:#e6db74">&#34;docodo.local&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Use this to add a second domain controller</span>
+</span></span><span style="display:flex;"><span>Install-ADDSDomainController -DomainName <span style="color:#e6db74">&#34;docodo.local&#34;</span> -Credential (Get-Credential)
+</span></span></code></pre></div>
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

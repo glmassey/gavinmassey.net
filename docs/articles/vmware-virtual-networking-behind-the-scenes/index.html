@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="VMware Workstation performs a significant amount of low-level networking operations to manage virtual networks for virtual machines (VMs). To achieve this, it installs special drivers and creates virtual network devices that integrate with the host system&rsquo;s networking stack. Here&rsquo;s how VMware modifies your system to enable its networking capabilities:
+Virtual Network Adapters: VMware installs virtual network adapters for different types of networks (like VMnet1 for Host-Only and VMnet8 for NAT by default).">  
+
+  <title>
+    
+      VMware Virtual Networking Under the Hood
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>VMware Virtual Networking Under the Hood</h1>
+
+    
+
+    <p>VMware Workstation performs a significant amount of low-level networking operations to manage virtual networks for virtual machines (VMs). To achieve this, it installs special drivers and creates virtual network devices that integrate with the host system&rsquo;s networking stack. Here&rsquo;s how VMware modifies your system to enable its networking capabilities:</p>
+<ol>
+<li>
+<p><strong>Virtual Network Adapters</strong>: VMware installs virtual network adapters for different types of networks (like VMnet1 for Host-Only and VMnet8 for NAT by default). These adapters show up in your host operating system&rsquo;s network connections panel. They can be configured much like physical network adapters.</p>
+</li>
+<li>
+<p><strong>VMware Bridge Protocol</strong>: For bridged networking, VMware installs a bridge protocol on the host&rsquo;s physical network adapter. This protocol allows it to bridge traffic between the physical network and the VMs&rsquo; virtual adapters.</p>
+</li>
+<li>
+<p><strong>VMware NAT Service</strong>: For NAT operations, VMware installs a NAT service that runs in the background on the host system. This service handles the translation of network addresses between the VMs&rsquo; private network and the host&rsquo;s network.</p>
+</li>
+<li>
+<p><strong>Kernel-Level Drivers</strong>: VMware includes kernel-level drivers that operate within the host&rsquo;s operating system. These drivers allow VMware to efficiently manage networking, among other things, at a low level, which is why it can offer features like network isolation, packet routing, and address translation with minimal overhead.</p>
+</li>
+<li>
+<p><strong>Virtual Network Editor</strong>: VMware also provides a Virtual Network Editor tool that allows users to customize the behavior of the network adapters and the virtual networks. This includes changing the subnet, managing DHCP settings, and configuring NAT rules.</p>
+</li>
+<li>
+<p><strong>VMware Tools</strong>: Inside each VM, VMware Tools can be installed to improve network performance and provide additional integration features such as shared folders and seamless mouse transitions. VMware Tools include drivers for the virtual network adapters used by the VMs, ensuring better performance and more features compared to generic network drivers.</p>
+</li>
+<li>
+<p><strong>Port Forwarding and Firewall Rules</strong>: VMware sets up port forwarding and firewall rules for NAT and host-only networks, allowing certain types of network traffic to flow between the host, the VMs, and the external network.</p>
+</li>
+</ol>
+<p>These changes should not interfere with your host&rsquo;s ability to connect to its network in a standard way. VMware&rsquo;s networking components are designed to coexist with existing network configurations. However, they do provide a layer of virtual networking that gives users the flexibility to create complex networking scenarios for VMs without affecting the host&rsquo;s physical network setup.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

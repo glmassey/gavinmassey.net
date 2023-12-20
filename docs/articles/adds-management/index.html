@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction Active Directory Domain Services (ADDS) is a foundational aspect of managing Windows-based networks, offering robust tools for managing users, computers, and other resources within an organization. This comprehensive guide delves into various key aspects of ADDS management, providing insights and practical instructions on how to efficiently use command line tools, PowerShell, and the Best Practices Analyzer (BPA) to maintain and optimize your Active Directory environment.
+Firstly, we explore how to check for replication errors in your Active Directory environment, using both command line tools like dcdiag and repadmin, and PowerShell commands.">  
+
+  <title>
+    
+      Active Directory Domain Services (ADDS) Management
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Active Directory Domain Services (ADDS) Management</h1>
+
+    
+
+    <h3 id="introduction">Introduction</h3>
+<p>Active Directory Domain Services (ADDS) is a foundational aspect of managing Windows-based networks, offering robust tools for managing users, computers, and other resources within an organization. This comprehensive guide delves into various key aspects of ADDS management, providing insights and practical instructions on how to efficiently use command line tools, PowerShell, and the Best Practices Analyzer (BPA) to maintain and optimize your Active Directory environment.</p>
+<p>Firstly, we explore how to check for replication errors in your Active Directory environment, using both command line tools like <code>dcdiag</code> and <code>repadmin</code>, and PowerShell commands. These tools are essential for diagnosing and resolving replication issues, ensuring that your AD environment remains healthy and synchronized across different domain controllers.</p>
+<p>We then delve into the importance of the Server Manager BPA tool for identifying potential issues, such as PDC synchronization errors, and how to rectify them using PowerShell commands. This step is crucial for maintaining the integrity and reliability of your Active Directory&rsquo;s time synchronization and other dependent services.</p>
+<p>Understanding the impact of FSMO (Flexible Single Master Operations) roles is another critical area covered in this guide. We outline the significance of each of the five FSMO roles, including Schema Master, Domain Naming Master, PDC Emulator, RID Pool Manager, and Infrastructure Master, explaining their responsibilities and the potential effects on your network if they become unavailable.</p>
+<p>Additionally, the guide provides detailed instructions on transferring and seizing FSMO roles. These procedures are vital for maintaining continuity and stability in scenarios where a domain controller hosting FSMO roles is replaced or becomes non-operational.</p>
+<p>In the realm of advanced ADDS management, we cover the process of cloning a domain controller, a valuable technique for rapid deployment and disaster recovery. The guide walks you through the steps of preparing, executing, and verifying a domain controller cloning operation, emphasizing the importance of adhering to best practices to avoid replication issues and conflicts.</p>
+<p>Finally, we discuss the process of demoting a domain controller, a crucial task for administrators managing network changes or decommissioning servers. The guide provides clear instructions on safely demoting a domain controller using PowerShell and the Server Manager tool, ensuring a smooth transition and minimal impact on your network.</p>
+<p>Overall, this guide serves as an invaluable resource for IT professionals tasked with managing and maintaining an Active Directory environment, offering practical advice and detailed procedures to handle various administrative tasks effectively.</p>
+<h3 id="use-command-line-tools-and-bpa-to-check-for-replication-errors">Use command line tools and BPA to check for replication errors</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span># Access help for dcdiag
+</span></span><span style="display:flex;"><span>dcdiag /h
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Check domain controllers and create a report
+</span></span><span style="display:flex;"><span>dcdiag /a &gt; result.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Another tool
+</span></span><span style="display:flex;"><span>repadmin /replsummary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># or
+</span></span><span style="display:flex;"><span>repadmin /showrepl
+</span></span></code></pre></div><h3 id="verify-replication-using-powershell">Verify replication using PowerShell</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Get a list of possible commands to use</span>
+</span></span><span style="display:flex;"><span>Get-Command *repl*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>help Get-ADReplicationConnection 
+</span></span><span style="display:flex;"><span>Get-ADReplicationConnection
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This will prompt for a list of domain controllers</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># nothing will be returned if no errors</span>
+</span></span><span style="display:flex;"><span>Get-ADReplicationFailure
+</span></span></code></pre></div><h3 id="the-server-manager-bpa-tool-can-also-be-used-to-find-errors">The Server Manager BPA Tool can also be used to find errors</h3>
+<p>You might see an error about PDC not being configured to correctly synchronize time from a valid time source.</p>
+<p>The following commands can be used to verify which server is the PDC and then configure it to sync with windows time server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>netdom query fsmo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>w32tm /config /manualpeerlist<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#e6db74">&#34;time.windows.com&#34;</span> /syncfromflags<span style="color:#960050;background-color:#1e0010">:</span>manual /reliable<span style="color:#960050;background-color:#1e0010">:</span>YES /update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Restart the time service</span>
+</span></span><span style="display:flex;"><span>Restart-Service w32time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To immediate resync the time</span>
+</span></span><span style="display:flex;"><span>w32tm /resync
+</span></span></code></pre></div><h3 id="impact-of-fsmo-roles">Impact of FSMO Roles</h3>
+<p>If a server hosting an FSMO role becomes unavailable, several critical Active Directory functions will be disrupted, even if other AD services remain operational. For instance, if the PDC (Primary Domain Controller) emulator goes offline, time synchronization features will be affected.</p>
+<p><strong>List of FSMO Roles:</strong></p>
+<ol>
+<li>
+<p><strong>Schema Master</strong></p>
+<ul>
+<li><strong>Description</strong>: This role manages updates and modifications to the schema. The schema defines objects and attributes that can be stored in the directory.</li>
+<li><strong>Action</strong>: Any changes to the directory schema (like adding new attributes or modifying existing ones) are done by the Schema Master.</li>
+</ul>
+</li>
+<li>
+<p><strong>Domain Naming Master</strong></p>
+<ul>
+<li><strong>Description</strong>: This role is responsible for making decisions regarding the addition or removal of domains in the forest.</li>
+<li><strong>Action</strong>: When new domains are added to the forest or existing ones are removed, the Domain Naming Master processes and replicates these changes across the forest.</li>
+</ul>
+</li>
+<li>
+<p><strong>PDC (Primary Domain Controller) Emulator</strong></p>
+<ul>
+<li><strong>Description</strong>: This role, initially used for compatibility, now has several critical functions. It acts as the primary time server within a domain and handles password changes, lockouts, and other authentication-related functions.</li>
+<li><strong>Action</strong>: The PDC Emulator ensures consistent time across all computers in the domain and is the authority for password changes and updates.</li>
+</ul>
+</li>
+<li>
+<p><strong>RID (Relative Identifier) Pool Manager</strong></p>
+<ul>
+<li><strong>Description</strong>: This role allocates RID pools to domain controllers. RIDs are used to uniquely identify objects within a domain.</li>
+<li><strong>Action</strong>: Whenever a domain controller creates a new object (like a user or group), it assigns a unique RID to that object. The RID Pool Manager provides batches of RIDs to domain controllers to ensure uniqueness.</li>
+</ul>
+</li>
+<li>
+<p><strong>Infrastructure Master</strong></p>
+<ul>
+<li><strong>Description</strong>: This role is responsible for updating references from objects in its domain to objects in other domains. It&rsquo;s particularly important in multiple domain environments.</li>
+<li><strong>Action</strong>: The Infrastructure Master ensures that cross-domain object references are correctly handled and updated, such as when a user from one domain is added to a group in another domain.</li>
+</ul>
+</li>
+</ol>
+<p>Each FSMO role is vital for the proper functioning and management of a Windows Active Directory environment, ensuring consistency, uniqueness, and coherence across the network.</p>
+<h3 id="moving-fsmo-roles-from-one-server-to-another">Moving FSMO roles from one server to another</h3>
+<p>To move FSMO roles from one server to another in a domain, follow these instructions:</p>
+<ol>
+<li>
+<p><strong>Open PowerShell or Command Prompt</strong>: On the server where you want to transfer the roles, open an elevated PowerShell or Command Prompt.</p>
+</li>
+<li>
+<p><strong>Transfer Roles</strong>: Use the following commands to transfer each FSMO role. Replace <code>TargetServerName</code> with the name of the server to which you&rsquo;re transferring the roles.</p>
+<ul>
+<li>
+<p>Schema Master:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity <span style="color:#e6db74">&#34;TargetServerName&#34;</span> -OperationMasterRole SchemaMaster
+</span></span></code></pre></div></li>
+<li>
+<p>Domain Naming Master:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity <span style="color:#e6db74">&#34;TargetServerName&#34;</span> -OperationMasterRole DomainNamingMaster
+</span></span></code></pre></div></li>
+<li>
+<p>PDC Emulator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity <span style="color:#e6db74">&#34;TargetServerName&#34;</span> -OperationMasterRole PDCEmulator
+</span></span></code></pre></div></li>
+<li>
+<p>RID Master:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity <span style="color:#e6db74">&#34;TargetServerName&#34;</span> -OperationMasterRole RIDMaster
+</span></span></code></pre></div></li>
+<li>
+<p>Infrastructure Master:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity <span style="color:#e6db74">&#34;TargetServerName&#34;</span> -OperationMasterRole InfrastructureMaster
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Verify Transfer</strong>: After transferring, verify that the roles have been successfully moved using the <code>Get-ADDomain</code> and <code>Get-ADForest</code> cmdlets.</p>
+</li>
+<li>
+<p><strong>Additional Considerations</strong>: Ensure the target server is properly prepared to handle these roles, and consider the impact of the transfer on your network.</p>
+</li>
+</ol>
+<h3 id="seizing-the-rolls-if-the-fsmo-host-is-down">Seizing the rolls if the FSMO host is down</h3>
+<p>The previous instructions for transferring FSMO roles are applicable when the source server (the one currently holding the roles) is operational. In an emergency situation where the source server is non-functional, you will need to seize the FSMO roles to a surviving domain controller. Seizing FSMO roles is a more forceful action and should only be done when the original role holder is not expected to return to the network.</p>
+<p>Here&rsquo;s how to seize FSMO roles in an emergency:</p>
+<ol>
+<li>
+<p><strong>Open PowerShell or Command Prompt</strong>: On the surviving domain controller where you want to seize the roles, open an elevated PowerShell or Command Prompt.</p>
+</li>
+<li>
+<p><strong>Seize Roles</strong>: Use the <code>ntdsutil</code> command to seize the roles. Here are the steps for each FSMO role:</p>
+<ul>
+<li>
+<p>Start <code>ntdsutil</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ntdsutil
+</span></span></code></pre></div></li>
+<li>
+<p>Enter roles context:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>roles
+</span></span></code></pre></div></li>
+<li>
+<p>Connect to the surviving server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>connections
+</span></span><span style="display:flex;"><span>connect to server SurvivingServerName
+</span></span><span style="display:flex;"><span>quit
+</span></span></code></pre></div></li>
+<li>
+<p>Seize each role as needed (run these commands in the <code>ntdsutil</code> context):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>seize schema master
+</span></span><span style="display:flex;"><span>seize naming master
+</span></span><span style="display:flex;"><span>seize PDC
+</span></span><span style="display:flex;"><span>seize RID master
+</span></span><span style="display:flex;"><span>seize infrastructure master
+</span></span></code></pre></div></li>
+<li>
+<p>Exit <code>ntdsutil</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>quit
+</span></span><span style="display:flex;"><span>quit
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Post-Seizure Steps</strong>:</p>
+<ul>
+<li>Once a FSMO role has been seized, the server that previously held the role should never be brought back into the environment without being completely rebuilt.</li>
+<li>Verify that the roles have been successfully seized using the <code>Get-ADDomain</code> and <code>Get-ADForest</code> cmdlets.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Important Notes</strong>:</p>
+<ul>
+<li>
+<p>Seizing FSMO roles can have significant implications for your Active Directory environment. It should only be done as a last resort and with a clear understanding of the potential impact.</p>
+</li>
+<li>
+<p>After seizing roles, check for any necessary cleanup or reconfiguration that may be required in your Active Directory environment.</p>
+</li>
+<li>
+<p>Always ensure you have reliable backups and a disaster recovery plan for your Active Directory infrastructure.</p>
+</li>
+</ul>
+<h3 id="cloning-a-domain-controller">Cloning a Domain Controller</h3>
+<p>Cloning a domain controller can be beneficial in certain scenarios, particularly in large and complex environments. Here are some key reasons:</p>
+<ol>
+<li>
+<p><strong>Rapid Deployment</strong>: Cloning allows for faster deployment of additional domain controllers, especially useful in large-scale environments or when expanding to new geographic locations. It&rsquo;s much quicker than setting up a new domain controller from scratch.</p>
+</li>
+<li>
+<p><strong>Consistency and Error Reduction</strong>: By cloning an existing domain controller, you ensure a consistent configuration across your domain controllers. This helps in maintaining standardization and reduces the risk of human error during configuration.</p>
+</li>
+<li>
+<p><strong>Disaster Recovery and Testing</strong>: In disaster recovery scenarios, cloning can be used to quickly bring a domain controller online. It&rsquo;s also useful in testing environments, where you can clone a domain controller to test updates, changes, or troubleshoot issues in a non-production environment.</p>
+</li>
+<li>
+<p><strong>Efficient Use of Resources</strong>: Cloning can be more resource-efficient, especially in virtualized environments. It uses less network bandwidth compared to traditional methods like promoting a new domain controller and letting it replicate all the data.</p>
+</li>
+<li>
+<p><strong>Template for Virtual Environments</strong>: In virtualized environments, a cloned domain controller can serve as a template for future deployments, simplifying the process of scaling Active Directory infrastructure.</p>
+</li>
+</ol>
+<p>However, it&rsquo;s important to follow best practices when cloning domain controllers, particularly in ensuring that the cloned domain controller correctly integrates into the existing Active Directory environment without causing issues like USN rollbacks or conflicts in the replication topology. Starting with Windows Server 2012, Microsoft introduced a safer cloning process for virtualized domain controllers to mitigate some of these risks.</p>
+<h3 id="how-to-create-a-cloneable-domain-controller">How to create a Cloneable Domain Controller</h3>
+<p>It is advised to not clone the PDC or a domain controller hosting any of the FSMO roles.</p>
+<p>Cloning a domain controller, especially in a virtualized environment using Windows Server 2012 or later, involves several steps. It&rsquo;s important to note that this process is specific to virtualized domain controllers and assumes that your hypervisor supports VM-GenerationID (like Hyper-V or recent versions of VMware).</p>
+<p>Here are the PowerShell commands and steps involved in cloning a domain controller:</p>
+<h4 id="1-verify-the-domain-controller-is-cloneable">1. Verify the Domain Controller is Cloneable</h4>
+<ul>
+<li>Ensure the source DC (domain controller) is running Windows Server 2012 or later and is a member of the <code>Cloneable Domain Controllers</code> group in Active Directory.</li>
+</ul>
+<h4 id="2-import-the-active-directory-module">2. Import the Active Directory Module</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span></code></pre></div><h4 id="3-run-the-get-addccloningexcludedapplicationlist-cmdlet">3. Run the <code>Get-ADDCCloningExcludedApplicationList</code> Cmdlet</h4>
+<ul>
+<li>
+<p>Check for any services or applications on the DC that aren&rsquo;t cloneable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ADDCCloningExcludedApplicationList
+</span></span></code></pre></div></li>
+<li>
+<p>If this cmdlet returns any applications, you need to remove them or get an updated version that supports cloning.</p>
+</li>
+</ul>
+<h4 id="4-create-the-dccloneconfigxml-file">4. Create the DCCloneConfig.xml File</h4>
+<ul>
+<li>
+<p>Use the <code>New-ADDCCloneConfigFile</code> cmdlet to create a configuration file (DCCloneConfig.xml). You need to specify the desired name of the new DC and the IP address if it&rsquo;s not going to use DHCP.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-ADDCCloneConfigFile -Static -CloneComputerName <span style="color:#e6db74">&#34;NewDCName&#34;</span> -IPv4Address <span style="color:#e6db74">&#34;x.x.x.x&#34;</span> -IPv4SubnetMask <span style="color:#e6db74">&#34;255.255.255.0&#34;</span> -IPv4DefaultGateway <span style="color:#e6db74">&#34;x.x.x.x&#34;</span> -IPv4DNSResolver <span style="color:#e6db74">&#34;x.x.x.x&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Place the DCCloneConfig.xml file in the root of the source DC&rsquo;s NTDS directory.</p>
+</li>
+</ul>
+<h4 id="5-export-and-import-the-virtual-machine">5. Export and Import the Virtual Machine</h4>
+<ul>
+<li>Shut down the source DC.</li>
+<li>Use your hypervisor&rsquo;s tools to export and then import the virtual machine. This process varies depending on the hypervisor.</li>
+</ul>
+<h4 id="6-start-the-cloned-virtual-machine">6. Start the Cloned Virtual Machine</h4>
+<ul>
+<li>Start the cloned VM. The DC will detect the DCCloneConfig.xml file and start the cloning process.</li>
+</ul>
+<h4 id="7-verify-the-cloning-process">7. Verify the Cloning Process</h4>
+<ul>
+<li>
+<p>Once the clone DC is up and running, verify its functionality and replication status.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Repadmin /replsummary
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="important-considerations">Important Considerations</h4>
+<ul>
+<li><strong>Testing</strong>: Always perform cloning in a test environment before doing it in production.</li>
+<li><strong>Active Directory Health</strong>: Ensure the health of Active Directory before cloning.</li>
+<li><strong>Backup</strong>: Have a current backup of AD DS.</li>
+<li><strong>Permissions</strong>: Make sure you have the necessary permissions to perform these actions.</li>
+</ul>
+<p>Remember, cloning a domain controller should be done with careful planning and consideration of the impact on your Active Directory environment.</p>
+<h3 id="demoting-a-domain-controller">Demoting a domain controller</h3>
+<p>To demote a domain controller, follow these instructions:</p>
+<ol>
+<li>
+<p><strong>Log into the Domain Controller</strong>: Ensure you are logged in as an administrator.</p>
+</li>
+<li>
+<p><strong>Open PowerShell</strong>: Right-click on the Start button and select “Windows PowerShell (Admin)” to open an elevated PowerShell prompt.</p>
+</li>
+<li>
+<p><strong>Run the Uninstallation Command</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Uninstall-ADDSDomainController
+</span></span></code></pre></div><ul>
+<li>If this is the last domain controller in the domain, add the <code>-DemoteOperationMasterRole</code> parameter.</li>
+<li>If you want to remove AD DS without removing the domain controller from the domain, use <code>-ForceRemoval</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Follow Prompts</strong>: The command will provide prompts to remove AD DS and, if applicable, to change the local administrator password.</p>
+</li>
+<li>
+<p><strong>Restart the Server</strong>: After the process completes, restart the server.</p>
+</li>
+</ol>
+<p>Ensure you have a backup and have considered the implications of demoting the domain controller, especially if it holds FSMO roles or is critical for your network&rsquo;s operation.</p>
+<p>Alternatively you can also use the &lsquo;Add roles and features&rsquo; in the Server Manager tool.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

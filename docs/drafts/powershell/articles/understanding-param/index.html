@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Understanding the param Keyword in PowerShell In PowerShell, the param keyword is used to define parameters that a script or function can accept. Parameters allow you to pass values into scripts and functions, making them more flexible and reusable. By providing different arguments, users can tailor the behavior of a script or function without modifying its actual code.
+Features of the param Block:
+Positional Parameters: By default, parameters are positional, and values are assigned based on the order they appear in the param block.">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="understanding-the-param-keyword-in-powershell">Understanding the <code>param</code> Keyword in PowerShell</h1>
+<p>In PowerShell, the <code>param</code> keyword is used to define parameters that a script or function can accept. Parameters allow you to pass values into scripts and functions, making them more flexible and reusable. By providing different arguments, users can tailor the behavior of a script or function without modifying its actual code.</p>
+<p><strong>Features of the <code>param</code> Block</strong>:</p>
+<ol>
+<li>
+<p><strong>Positional Parameters</strong>: By default, parameters are positional, and values are assigned based on the order they appear in the <code>param</code> block.</p>
+</li>
+<li>
+<p><strong>Mandatory Parameters</strong>: Using the <code>[Parameter(Mandatory=$true)]</code> attribute, you can require the user to provide a value for a specific parameter.</p>
+</li>
+<li>
+<p><strong>Default Values</strong>: Parameters can have default values specified with the <code>=</code> operator.</p>
+</li>
+<li>
+<p><strong>Type Constraints</strong>: You can specify the data type of a parameter to ensure that only values of that type are accepted.</p>
+</li>
+<li>
+<p><strong>Validation</strong>: With attributes like <code>[ValidateRange()]</code>, you can add validation to parameters.</p>
+</li>
+<li>
+<p><strong>Parameter Sets</strong>: You can create multiple sets of parameters that a function can accept, allowing for different combinations of arguments.</p>
+</li>
+<li>
+<p><strong>Pipeline Input</strong>: Parameters can be designed to accept input directly from the pipeline.</p>
+</li>
+</ol>
+<p><strong>Basic Syntax</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">type</span>]$ParameterName = DefaultValue,
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">type</span>]$AnotherParameter
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>Examples</strong>:</p>
+<ol>
+<li><strong>Basic Parameter</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    $Name
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;Hello, </span>$Name<span style="color:#e6db74">!&#34;</span>
+</span></span></code></pre></div><ol start="2">
+<li><strong>Mandatory Parameter</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true)]
+</span></span><span style="display:flex;"><span>    $Name
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;Hello, </span>$Name<span style="color:#e6db74">!&#34;</span>
+</span></span></code></pre></div><ol start="3">
+<li><strong>Typed Parameter with Default Value</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string</span>]$Greeting = <span style="color:#e6db74">&#34;Hello&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;</span>$Greeting<span style="color:#e6db74">, World!&#34;</span>
+</span></span></code></pre></div><ol start="4">
+<li><strong>Parameter Accepting Pipeline Input</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">ValueFromPipeline</span>=$true)]
+</span></span><span style="display:flex;"><span>    $Name
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Process</span> {
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#e6db74">&#34;Hello, </span>$Name<span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Benefits</strong>:</p>
+<ul>
+<li><strong>Flexibility</strong>: Parameters allow users to provide different inputs to modify script behavior.</li>
+<li><strong>Reusability</strong>: With parameters, the same script or function can handle a variety of scenarios.</li>
+<li><strong>Readability</strong>: Named parameters make scripts and functions more self-documenting, aiding in understanding the expected inputs.</li>
+</ul>
+<p><strong>Conclusion</strong>:</p>
+<p>The <code>param</code> keyword is a powerful tool in PowerShell scripting, enabling enhanced flexibility and adaptability. Whether you&rsquo;re writing simple scripts or advanced functions, understanding and using <code>param</code> effectively will greatly enhance your</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

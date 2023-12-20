@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Overview This guide provides PowerShell commands for effective monitoring of Active Directory Domain Services (AD DS) Sites and Replication, ensuring operational health and efficiency.
+Preparing the Environment Initial Setup: Begin on a generic server, for example, Server01. Open Windows PowerShell to execute the following commands. Commands for Monitoring Replication Recalculate Inbound Replication Topology:
+Repadmin /kcc Recalculates the inbound replication topology for Server01. Display Replication Status:
+Repadmin /showrepl Shows the replication status for each domain controller.">  
+
+  <title>
+    
+      Guide to Monitoring AD DS Sites and Replication using PowerShell
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Guide to Monitoring AD DS Sites and Replication using PowerShell</h1>
+
+    
+
+    <h2 id="overview">Overview</h2>
+<p>This guide provides PowerShell commands for effective monitoring of Active Directory Domain Services (AD DS) Sites and Replication, ensuring operational health and efficiency.</p>
+<h2 id="preparing-the-environment">Preparing the Environment</h2>
+<ul>
+<li><strong>Initial Setup</strong>: Begin on a generic server, for example, <code>Server01</code>. Open Windows PowerShell to execute the following commands.</li>
+</ul>
+<h2 id="commands-for-monitoring-replication">Commands for Monitoring Replication</h2>
+<ol>
+<li>
+<p><strong>Recalculate Inbound Replication Topology</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Repadmin /kcc
+</span></span></code></pre></div><ul>
+<li>Recalculates the inbound replication topology for <code>Server01</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Display Replication Status</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Repadmin /showrepl
+</span></span></code></pre></div><ul>
+<li>Shows the replication status for each domain controller.</li>
+</ul>
+</li>
+<li>
+<p><strong>Identify Bridgehead Servers</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Repadmin /bridgeheads
+</span></span></code></pre></div><ul>
+<li>Displays bridgehead servers for the site topology.</li>
+</ul>
+</li>
+<li>
+<p><strong>Summarize Replication Tasks</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Repadmin /replsummary
+</span></span></code></pre></div><ul>
+<li>Provides a summary of replication tasks, checking for errors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Replications using DCDiag</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>DCDiag /test<span style="color:#960050;background-color:#1e0010">:</span>replications
+</span></span></code></pre></div><ul>
+<li>Diagnoses the state of domain controller replication.</li>
+</ul>
+</li>
+<li>
+<p><strong>Force Replication Event in Active Directory Sites and Services</strong>:</p>
+<ul>
+<li>Navigate to: Sites → [Your Site Name] → Servers → [Domain Controller Name, e.g., DC01] → NTDS Settings.</li>
+<li>Right-click on the server (e.g., <code>Server01</code>) and select &lsquo;Replicate Now&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p><strong>Check Replication Up-to-Dateness</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ADReplicationUpToDatenessVectorTable <span style="color:#960050;background-color:#1e0010">–</span>Target <span style="color:#960050;background-color:#1e0010">“</span>YourDomain.local<span style="color:#960050;background-color:#1e0010">”</span>
+</span></span></code></pre></div><ul>
+<li>Shows the last several replication events for your domain.</li>
+</ul>
+</li>
+</ol>
+<h2 id="commands-for-monitoring-sites-and-subnets">Commands for Monitoring Sites and Subnets</h2>
+<ol>
+<li>
+<p><strong>Review Assigned Subnets</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-AdReplicationSubnet <span style="color:#960050;background-color:#1e0010">–</span><span style="color:#66d9ef">filter</span> *
+</span></span></code></pre></div><ul>
+<li>Provides detailed information about subnets assigned to sites.</li>
+</ul>
+</li>
+<li>
+<p><strong>Review Site Links</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-AdReplicationSiteLink <span style="color:#960050;background-color:#1e0010">–</span><span style="color:#66d9ef">filter</span> *
+</span></span></code></pre></div><ul>
+<li>Gives detailed information about site links assigned to sites.</li>
+</ul>
+</li>
+</ol>
+<h2 id="fix-dns-settings-on-a-domain-controller">Fix DNS Settings on a Domain Controller</h2>
+<ol>
+<li>
+<p><strong>Update DNS Client Server Address</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-DnsClient | Set-DnsClientServerAddress -ServerAddresses (<span style="color:#e6db74">&#34;IPAddress1&#34;</span>,<span style="color:#e6db74">&#34;IPAddress2&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>Configures DNS client server addresses on a specified domain controller (e.g., <code>DC01</code>).</li>
+</ul>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>This guide, with its PowerShell commands, offers a structured approach for monitoring and managing AD DS Sites and Replication. Regular use of these commands aids in maintaining the operational health and efficiency of the AD DS environment.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

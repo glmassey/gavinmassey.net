@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Sample PowerShell Scripts 1. User Information Collection Script
+# User Information Collection Script # This script prompts the user for information and then displays it. # Prompt user for information $name = Read-Host -Prompt &#34;Enter your name&#34; $age = Read-Host -Prompt &#34;Enter your age&#34; $city = Read-Host -Prompt &#34;Enter your city&#34; # Display collected information Write-Output &#34;You entered the following details:&#34; Write-Output &#34;Name: $name&#34; Write-Output &#34;Age: $age&#34; Write-Output &#34;City: $city&#34; 2.">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="sample-powershell-scripts">Sample PowerShell Scripts</h1>
+<p><strong>1. User Information Collection Script</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># User Information Collection Script</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This script prompts the user for information and then displays it.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Prompt user for information</span>
+</span></span><span style="display:flex;"><span>$name = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter your name&#34;</span>
+</span></span><span style="display:flex;"><span>$age = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter your age&#34;</span>
+</span></span><span style="display:flex;"><span>$city = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter your city&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display collected information</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;You entered the following details:&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;Name: </span>$name<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;Age: </span>$age<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;City: </span>$city<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><hr>
+<p><strong>2. File Cleanup Script</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># File Cleanup Script</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This script deletes all .tmp files from the user&#39;s Documents directory.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define the path</span>
+</span></span><span style="display:flex;"><span>$filePath = <span style="color:#e6db74">&#34;</span>$env:USERPROFILE<span style="color:#e6db74">\Documents\*.tmp&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove .tmp files</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem -Path $filePath -Recurse | Remove-Item -Force
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display completion message</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;All .tmp files in the Documents directory have been deleted.&#34;</span>
+</span></span></code></pre></div><hr>
+<p><strong>3. System Resource Monitoring Script</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># System Resource Monitoring Script</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This script monitors and displays the top 5 processes by CPU usage.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fetch and display top 5 processes by CPU usage</span>
+</span></span><span style="display:flex;"><span>Get-Process | Sort-Object CPU -Descending | Select-Object -First <span style="color:#ae81ff">5</span> Name, CPU | Format-Table -AutoSize
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display completion message</span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;Displayed the top 5 processes by CPU usage.&#34;</span>
+</span></span></code></pre></div><hr>
+<p><strong>4. User Group Membership Script</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># User Group Membership Script</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This script checks if a user is a member of a specific group.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Prompt user for username</span>
+</span></span><span style="display:flex;"><span>$username = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter the username to check&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check group membership</span>
+</span></span><span style="display:flex;"><span>$groups = Get-AdUser -Identity $username -Properties memberof | Select-Object -ExpandProperty memberof
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check for a specific group, e.g., &#39;AdminGroup&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($groups <span style="color:#f92672">-contains</span> <span style="color:#e6db74">&#39;CN=AdminGroup,OU=Groups,DC=domain,DC=com&#39;</span>) {
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#e6db74">&#34;</span>$username<span style="color:#e6db74"> is a member of AdminGroup.&#34;</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#e6db74">&#34;</span>$username<span style="color:#e6db74"> is not a member of AdminGroup.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<p><strong>5. Disk Space Monitoring Script</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Disk Space Monitoring Script</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This script checks available disk space on the C: drive and warns if it&#39;s below a threshold.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set threshold (in bytes, e.g., 10GB)</span>
+</span></span><span style="display:flex;"><span>$threshold = <span style="color:#ae81ff">10</span>GB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check available disk space</span>
+</span></span><span style="display:flex;"><span>$freeSpace = (Get-Volume -DriveLetter C).SizeRemaining
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Compare against threshold and display message</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($freeSpace <span style="color:#f92672">-lt</span> $threshold) {
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#e6db74">&#34;Warning: Disk space on C: is below the 10GB threshold.&#34;</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#e6db74">&#34;Disk space on C: is sufficient.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<p><strong>6. Backup Folder Script</strong></p>
+<p>This script creates a backup of a specified folder. The source folder and backup location are passed as parameters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e">&lt;#
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">SYNOPSIS</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Creates a backup of a specified folder.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">DESCRIPTION</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The script takes in a source folder and a backup location. It then copies the contents of the source folder to the backup location.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.PARAMETER SourceFolder
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The folder to be backed up.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.PARAMETER BackupLocation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The location where the backup will be stored.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">EXAMPLE</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.\Backup-Folder.ps1 -SourceFolder &#34;C:\Documents&#34; -BackupLocation &#34;D:\Backups\DocumentsBackup&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string</span>]$SourceFolder,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string</span>]$BackupLocation
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ensure the backup location exists</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> (Test-Path $BackupLocation)) {
+</span></span><span style="display:flex;"><span>    New-Item -Path $BackupLocation -ItemType Directory
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy the source folder to the backup location</span>
+</span></span><span style="display:flex;"><span>Copy-Item -Path $SourceFolder -Destination $BackupLocation -Recurse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;Backup of </span>$SourceFolder<span style="color:#e6db74"> created at </span>$BackupLocation<span style="color:#e6db74">.&#34;</span>
+</span></span></code></pre></div><hr>
+<p><strong>7. User Creation Script</strong></p>
+<p>This script creates a new user in Active Directory, taking parameters like username, password, and the organizational unit.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e">&lt;#
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">SYNOPSIS</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Creates a new user in Active Directory.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">DESCRIPTION</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The script creates a new AD user based on provided parameters: username, password, and organizational unit.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.PARAMETER Username
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The desired username for the new AD user.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.PARAMETER Password
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The password for the new AD user.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.PARAMETER OrganizationalUnit
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">The organizational unit where the user will be created.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">EXAMPLE</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.\New-ADUserScript.ps1 -Username &#34;jdoe&#34; -Password &#34;SecureP@ss123&#34; -OrganizationalUnit &#34;OU=Users,DC=domain,DC=com&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string</span>]$Username,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string</span>]$Password,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true)]
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string</span>]$OrganizationalUnit
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create the new AD user</span>
+</span></span><span style="display:flex;"><span>New-ADUser -Name $Username -GivenName $Username -Surname <span style="color:#e6db74">&#34;User&#34;</span> -SamAccountName $Username -UserPassword $Password -Path $OrganizationalUnit -Enabled $true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Output <span style="color:#e6db74">&#34;User </span>$Username<span style="color:#e6db74"> created in </span>$OrganizationalUnit<span style="color:#e6db74">.&#34;</span>
+</span></span></code></pre></div>
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

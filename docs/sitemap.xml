@@ -2,51 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://gavinmassey.net/articles/adds-management/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/global-catalog/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/getting-started-with-terraform/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/group-policy-object-management/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/guide-to-monitoring-ad-ds-sites-and-replication/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/configuring-pfsense-router/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/configuring-vyos-firewalls/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/introduction-to-trusts-in-ad/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/managing-domain-controllers-with-powershell/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/gpo-use-cases/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/advanced-powershell-remoting/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/understanding-roles-of-domain-enterprise-admins-in-ad/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/securing-adds/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/create-open-powershell-as-admin-context-entry-windows-explorer/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/the-need-for-sites-and-subnets/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/accessing-static-methods-and-members-with-powershell/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/vmware-virtual-networking-behind-the-scenes/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/vmware-virtual-networking-faq/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/why-different-dns-per-network-interface/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/cim-lab-exercises/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/wim-cim-quick-guide/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/simple-vmware-windows-infrastructure-lab/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/yaml-basics/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gavinmassey.net/resume/</loc>
     <lastmod>2023-12-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/ad-forests-trees-sites/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/articles/</loc>
+    <loc>https://gavinmassey.net/articles/bind-troubleshooting-guide/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/about-vmware-workstation-virtual-networks/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
+    <loc>https://gavinmassey.net/drafts/example-scripts/setting-up-server-core-dc/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/ad-infrastructure-management/</loc>
-    <lastmod>2012-12-20T00:00:00+00:00</lastmod>
+    <loc>https://gavinmassey.net/drafts/powershell/parameter-binding/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/accessing-static-methods-and-members-with-powershell/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/powershell-scripting/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/advanced-powershell-remoting/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/powershell-skill-list/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/creating-custom-modules/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/sample-powershell-scripts/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/introducing-wim-cim/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/setting-up-remote-powershell/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/managing-domain-controllers-with-powershell/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/understanding-param/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/parameter-binding/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/powershell-scripting/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/powershell-skill-list/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/sample-powershell-scripts/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/setting-up-remote-powershell/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/understanding-param/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/articles/windows-powershell-quickstart-guide/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/example-scripts/setting-up-server-core-dc/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/drafts/powershell/exercises/cim-lab-exercises/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/windows-powershell-quickstart-guide/</loc>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
   </url><url>

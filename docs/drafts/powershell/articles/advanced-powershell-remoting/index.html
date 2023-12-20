@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="PowerShell Remoting Guide by Manny Sethi Exercise: Get Information From Remote PC Task 1: Retrieve a list of physical network adapters from two computers Ensure that you are signed into the VIC-PC1 virtual machine.
+On VIC-PC1, find a command that can list network adapters:
+help *adapter* Note the Get-NetAdapter command.
+View the help for the Get-NetAdapter command:
+help Get-NetAdapter Note the -Physical parameter.
+Run the command on VIC-DC1 and VIC-Srv2 by means of remoting:">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="powershell-remoting-guide-by-manny-sethi">PowerShell Remoting Guide by Manny Sethi</h1>
+<h2 id="exercise-get-information-from-remote-pc">Exercise: Get Information From Remote PC</h2>
+<h3 id="task-1-retrieve-a-list-of-physical-network-adapters-from-two-computers">Task 1: Retrieve a list of physical network adapters from two computers</h3>
+<p>Ensure that you are signed into the VIC-PC1 virtual machine.</p>
+<p>On VIC-PC1, find a command that can list network adapters:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>help *adapter*
+</span></span></code></pre></div><p>Note the <code>Get-NetAdapter</code> command.</p>
+<p>View the help for the <code>Get-NetAdapter</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>help Get-NetAdapter
+</span></span></code></pre></div><p>Note the <code>-Physical</code> parameter.</p>
+<p>Run the command on VIC-DC1 and VIC-Srv2 by means of remoting:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -ComputerName VIC-DC1,VIC-Srv2 -ScriptBlock { Get-NetAdapter -Physical }
+</span></span></code></pre></div><h3 id="task-2-compare-the-output-of-a-local-command-to-that-of-a-remote-command">Task 2: Compare the output of a local command to that of a remote command</h3>
+<p>View the members of a Process object locally:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Process | Get-Member
+</span></span></code></pre></div><p>View the members from a remote Process object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -ComputerName VIC-DC1 -ScriptBlock { Get-Process } | Get-Member
+</span></span></code></pre></div><p>Note that the remote output includes limited MemberTypes due to deserialization.</p>
+<h2 id="exercise-using-implicit-remoting">Exercise: Using Implicit Remoting</h2>
+<h3 id="task-1-create-a-persistent-remoting-connection-to-a-server">Task 1: Create a persistent remoting connection to a server</h3>
+<p>On VIC-PC1, open Windows PowerShell as an administrator.</p>
+<p>Create a persistent connection to VIC-DC1 and store it in a variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$dc = New-PSSession -ComputerName VIC-DC1
+</span></span></code></pre></div><p>To view the PSSession list in the variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$dc
+</span></span></code></pre></div><p>Verify that the connection is available.</p>
+<h3 id="task-2-import-and-use-a-module-from-a-server">Task 2: Import and use a module from a server</h3>
+<p>Display a list of modules on VIC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Module -ListAvailable -PSSession $dc
+</span></span></code></pre></div><p>Find a module on VIC-DC1 related to Server Message Block (SMB) shares:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Module -ListAvailable -PSSession $dc | Where-Object { $_.Name <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#39;*share*&#39;</span> }
+</span></span></code></pre></div><p>Import the module from VIC-DC1 to your local computer and add the prefix &ldquo;DC&rdquo; to important commands&rsquo; nouns:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Import-Module -PSSession $dc -Name SMBShare -Prefix DC
+</span></span></code></pre></div><p>Display a list of shares on VIC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-DCSMBShare
+</span></span></code></pre></div><p>Display a list of shares on the local computer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-SMBShare
+</span></span></code></pre></div><p>The local commands are still available with their original names.</p>
+<h3 id="task-3-close-all-open-remoting-connections">Task 3: Close all open remoting connections</h3>
+<p>To close all open remoting connections:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-PSSession | Remove-PSSession
+</span></span></code></pre></div><h2 id="exercise-managing-multiple-computers">Exercise: Managing Multiple Computers</h2>
+<h3 id="task-1-create-pssessions-to-two-computers">Task 1: Create PSSessions to two computers</h3>
+<p>Make sure you are still signed in to VIC-PC1.</p>
+<p>Open Windows PowerShell.</p>
+<p>Create PSSessions to VIC-Srv2 and VIC-DC1 and save them in a variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$computers = New-PSSession -ComputerName VIC-Srv2,VIC-DC1
+</span></span></code></pre></div><p>To verify the connections:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$computers
+</span></span></code></pre></div><p>Verify that two connections display as Available.</p>
+<h3 id="task-2-create-a-report-that-displays-windows-firewall-rules-from-two-computers">Task 2: Create a report that displays Windows Firewall rules from two computers</h3>
+<p>Find a module capable of working with network security:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Module *security* -ListAvailable
+</span></span></code></pre></div><p>Note the NetSecurity module.</p>
+<p>Load the module into memory on VIC-Srv2 and VIC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Import-Module NetSecurity }
+</span></span></code></pre></div><p>Find a command that can display Windows Firewall rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Command -Module NetSecurity
+</span></span></code></pre></div><p>You can review the help for the command using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Help Get-NetFirewallRule -ShowWindow
+</span></span></code></pre></div><p>Display a list of enabled firewall rules on VIC-Srv2 and VIC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Get-NetFirewallRule -Enabled True } | Select-Object Name, PSComputerName
+</span></span></code></pre></div><p>Unload the module on VIC-Srv2 and VIC-DC1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Remove-Module NetSecurity }
+</span></span></code></pre></div><h3 id="task-3-create-and-display-an-html-report-that-displays-local-disk-information-from-two-computers">Task 3: Create and display an HTML report that displays local disk information from two computers</h3>
+<p>Display a list of local hard drives filtered to include only those with a drive type of 3:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-WmiObject -Class Win32_LogicalDisk -Filter <span style="color:#e6db74">&#34;DriveType=3&#34;</span>
+</span></span></code></pre></div><p>Run the same command on VIC-Srv2 and VIC-DC1 via remoting:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Get-WmiObject -Class Win32_LogicalDisk -Filter <span style="color:#e6db74">&#34;DriveType=3&#34;</span> }
+</span></span></code></pre></div><p>Your report must include each computer&rsquo;s name, each drive&rsquo;s letter, and each drive&rsquo;s free space and total size in bytes.</p>
+<p>Produce an HTML report containing the results of the previous command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -Session $computers -ScriptBlock { Get-WmiObject -Class Win32_LogicalDisk -Filter <span style="color:#e6db74">&#34;DriveType=3&#34;</span> } | ConvertTo-Html -Property PSComputerName, DeviceID, FreeSpace, Size | Out-File -FilePath PSDrives.html
+</span></span></code></pre></div><h3 id="task-4-close-all-open-pssessions">Task 4: Close all open PSSessions</h3>
+<p>To close all open PSSessions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-PSSession | Remove-PSSession
+</span></span></code></pre></div><p>After completing these exercises, you should have a better understanding of how to use PowerShell Remoting to administer remote computers and manage multiple computers efficiently.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

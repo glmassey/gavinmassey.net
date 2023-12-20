@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="PowerShell&rsquo;s integration with the .NET framework allows for leveraging a variety of functionalities via static and instance members of classes. Grasping the differences between these two types of members is key to proficient scripting and effective system administration.
+Static Methods and Members What Are They? Static methods and members are associated with the class itself rather than any specific object created from the class. They can be accessed directly using the class name, eliminating the need to create an instance of the class.">  
+
+  <title>
+    
+      Understanding Static vs. Instance Methods and Members in PowerShell
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Understanding Static vs. Instance Methods and Members in PowerShell</h1>
+
+    
+
+    <p>PowerShell&rsquo;s integration with the .NET framework allows for leveraging a variety of functionalities via static and instance members of classes. Grasping the differences between these two types of members is key to proficient scripting and effective system administration.</p>
+<h2 id="static-methods-and-members">Static Methods and Members</h2>
+<h3 id="what-are-they">What Are They?</h3>
+<ul>
+<li>Static methods and members are associated with the class itself rather than any specific object created from the class.</li>
+<li>They can be accessed directly using the class name, eliminating the need to create an instance of the class.</li>
+</ul>
+<h3 id="examples-in-use">Examples in Use</h3>
+<ol>
+<li>
+<p><strong>Using Math Class</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$result = [<span style="color:#66d9ef">System.Math</span>]::Sqrt(<span style="color:#ae81ff">16</span>)  <span style="color:#75715e"># Calculates the square root of 16, returning 4</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Accessing OS Information via Environment Class</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$osVersion = [<span style="color:#66d9ef">System.Environment</span>]::OSVersion  <span style="color:#75715e"># Fetches the operating system version</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Listing Directories with Directory Class</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$directories = [<span style="color:#66d9ef">System.IO.Directory</span>]::GetDirectories(<span style="color:#e6db74">&#34;C:\\&#34;</span>)  <span style="color:#75715e"># Lists directories in C:\</span>
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="why-use-them">Why Use Them?</h3>
+<ul>
+<li>They are memory efficient, being allocated just once at the class level.</li>
+<li>Typically stateless, making them suitable for utility-like functions.</li>
+</ul>
+<h2 id="instance-methods-and-members">Instance Methods and Members</h2>
+<h3 id="what-are-they-1">What Are They?</h3>
+<ul>
+<li>Instance methods and members are specific to an actual object instance created from a class.</li>
+<li>They necessitate creating an object from the class to be used.</li>
+</ul>
+<h3 id="examples-in-use-1">Examples in Use</h3>
+<ol>
+<li>
+<p><strong>Manipulating Dates with DateTime</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$date = New-Object System.DateTime(<span style="color:#ae81ff">2023</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># Creates a new DateTime object</span>
+</span></span><span style="display:flex;"><span>$nextDay = $date.AddDays(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># Adds a day to the date</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Handling Files with FileInfo</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$file = New-Object System.IO.FileInfo(<span style="color:#e6db74">&#34;C:\\example.txt&#34;</span>)  <span style="color:#75715e"># Creates a FileInfo object</span>
+</span></span><span style="display:flex;"><span>$length = $file.Length  <span style="color:#75715e"># Retrieves the file size</span>
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="why-use-them-1">Why Use Them?</h3>
+<ul>
+<li>They offer functionality specific to each object, allowing for personalized states and behaviors within each instance.</li>
+</ul>
+<h2 id="handy-static-types-for-system-administrators">Handy Static Types for System Administrators</h2>
+<ol>
+<li><strong>System.Environment</strong>: Useful for managing environment variables and command-line arguments.</li>
+<li><strong>System.IO.Directory / System.IO.File</strong>: Ideal for directory and file operations.</li>
+<li><strong>System.Net.NetworkInformation.Ping</strong>: Helpful for network diagnostics via ICMP echo.</li>
+<li><strong>System.Diagnostics.Process</strong>: Essential for process management tasks.</li>
+<li><strong>System.Security.Principal.WindowsIdentity</strong>: Useful for handling Windows user and group data.</li>
+<li><strong>System.Management.Automation.PsCustomObject</strong>: Versatile for creating and handling custom data objects.</li>
+</ol>
+<h3 id="practical-examples">Practical Examples</h3>
+<ol>
+<li>
+<p><strong>Network Diagnostics via Ping</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$ping = New-Object System.Net.NetworkInformation.Ping
+</span></span><span style="display:flex;"><span>$result = $ping.Send(<span style="color:#e6db74">&#34;google.com&#34;</span>)  <span style="color:#75715e"># Sends a ping to Google</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Managing Processes</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$processes = [<span style="color:#66d9ef">System.Diagnostics.Process</span>]::GetProcessesByName(<span style="color:#e6db74">&#34;notepad&#34;</span>)  <span style="color:#75715e"># Retrieves Notepad processes</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Retrieving Current User Information</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$currentUser = [<span style="color:#66d9ef">System.Security.Principal.WindowsIdentity</span>]::GetCurrent()  <span style="color:#75715e"># Gets the current Windows user</span>
+</span></span></code></pre></div></li>
+</ol>
+<p>To conclude, a clear understanding of static versus instance methods and members in PowerShell can greatly enhance one&rsquo;s scripting proficiency. This guide, along with the provided examples, serves as an introduction to the extensive capabilities available through PowerShell&rsquo;s integration with the .NET framework, particularly useful in system administration.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

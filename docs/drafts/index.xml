@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on gavinmassey.net</title>
+    <link>https://gavinmassey.net/drafts/</link>
+    <description>Recent content in Drafts on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://gavinmassey.net/drafts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/example-scripts/setting-up-server-core-dc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/example-scripts/setting-up-server-core-dc/</guid>
+      <description>Configure Windows Server Core Domain Controller # Install vmware tools if not installed setup64.exe /s /v&amp;#34;/qn REBOOT=R&amp;#34; # Change the hostname and reboot Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.104&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/parameter-binding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/parameter-binding/</guid>
+      <description>Demystifying PowerShell&amp;rsquo;s Parameter Binding: How Objects Match Up to Cmdlet Parameters PowerShell&amp;rsquo;s true power lies in its object-oriented nature and the ability to pipe objects from one cmdlet to another. Understanding how PowerShell matches piped object data to cmdlet parameters is crucial for writing efficient and effective scripts. This article delves into the algorithm behind this matching process and how you can anticipate it using the Get-Help documentation.&#xA;Understanding Parameter Binding in PowerShell When you pipe data from one cmdlet to another in PowerShell, the system uses a process called parameter binding to match the piped object data to the parameters of the receiving cmdlet.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/powershell-scripting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/powershell-scripting/</guid>
+      <description>PowerShell Scripting Mastering PowerShell Scripting: A Concise Guide&#xA;PowerShell, a combination of a command-line shell and scripting language, offers powerful tools to automate tasks across Windows, Linux, and macOS platforms. Let&amp;rsquo;s dive deep into the realm of PowerShell scripting, exploring advanced topics and techniques with extensive code samples.&#xA;1. Introduction to PowerShell Scripting Originally designed for Windows, PowerShell has extended its reach to other OS platforms, making it a must-know for IT professionals.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/powershell-skill-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/powershell-skill-list/</guid>
+      <description>Windows System Admin Skills File system operations get current location test if a path is valid add/edit path change to different directory create file/directory delete file/directory copy file move file display contents of file delete contents of file write contents to file append to content of file list contents of directory recursive search of fs to list files by size, or other property recursive search to find files matching a string recursive search of text file to find string matching a pattern recursive traversal of file system to list permissions recursive traversal of file system to edit permissions list/add/remove psdrives Modules search for modules add/remove modules create a new module add/remove snap-ins System network interface configuration list network adapters list ipv4, ipv6 addresses list dns server address list gateway address list routing table remove/change/add ip address remove/change/add dns server address remove/change/add gateway address ping/tracepath change to dhcp release/renew dhcp address change to static ip add ip route System management - networking enable remote desktop (server) disable remote desktop (server) enable ping show network connections show firewall information disable/enable firewall for troubleshooting reasons Local user and group management list local users list local groups create local user delete local user create local group add/remove user from local group System management - processes and services list processes start process end process list services start/stop/restart service configure service startup type service get information on processes get information on service System management - basics get hostname get current username rename system stop/reboot computer add to domain remove from domain reset domain connection test domain connection get name of domain get list of windows roles add/remove windows role or feature install/remove windows update configure windows update automatic Windows domain controller management promote computer to domain controller demote computer from domain controller list domain controllers list fsmo roles transfer fsmo roles test health of domain test trust relationship between domain computers seize fsmo roles from failed domain controller get domain information get forest information get trust relationship information Windows AD group and user management change user password require password change disable password change requirement add user create user from template list user properties change user properties delete user account add/delete computer account add security or distribution group list security or distribution groups delete security or distribution group add/remove user from security or distribution group list members of security groups list/create/edit/delete ou DNS list/create/edit/delete dns a or aaaa record list/create/edit/delete dns alias record list/create/edit/delete dns mx record list/create/edit/delete dns txt record list/create/edit/delete spf record configure conditional forwarders list cached dns entries clear dns cache DHCP authorize/de-authorize server list/create/edit/delete scopes list/create/edit leases list/create/edit reservations list/create/edit exclusion zone list/create/edit dhcp scope options Other stuff boot to admin powershell instead of sconfig set execution policy and enable psremoting system profile sourcing local system profile for pssession how do use powershell to download external file, or website Manipulating data using Where-Object using Select-Object writing/reading csv format data writing/reading xml files data iterating/looping through list assigning values to variables creating arrays and dictionaries System time get/change time zone update ntp servers Remote management start/end pssession list/delete pssessions invoke command remotely save pssessions to variable and iterate through list executing commands or collecting information exporting a pssession CIM, WMI objects get/set/edit cim objects (wmi is depreciated) DSC, desired state configuration tbd Group policy objects creating new gpos listing gpos editing gpos gpupdate /force and gpresults getting help searching for help (get-help) searching for a command understanding cmdlet options Fix tab-complete Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward Troubleshooting scripts Maybe some scripts to check for common misconfigurations Maybe a script to view event viewer logs &amp;hellip; Some diagnostic tools Network shares list/add/edit/delete network share list/add/edit/delete network share permissions </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/sample-powershell-scripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/sample-powershell-scripts/</guid>
+      <description>Sample PowerShell Scripts 1. User Information Collection Script&#xA;# User Information Collection Script # This script prompts the user for information and then displays it. # Prompt user for information $name = Read-Host -Prompt &amp;#34;Enter your name&amp;#34; $age = Read-Host -Prompt &amp;#34;Enter your age&amp;#34; $city = Read-Host -Prompt &amp;#34;Enter your city&amp;#34; # Display collected information Write-Output &amp;#34;You entered the following details:&amp;#34; Write-Output &amp;#34;Name: $name&amp;#34; Write-Output &amp;#34;Age: $age&amp;#34; Write-Output &amp;#34;City: $city&amp;#34; 2.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/setting-up-remote-powershell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/setting-up-remote-powershell/</guid>
+      <description>Setting up PowerShell Remoting 1. On the Remote Host Enable PowerShell Remoting: You can enable PowerShell Remoting on the remote host by running the following command in an elevated PowerShell session (Run as Administrator):&#xA;Enable-PSRemoting -Force Allow Incoming Connections: Ensure that the Windows Firewall (or any other firewall software you may be using) allows incoming connections for PowerShell Remoting. If using the Windows Firewall, this command will help:&#xA;Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any 2.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/understanding-param/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/understanding-param/</guid>
+      <description>Understanding the param Keyword in PowerShell In PowerShell, the param keyword is used to define parameters that a script or function can accept. Parameters allow you to pass values into scripts and functions, making them more flexible and reusable. By providing different arguments, users can tailor the behavior of a script or function without modifying its actual code.&#xA;Features of the param Block:&#xA;Positional Parameters: By default, parameters are positional, and values are assigned based on the order they appear in the param block.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/powershell/windows-powershell-quickstart-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/powershell/windows-powershell-quickstart-guide/</guid>
+      <description>PowerShell Quickstart Guide PowerShell Quickstart Guide 1. Introduction PowerShell is Microsoft&amp;rsquo;s task automation framework, combining command-line speed, the flexibility of scripting, and the power of a GUI-based admin tool. Whether you&amp;rsquo;re automating tasks, extracting and processing data, or managing systems, PowerShell is a versatile tool to know.&#xA;2. Launching PowerShell You can find PowerShell by searching for it in the Windows start menu. For administrative tasks, it&amp;rsquo;s advisable to run PowerShell as an administrator (right-click the application and select &amp;ldquo;Run as administrator&amp;rdquo;).</description>
+    </item>
+  </channel>
+</rss>

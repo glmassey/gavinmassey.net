@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Windows System Admin Skills File system operations get current location test if a path is valid add/edit path change to different directory create file/directory delete file/directory copy file move file display contents of file delete contents of file write contents to file append to content of file list contents of directory recursive search of fs to list files by size, or other property recursive search to find files matching a string recursive search of text file to find string matching a pattern recursive traversal of file system to list permissions recursive traversal of file system to edit permissions list/add/remove psdrives Modules search for modules add/remove modules create a new module add/remove snap-ins System network interface configuration list network adapters list ipv4, ipv6 addresses list dns server address list gateway address list routing table remove/change/add ip address remove/change/add dns server address remove/change/add gateway address ping/tracepath change to dhcp release/renew dhcp address change to static ip add ip route System management - networking enable remote desktop (server) disable remote desktop (server) enable ping show network connections show firewall information disable/enable firewall for troubleshooting reasons Local user and group management list local users list local groups create local user delete local user create local group add/remove user from local group System management - processes and services list processes start process end process list services start/stop/restart service configure service startup type service get information on processes get information on service System management - basics get hostname get current username rename system stop/reboot computer add to domain remove from domain reset domain connection test domain connection get name of domain get list of windows roles add/remove windows role or feature install/remove windows update configure windows update automatic Windows domain controller management promote computer to domain controller demote computer from domain controller list domain controllers list fsmo roles transfer fsmo roles test health of domain test trust relationship between domain computers seize fsmo roles from failed domain controller get domain information get forest information get trust relationship information Windows AD group and user management change user password require password change disable password change requirement add user create user from template list user properties change user properties delete user account add/delete computer account add security or distribution group list security or distribution groups delete security or distribution group add/remove user from security or distribution group list members of security groups list/create/edit/delete ou DNS list/create/edit/delete dns a or aaaa record list/create/edit/delete dns alias record list/create/edit/delete dns mx record list/create/edit/delete dns txt record list/create/edit/delete spf record configure conditional forwarders list cached dns entries clear dns cache DHCP authorize/de-authorize server list/create/edit/delete scopes list/create/edit leases list/create/edit reservations list/create/edit exclusion zone list/create/edit dhcp scope options Other stuff boot to admin powershell instead of sconfig set execution policy and enable psremoting system profile sourcing local system profile for pssession how do use powershell to download external file, or website Manipulating data using Where-Object using Select-Object writing/reading csv format data writing/reading xml files data iterating/looping through list assigning values to variables creating arrays and dictionaries System time get/change time zone update ntp servers Remote management start/end pssession list/delete pssessions invoke command remotely save pssessions to variable and iterate through list executing commands or collecting information exporting a pssession CIM, WMI objects get/set/edit cim objects (wmi is depreciated) DSC, desired state configuration tbd Group policy objects creating new gpos listing gpos editing gpos gpupdate /force and gpresults getting help searching for help (get-help) searching for a command understanding cmdlet options Fix tab-complete Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward Troubleshooting scripts Maybe some scripts to check for common misconfigurations Maybe a script to view event viewer logs &hellip; Some diagnostic tools Network shares list/add/edit/delete network share list/add/edit/delete network share permissions ">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="windows-system-admin-skills">Windows System Admin Skills</h1>
+<h2 id="file-system-operations">File system operations</h2>
+<ul>
+<li>get current location</li>
+<li>test if a path is valid</li>
+<li>add/edit path</li>
+<li>change to different directory</li>
+<li>create file/directory</li>
+<li>delete file/directory</li>
+<li>copy file</li>
+<li>move file</li>
+<li>display contents of file</li>
+<li>delete contents of file</li>
+<li>write contents to file</li>
+<li>append to content of file</li>
+<li>list contents of directory</li>
+<li>recursive search of fs to list files by size, or other property</li>
+<li>recursive search to find files matching a string</li>
+<li>recursive search of text file to find string matching a pattern</li>
+<li>recursive traversal of file system to list permissions</li>
+<li>recursive traversal of file system to edit permissions</li>
+<li>list/add/remove psdrives</li>
+</ul>
+<h2 id="modules">Modules</h2>
+<ul>
+<li>search for modules</li>
+<li>add/remove modules</li>
+<li>create a new module</li>
+<li>add/remove snap-ins</li>
+</ul>
+<h2 id="system-network-interface-configuration">System network interface configuration</h2>
+<ul>
+<li>list network adapters</li>
+<li>list ipv4, ipv6 addresses</li>
+<li>list dns server address</li>
+<li>list gateway address</li>
+<li>list routing table</li>
+<li>remove/change/add ip address</li>
+<li>remove/change/add dns server address</li>
+<li>remove/change/add gateway address</li>
+<li>ping/tracepath</li>
+<li>change to dhcp</li>
+<li>release/renew dhcp address</li>
+<li>change to static ip</li>
+<li>add ip route</li>
+</ul>
+<h2 id="system-management---networking">System management - networking</h2>
+<ul>
+<li>enable remote desktop (server)</li>
+<li>disable remote desktop (server)</li>
+<li>enable ping</li>
+<li>show network connections</li>
+<li>show firewall information</li>
+<li>disable/enable firewall for troubleshooting reasons</li>
+</ul>
+<h2 id="local-user-and-group-management">Local user and group management</h2>
+<ul>
+<li>list local users</li>
+<li>list local groups</li>
+<li>create local user</li>
+<li>delete local user</li>
+<li>create local group</li>
+<li>add/remove user from local group</li>
+</ul>
+<h2 id="system-management---processes-and-services">System management - processes and services</h2>
+<ul>
+<li>list processes</li>
+<li>start process</li>
+<li>end process</li>
+<li>list services</li>
+<li>start/stop/restart service</li>
+<li>configure service startup type service</li>
+<li>get information on processes</li>
+<li>get information on service</li>
+</ul>
+<h2 id="system-management---basics">System management - basics</h2>
+<ul>
+<li>get hostname</li>
+<li>get current username</li>
+<li>rename system</li>
+<li>stop/reboot computer</li>
+<li>add to domain</li>
+<li>remove from domain</li>
+<li>reset domain connection</li>
+<li>test domain connection</li>
+<li>get name of domain</li>
+<li>get list of windows roles</li>
+<li>add/remove windows role or feature</li>
+<li>install/remove windows update</li>
+<li>configure windows update automatic</li>
+</ul>
+<h2 id="windows-domain-controller-management">Windows domain controller management</h2>
+<ul>
+<li>promote computer to domain controller</li>
+<li>demote computer from domain controller</li>
+<li>list domain controllers</li>
+<li>list fsmo roles</li>
+<li>transfer fsmo roles</li>
+<li>test health of domain</li>
+<li>test trust relationship between domain computers</li>
+<li>seize fsmo roles from failed domain controller</li>
+<li>get domain information</li>
+<li>get forest information</li>
+<li>get trust relationship information</li>
+</ul>
+<h2 id="windows-ad-group-and-user-management">Windows AD group and user management</h2>
+<ul>
+<li>change user password</li>
+<li>require password change</li>
+<li>disable password change requirement</li>
+<li>add user</li>
+<li>create user from template</li>
+<li>list user properties</li>
+<li>change user properties</li>
+<li>delete user account</li>
+<li>add/delete computer account</li>
+<li>add security or distribution group</li>
+<li>list security or distribution groups</li>
+<li>delete security or distribution group</li>
+<li>add/remove user from security or distribution group</li>
+<li>list members of security groups</li>
+<li>list/create/edit/delete ou</li>
+</ul>
+<h2 id="dns">DNS</h2>
+<ul>
+<li>list/create/edit/delete dns a or aaaa record</li>
+<li>list/create/edit/delete dns alias record</li>
+<li>list/create/edit/delete dns mx record</li>
+<li>list/create/edit/delete dns txt record</li>
+<li>list/create/edit/delete spf record</li>
+<li>configure conditional forwarders</li>
+<li>list cached dns entries</li>
+<li>clear dns cache</li>
+</ul>
+<h2 id="dhcp">DHCP</h2>
+<ul>
+<li>authorize/de-authorize server</li>
+<li>list/create/edit/delete scopes</li>
+<li>list/create/edit leases</li>
+<li>list/create/edit reservations</li>
+<li>list/create/edit exclusion zone</li>
+<li>list/create/edit dhcp scope options</li>
+</ul>
+<h2 id="other-stuff">Other stuff</h2>
+<ul>
+<li>boot to admin powershell instead of sconfig</li>
+<li>set execution policy and enable psremoting</li>
+<li>system profile</li>
+<li>sourcing local system profile for pssession</li>
+<li>how do use powershell to download external file, or website</li>
+</ul>
+<h2 id="manipulating-data">Manipulating data</h2>
+<ul>
+<li>using Where-Object</li>
+<li>using Select-Object</li>
+<li>writing/reading csv format data</li>
+<li>writing/reading xml files data</li>
+<li>iterating/looping through list</li>
+<li>assigning values to variables</li>
+<li>creating arrays and dictionaries</li>
+</ul>
+<h2 id="system-time">System time</h2>
+<ul>
+<li>get/change time zone</li>
+<li>update ntp servers</li>
+</ul>
+<h2 id="remote-management">Remote management</h2>
+<ul>
+<li>start/end pssession</li>
+<li>list/delete pssessions</li>
+<li>invoke command remotely</li>
+<li>save pssessions to variable and iterate through list executing commands or collecting information</li>
+<li>exporting a pssession</li>
+</ul>
+<h2 id="cim-wmi-objects">CIM, WMI objects</h2>
+<ul>
+<li>get/set/edit cim objects (wmi is depreciated)</li>
+</ul>
+<h2 id="dsc-desired-state-configuration">DSC, desired state configuration</h2>
+<ul>
+<li>tbd</li>
+</ul>
+<h2 id="group-policy-objects">Group policy objects</h2>
+<ul>
+<li>creating new gpos</li>
+<li>listing gpos</li>
+<li>editing gpos</li>
+<li>gpupdate /force and gpresults</li>
+</ul>
+<h2 id="getting-help">getting help</h2>
+<ul>
+<li>searching for help (get-help)</li>
+<li>searching for a command</li>
+<li>understanding cmdlet options</li>
+</ul>
+<h2 id="fix-tab-complete">Fix tab-complete</h2>
+<ul>
+<li>Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete</li>
+<li>Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward</li>
+<li>Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward</li>
+</ul>
+<h2 id="troubleshooting-scripts">Troubleshooting scripts</h2>
+<ul>
+<li>Maybe some scripts to check for common misconfigurations</li>
+<li>Maybe a script to view event viewer logs &hellip;</li>
+<li>Some diagnostic tools</li>
+</ul>
+<h2 id="network-shares">Network shares</h2>
+<ul>
+<li>list/add/edit/delete network share</li>
+<li>list/add/edit/delete network share permissions</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

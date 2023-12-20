@@ -1,34 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>www.gavinmassey.net on gavinmassey.net</title>
-    <link>https://gavinmassey.net/</link>
-    <description>Recent content in www.gavinmassey.net on gavinmassey.net</description>
+    <title>AWS Articles on gavinmassey.net</title>
+    <link>https://gavinmassey.net/articles/aws/</link>
+    <description>Recent content in AWS Articles on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gavinmassey.net/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>RICHARD (GAVIN) MASSEY</title>
-      <link>https://gavinmassey.net/resume/</link>
-      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/resume/</guid>
-      <description>TARGET ROLE: System Administrator&#xA;gavin@gavinmassey.net&#xA;linkedin.com/in/gavin-massey/&#xA;SUMMARY Dynamic Infrastructure Administrator with 12+ years of experience in enhancing IT infrastructure efficiency, security, and performance. Expert in complex integrations, project management, and data protection. Adept at troubleshooting, innovative solution implementation, and team leadership. Committed to high-quality infrastructure services and staying abreast of evolving technologies.&#xA;CORE COMPETENCIES IT Infrastructure Management | Cloud Computing | Virtualization | Information Systems Integration | Enterprise &amp;amp; IT Security | Network Security | Security Policies and Procedures | Workflow Management Systems | Active Directory | User Account Management | System Administration | Vendor Management | Web Server Management | Software Deployment | Enterprise Networking</description>
-    </item>
-    <item>
-      <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
-      <link>https://gavinmassey.net/articles/windows/ad-forests-trees-sites/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/windows/ad-forests-trees-sites/</guid>
-      <description>When navigating the complexities of Microsoft Active Directory (AD), it&amp;rsquo;s crucial to understand the fundamental building blocks of its architecture: forests, trees, and sites. These terms are often used interchangeably, but they refer to distinct elements within an AD environment.&#xA;Active Directory Forest An Active Directory Forest is the topmost level of the AD structure. Think of a forest as a security boundary within which users, computers, groups, and other objects are managed.</description>
-    </item>
-    <item>
-      <title>Understanding VMware Virtual Network Types and IP Addressing</title>
-      <link>https://gavinmassey.net/articles/virtualization/about-vmware-workstation-virtual-networks/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/virtualization/about-vmware-workstation-virtual-networks/</guid>
-      <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
-    </item>
+    <atom:link href="https://gavinmassey.net/articles/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://gavinmassey.net/articles/aws/aws-clf-c02/aws-clf-c02-in-scope-services/</link>
@@ -63,13 +41,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/aws/aws-clf-c02/exam-guide-clf-c02/</guid>
       <description>AWS Certified Cloud Practitioner Exam Domain 1: Cloud Concepts Task Statement 1.1: Define the benefits of the AWS Cloud Knowledge of Value proposition of the AWS Cloud Skills in Understanding the economies of scale (for example, cost savings)&#xA;Understanding the benefits of global infrastructure (for example, speed of deployment, global reach)&#xA;Understanding the advantages of high availability, elasticity, and agility&#xA;Task Statement 1.2: Identify design principles of the AWS Cloud Knowledge of AWS Well-Architected Framework Skills in Understanding the pillars of the Well-Architected Framework (for example, operational excellence, security, reliability, performance efficiency, cost optimization, sustainability) Identifying differences between the pillars of the Well-Architected Framework Task Statement 1.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/articles/devops/yaml-basics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/devops/yaml-basics/</guid>
-      <description>YAML Basics 1. Structure:&#xA;YAML uses indentation (spaces, not tabs) to represent the structure, similar to Python. The number of spaces in the indentation is not fixed, but all elements of the list or map must be aligned. 2. Scalars (Strings, Numbers, Booleans):&#xA;Strings can be unquoted or enclosed in single (&#39;) or double quotes (&amp;quot;). Numbers are written as in most programming languages. Booleans are represented with true and false.</description>
     </item>
   </channel>
 </rss>

@@ -5,47 +5,51 @@
     <loc>https://gavinmassey.net/resume/</loc>
     <lastmod>2023-12-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/articles/windows/ad-forests-trees-sites/</loc>
+    <loc>https://gavinmassey.net/articles/ad-forests-trees-sites/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/articles/virtualization/about-vmware-workstation-virtual-networks/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/virtualization/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/windows/</loc>
+    <loc>https://gavinmassey.net/articles/about-vmware-workstation-virtual-networks/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/articles/aws/aws-clf-c02/aws-clf-c02-in-scope-services/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/accessing-static-methods-and-members-with-powershell/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/aws/aws-clf-c02/aws-clf-c02-knowledge-of/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/advanced-powershell-remoting/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/aws/aws-clf-c02/aws-clf-c02-skills-in/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/creating-custom-modules/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/aws/aws-clf-c02/aws-clf-c02-technologies-and-concepts/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/introducing-wim-cim/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/aws/aws-clf-c02/exam-guide-clf-c02/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/managing-domain-controllers-with-powershell/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/devops/yaml-basics/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/parameter-binding/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/networking/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/powershell-scripting/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/powershell/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/powershell-skill-list/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/aws/</loc>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/sample-powershell-scripts/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/setting-up-remote-powershell/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/understanding-param/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/powershell/articles/windows-powershell-quickstart-guide/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/powershell/example-scripts/setting-up-server-core-dc/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/powershell/exercises/cim-lab-exercises/</loc>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/devops/</loc>
+    <loc>https://gavinmassey.net/drafts/</loc>
   </url><url>
-    <loc>https://gavinmassey.net/articles/linux/</loc>
+    <loc>https://gavinmassey.net/articles/ad-infrastructure-management/</loc>
   </url><url>
     <loc>https://gavinmassey.net/tags/</loc>
   </url>

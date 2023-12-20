@@ -30,6 +30,13 @@
       <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
     </item>
     <item>
+      <title>Introduction to Trusts in Active Directory</title>
+      <link>https://gavinmassey.net/articles/ad-infrastructure-management/</link>
+      <pubDate>Thu, 20 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/ad-infrastructure-management/</guid>
+      <description>In the realm of network security and management, Trusts within Active Directory (AD) are pivotal. They are the backbone of domain interactions, enabling users in one domain to access resources in another. This guide delves into the intricacies of these trusts, outlining their types, implementations, and best practices for secure and efficient network management.&#xA;Types of Trusts in Active Directory Active Directory trusts can be broadly categorized into several types, each serving a unique purpose in the network infrastructure:</description>
+    </item>
+    <item>
       <title></title>
       <link>https://gavinmassey.net/drafts/powershell/articles/accessing-static-methods-and-members-with-powershell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -126,13 +133,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/drafts/powershell/exercises/cim-lab-exercises/</guid>
       <description>WIM and CIM Lab Exercises Lab Exercise 1: System Overview Objective: Get an overview of your computer system&amp;rsquo;s properties.&#xA;Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.&#xA;Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&amp;rsquo;s name, manufacturer, model, and the total physical memory.&#xA;Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.</description>
-    </item>
-    <item>
-      <title>Introduction to Trusts in Active Directory</title>
-      <link>https://gavinmassey.net/articles/ad-infrastructure-management/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/ad-infrastructure-management/</guid>
-      <description>In the realm of network security and management, Trusts within Active Directory (AD) are pivotal. They are the backbone of domain interactions, enabling users in one domain to access resources in another. This guide delves into the intricacies of these trusts, outlining their types, implementations, and best practices for secure and efficient network management.&#xA;Types of Trusts in Active Directory Active Directory trusts can be broadly categorized into several types, each serving a unique purpose in the network infrastructure:</description>
     </item>
   </channel>
 </rss>

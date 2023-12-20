@@ -17,6 +17,9 @@
     <loc>https://gavinmassey.net/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://gavinmassey.net/articles/ad-infrastructure-management/</loc>
+    <lastmod>2012-12-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gavinmassey.net/drafts/powershell/articles/accessing-static-methods-and-members-with-powershell/</loc>
   </url><url>
     <loc>https://gavinmassey.net/drafts/powershell/articles/advanced-powershell-remoting/</loc>
@@ -48,8 +51,6 @@
     <loc>https://gavinmassey.net/categories/</loc>
   </url><url>
     <loc>https://gavinmassey.net/drafts/</loc>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/ad-infrastructure-management/</loc>
   </url><url>
     <loc>https://gavinmassey.net/tags/</loc>
   </url>

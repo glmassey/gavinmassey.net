@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="In a virtual lab environment, often you will need a network device to accurately reflect a real-world environment. pfSense is a good option and is easy to use.
+1. Download pfSense Image Visit pfSense Download Page: Go to the pfSense download page. Select Version and Architecture: Choose the latest stable release and select the architecture that matches your system (most likely AMD64). Select Installer Type: Choose the installer type. For VMware, the CD Image (ISO) installer is typically used.">  
+
+  <title>
+    
+      How to Set Up pfSense on VMware Workstation Pro
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>How to Set Up pfSense on VMware Workstation Pro</h1>
+
+    
+
+    <p>In a virtual lab environment, often you will need a network device to accurately reflect a real-world environment.  pfSense is a good option and is easy to use.</p>
+<h4 id="1-download-pfsense-image">1. Download pfSense Image</h4>
+<ol>
+<li><strong>Visit pfSense Download Page:</strong> Go to the <a href="https://www.pfsense.org/download/">pfSense download page</a>.</li>
+<li><strong>Select Version and Architecture:</strong> Choose the latest stable release and select the architecture that matches your system (most likely AMD64).</li>
+<li><strong>Select Installer Type:</strong> Choose the installer type. For VMware, the CD Image (ISO) installer is typically used.</li>
+<li><strong>Download Image:</strong> Click on the download link for the ISO image and save it to your computer.</li>
+</ol>
+<h4 id="2-create-a-new-virtual-machine-in-vmware">2. Create a New Virtual Machine in VMware</h4>
+<ol>
+<li><strong>Open VMware Workstation Pro:</strong> Launch the application.</li>
+<li><strong>Create New Virtual Machine:</strong> Select &ldquo;Create a New Virtual Machine&rdquo; or use &ldquo;File&rdquo; &gt; &ldquo;New Virtual Machine.&rdquo;</li>
+<li><strong>Installation Method:</strong> Choose &ldquo;Installer disc image file (iso)&rdquo; and browse to the pfSense ISO file.</li>
+<li><strong>Guest Operating System:</strong> Select &ldquo;Other&rdquo; and then &ldquo;FreeBSD&rdquo; (version 14).</li>
+<li><strong>Name and Location:</strong> Name your VM and choose a storage location for VM files.</li>
+<li><strong>Disk Capacity:</strong> Allocate disk space (10-20 GB should be sufficient) and choose single or multiple file storage.</li>
+<li><strong>Customize Hardware:</strong> Adjust RAM (at least 512 MB) and CPU settings based on your system&rsquo;s capabilities. Also, add at least two network adapters (for WAN and LAN).</li>
+<li><strong>Complete Setup:</strong> Review settings and complete the VM creation.</li>
+</ol>
+<h4 id="3-install-pfsense">3. Install pfSense</h4>
+<ol>
+<li><strong>Start VM:</strong> Power on the VM, and it should boot from the ISO.</li>
+<li><strong>Install pfSense:</strong> Follow the on-screen instructions to install pfSense. The process is straightforward, with prompts guiding you through.</li>
+<li><strong>Reboot and Eject ISO:</strong> After installation, reboot the VM and disconnect the ISO from the virtual drive.</li>
+</ol>
+<h4 id="4-initial-configuration-of-pfsense">4. Initial Configuration of pfSense</h4>
+<ol>
+<li><strong>Access pfSense Web Interface:</strong> Once pfSense has booted, it will display the LAN IP address in the console. Use a web browser from a VM or computer on the same network to access the pfSense web interface.</li>
+<li><strong>Run Setup Wizard:</strong> The first time you access the web interface, you&rsquo;ll be prompted to run the setup wizard.</li>
+<li><strong>Configure General Information:</strong> Set hostname, domain, and primary DNS servers.</li>
+<li><strong>Configure WAN Interface:</strong> Set up the WAN interface with the appropriate settings (DHCP, static IP, PPPoE, etc.).</li>
+<li><strong>Configure LAN Interface:</strong> Set the LAN IP address and subnet mask.</li>
+<li><strong>Set Admin Password:</strong> Change the admin password from the default to a strong, secure password.</li>
+<li><strong>Reload Configuration:</strong> After completing the setup wizard, pfSense will apply the configuration and reload.</li>
+</ol>
+<h4 id="5-additional-configurations">5. Additional Configurations</h4>
+<ul>
+<li><strong>Configure Firewall and NAT Rules:</strong> Set up firewall rules to control traffic between networks.</li>
+<li><strong>Set Up DHCP Server:</strong> If needed, configure the DHCP server for the LAN interface.</li>
+<li><strong>Create VPNs, VLANs, etc.:</strong> Depending on your requirements, set up additional features like VPNs, VLANs, traffic shaping, etc.</li>
+</ul>
+<h4 id="6-install-vmware-tools-on-pfsense">6. Install VMware Tools on pfSense</h4>
+<ol>
+<li>
+<p><strong>Access pfSense Shell:</strong> From the pfSense console menu, access the shell (option 8).</p>
+</li>
+<li>
+<p><strong>Install VMware Tools:</strong> Run the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg update
+</span></span><span style="display:flex;"><span>pkg install open-vm-tools
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Reboot pfSense:</strong> After installation, reboot pfSense.</p>
+</li>
+</ol>
+<h4 id="7-finalize-configuration">7. Finalize Configuration</h4>
+<ul>
+<li><strong>Review Settings:</strong> Go through the settings to ensure everything is configured as per your requirements.</li>
+<li><strong>Backup Configuration:</strong> It&rsquo;s a good practice to backup your pfSense configuration once everything is set up.</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>Always use a strong and unique password for the admin account.</li>
+<li>Regularly update pfSense to the latest version for security and stability.</li>
+<li>Document your configuration settings for future reference.</li>
+<li>Adjust firewall rules according to your network&rsquo;s security policy and requirements.</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

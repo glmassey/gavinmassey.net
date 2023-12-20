@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="1. On the Remote Host Enable PowerShell Remoting: You can enable PowerShell Remoting on the remote host by running the following command in an elevated PowerShell session (Run as Administrator):
+Enable-PSRemoting -Force Allow Incoming Connections: Ensure that the Windows Firewall (or any other firewall software you may be using) allows incoming connections for PowerShell Remoting. If using the Windows Firewall, this command will help:
+Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any 2. On the Client Machine (from where you want to initiate the connection) Trust the Remote Host: If your remote host is not part of a domain or the certificate used by the remote host is not trusted, you need to add the remote host to your list of trusted hosts:">  
+
+  <title>
+    
+      Setting up PowerShell Remoting
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Setting up PowerShell Remoting</h1>
+
+    
+
+    <h4 id="1-on-the-remote-host">1. <strong>On the Remote Host</strong></h4>
+<ul>
+<li>
+<p><strong>Enable PowerShell Remoting</strong>: You can enable PowerShell Remoting on the remote host by running the following command in an elevated PowerShell session (Run as Administrator):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Enable-PSRemoting -Force
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Allow Incoming Connections</strong>: Ensure that the Windows Firewall (or any other firewall software you may be using) allows incoming connections for PowerShell Remoting. If using the Windows Firewall, this command will help:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="2-on-the-client-machine-from-where-you-want-to-initiate-the-connection">2. <strong>On the Client Machine</strong> (from where you want to initiate the connection)</h4>
+<ul>
+<li>
+<p><strong>Trust the Remote Host</strong>: If your remote host is not part of a domain or the certificate used by the remote host is not trusted, you need to add the remote host to your list of trusted hosts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Item WSMan<span style="color:#960050;background-color:#1e0010">:</span>\localhost\Client\TrustedHosts -Value <span style="color:#e6db74">&#39;RemotePCName&#39;</span>
+</span></span></code></pre></div><p>Replace <code>'RemotePCName'</code> with the name or IP address of the remote host. Use <code>&quot;*&quot;</code> to trust all hosts (not recommended for security reasons).</p>
+</li>
+</ul>
+<h3 id="using-powershell-remoting">Using PowerShell Remoting</h3>
+<ul>
+<li>
+<p><strong>Establish a Session</strong>: You can start a remote session (often called a PSSession) using the <code>Enter-PSSession</code> cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Enter-PSSession -ComputerName RemotePCName -Credential RemotePCName\Administrator
+</span></span></code></pre></div><p>This will prompt you for the password for the <code>Administrator</code> account on <code>RemotePCName</code>. If you&rsquo;re using a different account, replace <code>Administrator</code> with the appropriate username.</p>
+</li>
+<li>
+<p><strong>Run Commands</strong>: Once in the session, you can run commands as if you were on the remote machine. Any command you type is executed on the remote host.</p>
+</li>
+<li>
+<p><strong>Exit the Session</strong>: When you&rsquo;re done, use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Exit-PSSession
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Invoke a Single Command</strong>: If you just want to run a single command on the remote host without entering into a full session, use the <code>Invoke-Command</code> cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-Command -ComputerName RemotePCName -Credential RemotePCName\Administrator -ScriptBlock { Get-Process }
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="tips">Tips</h3>
+<ol>
+<li>
+<p><strong>Use Sessions for Multiple Commands</strong>: If you&rsquo;re planning to run multiple commands on a remote host, it&rsquo;s more efficient to start a PSSession and run your commands within it. This way, you establish the connection once and use it for multiple commands.</p>
+</li>
+<li>
+<p><strong>Security Considerations</strong>: Remoting opens up a communication channel between the client and remote host. Always ensure you trust the networks you&rsquo;re operating on. When possible, use HTTPS for remoting to encrypt the communication.</p>
+</li>
+<li>
+<p><strong>WSMan vs. SSH</strong>: By default, PowerShell remoting uses the WSMan protocol. However, starting from PowerShell 7, you can use SSH as a transport for PowerShell remoting, which can be more secure and compatible across platforms.</p>
+</li>
+<li>
+<p><strong>Compatibility</strong>: Some older systems or non-Windows platforms might require additional setup or have certain caveats for PowerShell remoting.</p>
+</li>
+</ol>
+<p>Remember, always be cautious when performing operations on remote machines to avoid unintended consequences. Always double-check your commands, especially if they have the potential to change configurations or delete data.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

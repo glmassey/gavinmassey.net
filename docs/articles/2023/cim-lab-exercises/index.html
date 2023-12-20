@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Lab Exercise 1: System Overview Objective: Get an overview of your computer system&rsquo;s properties.
+Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.
+Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&rsquo;s name, manufacturer, model, and the total physical memory.
+Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.">  
+
+  <title>
+    
+      WIM and CIM Lab Exercises
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>WIM and CIM Lab Exercises</h1>
+
+    
+
+    <h2 id="lab-exercise-1-system-overview">Lab Exercise 1: System Overview</h2>
+<p><strong>Objective:</strong> Get an overview of your computer system&rsquo;s properties.</p>
+<ol>
+<li>
+<p><strong>Task:</strong> Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName CIM_OperatingSystem</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Fetch the computer&rsquo;s name, manufacturer, model, and the total physical memory.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_ComputerSystem</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-2-disk-analysis">Lab Exercise 2: Disk Analysis</h3>
+<p><strong>Objective:</strong> Analyze the disk space usage and health.</p>
+<ol>
+<li>
+<p><strong>Task:</strong> List all logical disks, including their size, free space, and filesystem type.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_LogicalDisk</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Fetch the details of all partitions on your main hard drive, including partition type and size.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_DiskPartition</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-3-process-and-services">Lab Exercise 3: Process and Services</h3>
+<p><strong>Objective:</strong> Understand the processes and services running on your system.</p>
+<ol>
+<li>
+<p><strong>Task:</strong> Display all currently running processes on your machine.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_Process</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Retrieve a list of all services on your machine, including their status (running, stopped, etc.).</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_Service</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Try starting or stopping a specific service. (Be cautious and select a non-critical service.)</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Invoke-CimMethod -ClassName Win32_Service -MethodName 'StartService' -Filter &quot;Name='YourServiceName'&quot;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-4-network-configuration">Lab Exercise 4: Network Configuration</h3>
+<p><strong>Objective:</strong> Explore the network configuration and status of your computer.</p>
+<ol>
+<li>
+<p><strong>Task:</strong> List all the network adapters on your system.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_NetworkAdapter</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Fetch details about the IP configuration of your primary network adapter.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration | Where-Object { $_.IPEnabled -eq $true }</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-5-system-health-and-configuration">Lab Exercise 5: System Health and Configuration</h3>
+<p><strong>Objective:</strong> Examine the hardware components and system configurations.</p>
+<ol>
+<li>
+<p><strong>Task:</strong> Display details about the system&rsquo;s BIOS.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_BIOS</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Retrieve detailed information about physical memory (RAM) modules.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_PhysicalMemory</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Fetch the system&rsquo;s current power settings and configurations.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_PowerPlan</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-6-system-overview-and-data-export">Lab Exercise 6: System Overview and Data Export</h3>
+<p><strong>Objective:</strong> Obtain a system overview and export the data for further analysis.</p>
+<ol>
+<li><strong>Task:</strong> Retrieve the computer&rsquo;s name, manufacturer, model, and total physical memory, then save the output to a CSV file.
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_ComputerSystem | Export-Csv -Path &quot;C:\path_to_your_directory\system_overview.csv&quot;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-7-disk-analysis-and-space-management">Lab Exercise 7: Disk Analysis and Space Management</h3>
+<p><strong>Objective:</strong> Analyze disk space and free up space by cleaning temporary files.</p>
+<ol>
+<li>
+<p><strong>Task:</strong> List all logical disks, their size, free space, and filesystem type, and then save this data to a CSV file.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_LogicalDisk | Export-Csv -Path &quot;C:\path_to_your_directory\disk_overview.csv&quot;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> If your C: drive has less than 10GB free, attempt to clean the temp directory.</p>
+<ul>
+<li><strong>Commands:</strong>
+<ol>
+<li>Check space: <code>$space = (Get-CimInstance -ClassName Win32_LogicalDisk | Where-Object { $_.DeviceID -eq 'C:' }).FreeSpace</code></li>
+<li>Clean temp if necessary: <code>if ($space -lt 10GB) { Remove-Item &quot;C:\Windows\Temp\*&quot; -Recurse -Force }</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-8-remote-process-management">Lab Exercise 8: Remote Process Management</h3>
+<p><strong>Objective:</strong> Remotely monitor and control processes on another machine (ensure PS remoting is enabled on the remote machine).</p>
+<ol>
+<li>
+<p><strong>Task:</strong> Display the top 5 memory-consuming processes from a remote machine named &lsquo;RemotePC&rsquo;.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_Process -ComputerName &quot;RemotePC&quot; | Sort-Object WS -Descending | Select-Object -First 5</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Task:</strong> Remotely stop a specific non-critical process (e.g., <code>notepad.exe</code>) on &lsquo;RemotePC&rsquo;.</p>
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_Process -ComputerName &quot;RemotePC&quot; | Where-Object { $_.Name -eq 'notepad.exe' } | Invoke-CimMethod -MethodName &quot;Terminate&quot;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-9-remote-network-configuration-inspection">Lab Exercise 9: Remote Network Configuration Inspection</h3>
+<p><strong>Objective:</strong> Examine the network configuration of a remote computer.</p>
+<ol>
+<li><strong>Task:</strong> Fetch details about the IP configuration of the primary network adapter of a computer named &lsquo;RemotePC&rsquo; and save this to a CSV.
+<ul>
+<li><strong>Command Hint:</strong> <code>Get-CimInstance -ClassName Win32_NetworkAdapterConfiguration -ComputerName &quot;RemotePC&quot; | Where-Object { $_.IPEnabled -eq $true } | Export-Csv -Path &quot;C:\path_to_your_directory\remote_network_config.csv&quot;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="lab-exercise-10-remote-system-health-checks-and-action">Lab Exercise 10: Remote System Health Checks and Action</h3>
+<p><strong>Objective:</strong> Monitor hardware health remotely and take action based on findings.</p>
+<ol>
+<li><strong>Task:</strong> Check the status of a remote system&rsquo;s battery. If its status is not &ldquo;OK&rdquo;, send an email alert.
+<ul>
+<li><strong>Commands:</strong>
+<ol>
+<li>Check battery: <code>$batteryStatus = (Get-CimInstance -ClassName Win32_Battery -ComputerName &quot;RemotePC&quot;).Status</code></li>
+<li>Send email if necessary: <code>if ($batteryStatus -ne &quot;OK&quot;) { Send-MailMessage -From 'your_email@example.com' -To 'admin_email@example.com' -Subject 'Battery Alert' -Body 'The remote PC battery is not OK.' -SmtpServer 'your_smtp_server' }</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

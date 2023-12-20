@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. It codifies cloud APIs into declarative configuration files. This article will guide you through launching an Amazon EC2 instance and configuring its security group using Terraform.
+Pre-requisites Before starting, ensure you have the following:
+Set up AWS Environment: Have an AWS account with necessary permissions. Install Terraform: Download and install the Terraform CLI.">  
+
+  <title>
+    
+      Getting Started With Terraform
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Getting Started With Terraform</h1>
+
+    
+
+    <h2 id="introduction">Introduction</h2>
+<p><a href="https://www.terraform.io/">Terraform</a> is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. It codifies cloud APIs into declarative configuration files. This article will guide you through launching an Amazon EC2 instance and configuring its security group using Terraform.</p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>Before starting, ensure you have the following:</p>
+<ol>
+<li><strong>Set up AWS Environment</strong>: Have an AWS account with necessary permissions.</li>
+<li><strong>Install Terraform</strong>: Download and install the <a href="https://www.terraform.io/downloads.html">Terraform CLI</a>.</li>
+<li><strong>Install AWS Command Line Interface</strong>: Follow the instructions <a href="https://aws.amazon.com/cli/">here</a> to install and configure the AWS CLI.</li>
+</ol>
+<h2 id="basic-terraform-workflow">Basic Terraform Workflow</h2>
+<p>The basic Terraform workflow consists of the following steps:</p>
+<ul>
+<li><code>terraform init</code>: Initializes a new or existing Terraform configuration.</li>
+<li><code>terraform plan</code>: Creates an execution plan, showing what actions Terraform will perform.</li>
+<li><code>terraform apply</code>: Applies the changes required to reach the desired state of the configuration.</li>
+<li><code>terraform destroy</code>: Removes all resources managed by Terraform.</li>
+</ul>
+<h2 id="launching-an-ec2-instance-with-terraform">Launching an EC2 Instance with Terraform</h2>
+<h3 id="step-1-create-a-terraform-configuration-file">Step 1: Create a Terraform Configuration File</h3>
+<p>Create a file named <code>main.tf</code> and add the following content to define your AWS provider and the EC2 instance resource:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;aws&#34;</span> {
+</span></span><span style="display:flex;"><span>  region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;us-west-2&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_instance&#34; &#34;example&#34;</span> {
+</span></span><span style="display:flex;"><span>  ami           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ami-0c55b159cbfafe1f0&#34;</span>
+</span></span><span style="display:flex;"><span>  instance_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;t2.micro&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Replace the <code>ami</code> with the appropriate AMI ID for your region.</p>
+<h3 id="step-2-initialize-terraform">Step 2: Initialize Terraform</h3>
+<p>Run the following command in your terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform init
+</span></span></code></pre></div><p>This command will initialize the project and download the necessary plugins.</p>
+<h3 id="step-3-plan-and-apply">Step 3: Plan and Apply</h3>
+<p>Execute the plan and apply commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform plan
+</span></span><span style="display:flex;"><span>terraform apply
+</span></span></code></pre></div><p>Confirm the actions by typing <code>yes</code> when prompted.</p>
+<h3 id="step-4-accessing-the-instance">Step 4: Accessing the Instance</h3>
+<p>Once the instance is launched, you can access it using SSH. The public IP will be displayed as an output of the <code>terraform apply</code> command.</p>
+<h3 id="step-5-clean-up">Step 5: Clean Up</h3>
+<p>To remove the resources:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform destroy
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Terraform is a key tool in modern cloud infrastructure management. By following these steps, you have launched your first AWS EC2 instance using Terraform. Continue exploring Terraform&rsquo;s capabilities to manage and automate more complex cloud infrastructures.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

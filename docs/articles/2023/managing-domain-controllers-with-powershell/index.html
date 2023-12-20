@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &#34;Domain FSMO Roles:&#34; Write-Host &#34;PDC Emulator: $($domain.">  
+
+  <title>
+    
+      Managing Domain Controllers With PowerShell
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Managing Domain Controllers With PowerShell</h1>
+
+    
+
+    <h2 id="important-considerations">Important considerations</h2>
+<ol>
+<li>Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected.</li>
+<li>Alway create a backup before making any changes.</li>
+</ol>
+<h2 id="how-do-you-verify-which-domain-controller-has-the-fsmo-roles">How do you verify which domain controller has the FSMO roles</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Verifying FSMO Roles Assignment</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This module is necessary to run Active Directory-related cmdlets</span>
+</span></span><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve domain information</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command gets information about the current domain</span>
+</span></span><span style="display:flex;"><span>$domain = Get-ADDomain
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve forest information</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command gets information about the forest</span>
+</span></span><span style="display:flex;"><span>$forest = Get-ADForest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display FSMO roles for the domain</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Domain FSMO Roles:&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;PDC Emulator: </span>$($domain.PDCEmulator)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;RID Master: </span>$($domain.RIDMaster)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Infrastructure Master: </span>$($domain.InfrastructureMaster)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display FSMO roles for the forest</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SchemaMaster and DomainNamingMaster roles are forest-wide roles</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">Forest FSMO Roles:&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Schema Master: </span>$($forest.SchemaMaster)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Domain Naming Master: </span>$($forest.DomainNamingMaster)<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h2 id="how-to-transfer-fsmo-roles-from-an-existing-domain-controller">How to transfer FSMO roles from an existing domain controller</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Transferring FSMO Roles</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Specify the new domain controller</span>
+</span></span><span style="display:flex;"><span>$newDC = <span style="color:#e6db74">&#39;slc-dc2&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transferring FSMO Roles to a New Domain Controller Individually</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ensure you are a member of all necessary groups, such as domain admins and schema admins</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This is necessary for performing Active Directory-related operations</span>
+</span></span><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Specify the new domain controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This is the target DC to which FSMO roles will be transferred</span>
+</span></span><span style="display:flex;"><span>$newDC = <span style="color:#e6db74">&#39;slc-dc2&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transfer the PDCEmulator role</span>
+</span></span><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity $newDC -OperationMasterRole PDCEmulator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transfer the RIDMaster role</span>
+</span></span><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity $newDC -OperationMasterRole RIDMaster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transfer the InfrastructureMaster role</span>
+</span></span><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity $newDC -OperationMasterRole InfrastructureMaster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transfer the DomainNamingMaster role</span>
+</span></span><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity $newDC -OperationMasterRole DomainNamingMaster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transfer the SchemaMaster role, please not this might require the use of MMC after registering the</span>
+</span></span><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity $newDC -OperationMasterRole SchemaMaster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Each command above moves one of the FSMO roles to the specified domain controller ($newDC)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The roles are: PDCEmulator, RIDMaster, InfrastructureMaster, SchemaMaster, and DomainNamingMaster</span>
+</span></span></code></pre></div><h2 id="using-mmc-to-transfer-the-schema-master-roll">Using MMC to transfer the Schema Master Roll</h2>
+<p>The failure to transfer the Schema Master role might be due to specific requirements that are unique to this role. Here are some steps and considerations to help resolve the issue:</p>
+<ol>
+<li>
+<p><strong>Register the Schema MMC Snap-In</strong>:</p>
+<ul>
+<li>
+<p>The Schema Master role is managed differently from the other FSMO roles. It requires the use of the Active Directory Schema snap-in, which is not registered by default.</p>
+</li>
+<li>
+<p>To register it, open an elevated PowerShell prompt and run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>regsvr32 schmmgmt.dll
+</span></span></code></pre></div></li>
+<li>
+<p>After registering, you can use the <code>mmc</code> command to open the Microsoft Management Console, then add the Active Directory Schema snap-in.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Schema Master Role Transfer via GUI</strong>:</p>
+<ul>
+<li>With the Schema snap-in added in MMC, connect to the current Schema Master (<code>perth-dc1.docodo.local</code>).</li>
+<li>Right-click on the Active Directory Schema node and select &ldquo;Change Active Directory Domain Controller&rdquo;.</li>
+<li>Select the new target domain controller (<code>slc-dc2.docodo.local</code>) and then right-click on the Active Directory Schema node again to select &ldquo;Operations Master&rdquo;. Here, you can transfer the role.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ensure Connection to the Correct Domain Controller</strong>:</p>
+<ul>
+<li>Make sure you&rsquo;re connected to the domain controller that currently holds the Schema Master role when trying to transfer it.</li>
+</ul>
+</li>
+</ol>
+<h2 id="how-to-seize-fsmo-roles-from-a-failed-domain-controller">How to seize FSMO roles from a failed domain controller</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Seizing FSMO Roles from a Failed Domain Controller</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Specify the domain controller to seize the roles</span>
+</span></span><span style="display:flex;"><span>$failedDC = <span style="color:#e6db74">&#39;slc-dc1&#39;</span>
+</span></span><span style="display:flex;"><span>$newDC = <span style="color:#e6db74">&#39;slc-dc2&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Seize FSMO roles</span>
+</span></span><span style="display:flex;"><span>Move-ADDirectoryServerOperationMasterRole -Identity $newDC -OperationMasterRole <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span> -Force
+</span></span></code></pre></div><h2 id="how-to-make-a-domain-controller-a-global-catalog">How to make a domain controller a global catalog</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Making a Domain Controller a Global Catalog</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Specify the domain controller</span>
+</span></span><span style="display:flex;"><span>$dcName = <span style="color:#e6db74">&#39;slc-dc1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve the NTDS settings object for the domain controller</span>
+</span></span><span style="display:flex;"><span>$ntds = Get-ADObject -Filter { ObjectClass <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#39;nTDSDSA&#39;</span> } -SearchBase <span style="color:#e6db74">&#34;CN=</span>$dcName<span style="color:#e6db74">,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=YourDomain,DC=com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Modify the object to set it as a Global Catalog</span>
+</span></span><span style="display:flex;"><span>Set-ADObject -Identity $ntds <span style="color:#f92672">-Replace</span> @{options=<span style="color:#e6db74">&#39;1&#39;</span>}
+</span></span></code></pre></div><h2 id="how-to-verify-replication-using-powershell">How to verify replication using PowerShell</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Verifying Replication Status</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span>Import-Module ActiveDirectory
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check replication status for the domain controllers</span>
+</span></span><span style="display:flex;"><span>Get-ADReplicationPartnerMetadata -Target <span style="color:#e6db74">&#39;slc-dc1&#39;</span> -Scope Domain
+</span></span><span style="display:flex;"><span>Get-ADReplicationPartnerMetadata -Target <span style="color:#e6db74">&#39;slc-dc2&#39;</span> -Scope Domain
+</span></span></code></pre></div><h2 id="how-to-install-adds-using-powershell-and-promote-to-domain-controller">How to install ADDS using PowerShell, and promote to domain controller</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Installing Active Directory Domain Services (AD DS) and Promoting Server to Domain Controller</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Server Manager module</span>
+</span></span><span style="display:flex;"><span>Import-Module ServerManager
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install AD DS role</span>
+</span></span><span style="display:flex;"><span>Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span>Import-Module ADDSDeployment
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Promote the server to a domain controller</span>
+</span></span><span style="display:flex;"><span>Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -DatabasePath <span style="color:#e6db74">&#34;C:\Windows\NTDS&#34;</span> -DomainName <span style="color:#e6db74">&#34;docodo.local&#34;</span> -InstallDns:$true -LogPath <span style="color:#e6db74">&#34;C:\Windows\NTDS&#34;</span> -NoRebootOnCompletion:$false -SiteName <span style="color:#e6db74">&#34;Default-First-Site-Name&#34;</span> -SysvolPath <span style="color:#e6db74">&#34;C:\Windows\SYSVOL&#34;</span> -Force:$true
+</span></span></code></pre></div><h2 id="how-to-demote-a-domain-controller">How to demote a domain controller</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Remotely Demoting a Domain Controller</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Import Active Directory module</span>
+</span></span><span style="display:flex;"><span>Import-Module ADDSDeployment
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Specify the domain controller to be demoted</span>
+</span></span><span style="display:flex;"><span>$targetDC = <span style="color:#e6db74">&#39;perth-dc1&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Demote the specified domain controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The -ComputerName parameter allows specifying the DC to demote.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The -DemoteOperationMasterRole and -RemoveApplicationPartition parameters handle FSMO roles and application partitions.</span>
+</span></span><span style="display:flex;"><span>Invoke-Command -ComputerName $targetDC -ScriptBlock { Uninstall-ADDSDomainController }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -ForceRemoval and -Confirm:$false are used for a non-interactive demotion.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Be cautious with these options, as they can have significant impacts.</span>
+</span></span></code></pre></div><h2 id="active-directory-health-check">Active Directory Health Check</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Active Directory Health Check Script</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run DCDiag to analyze the state of domain controllers</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command checks the local domain controller&#39;s health</span>
+</span></span><span style="display:flex;"><span>dcdiag
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To check the health of all domain controllers in the forest, use:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># dcdiag /e</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - &#39;dcdiag&#39; without parameters checks the local DC.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - &#39;dcdiag /e&#39; checks all DCs in the enterprise (forest).</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - Review the output for any errors or warnings.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check Replication Status with RepAdmin</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command provides a summary of replication status across domain controllers</span>
+</span></span><span style="display:flex;"><span>repadmin /replsummary
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Optional: Check SYSVOL and Netlogon share availability</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This command lists all shared resources on the server</span>
+</span></span><span style="display:flex;"><span>net share
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remember to run these commands in a PowerShell window with administrative privileges.</span>
+</span></span></code></pre></div>
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

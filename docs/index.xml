@@ -10,163 +10,198 @@
     <atom:link href="https://gavinmassey.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Active Directory Domain Services (ADDS) Management</title>
-      <link>https://gavinmassey.net/articles/adds-management/</link>
+      <link>https://gavinmassey.net/articles/2023/adds-management/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/adds-management/</guid>
+      <guid>https://gavinmassey.net/articles/2023/adds-management/</guid>
       <description>Introduction Active Directory Domain Services (ADDS) is a foundational aspect of managing Windows-based networks, offering robust tools for managing users, computers, and other resources within an organization. This comprehensive guide delves into various key aspects of ADDS management, providing insights and practical instructions on how to efficiently use command line tools, PowerShell, and the Best Practices Analyzer (BPA) to maintain and optimize your Active Directory environment.&#xA;Firstly, we explore how to check for replication errors in your Active Directory environment, using both command line tools like dcdiag and repadmin, and PowerShell commands.</description>
     </item>
     <item>
-      <title>Domain Controller vs Global Catalog in Active Directory</title>
-      <link>https://gavinmassey.net/articles/global-catalog/</link>
+      <title>Demystifying PowerShell&#39;s Parameter Binding: How Objects Match Up to Cmdlet Parameters</title>
+      <link>https://gavinmassey.net/articles/2023/parameter-binding/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/global-catalog/</guid>
+      <guid>https://gavinmassey.net/articles/2023/parameter-binding/</guid>
+      <description>PowerShell&amp;rsquo;s true power lies in its object-oriented nature and the ability to pipe objects from one cmdlet to another. Understanding how PowerShell matches piped object data to cmdlet parameters is crucial for writing efficient and effective scripts. This article delves into the algorithm behind this matching process and how you can anticipate it using the Get-Help documentation.&#xA;Understanding Parameter Binding in PowerShell When you pipe data from one cmdlet to another in PowerShell, the system uses a process called parameter binding to match the piped object data to the parameters of the receiving cmdlet.</description>
+    </item>
+    <item>
+      <title>Domain Controller vs Global Catalog in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/global-catalog/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/global-catalog/</guid>
       <description>In Microsoft&amp;rsquo;s Active Directory (AD), Domain Controllers (DCs) and Global Catalogs (GCs) are crucial components, each with distinct roles and functions.&#xA;Domain Controller (DC) Primary Role: Handles authentication, authorization, and directory services within its domain. Data Scope: Manages the full Active Directory database for its domain, containing detailed information for each object. Functionality: Responds to security authentication requests, manages user and computer accounts, and enforces security policies. Replication: Every DC can update the directory and replicate changes to other DCs, ensuring network-wide consistency.</description>
     </item>
     <item>
       <title>Getting Started With Terraform</title>
-      <link>https://gavinmassey.net/articles/getting-started-with-terraform/</link>
+      <link>https://gavinmassey.net/articles/2023/getting-started-with-terraform/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/getting-started-with-terraform/</guid>
+      <guid>https://gavinmassey.net/articles/2023/getting-started-with-terraform/</guid>
       <description>Introduction Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. It codifies cloud APIs into declarative configuration files. This article will guide you through launching an Amazon EC2 instance and configuring its security group using Terraform.&#xA;Pre-requisites Before starting, ensure you have the following:&#xA;Set up AWS Environment: Have an AWS account with necessary permissions. Install Terraform: Download and install the Terraform CLI.</description>
     </item>
     <item>
       <title>GPO Management</title>
-      <link>https://gavinmassey.net/articles/group-policy-object-management/</link>
+      <link>https://gavinmassey.net/articles/2023/group-policy-object-management/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/group-policy-object-management/</guid>
+      <guid>https://gavinmassey.net/articles/2023/group-policy-object-management/</guid>
       <description>Group Policy Objects (GPOs) are a pivotal component in Windows environments for efficient system administration and security management. This comprehensive guide dives into the nuances of GPO management, addressing common questions and providing practical exercises to enhance your understanding and skills.&#xA;From the basics of Active Directory (AD) structure to advanced topics like GPO inheritance and loopback processing, we cover a wide array of subjects critical for IT professionals. Whether you&amp;rsquo;re looking to refine your existing knowledge or starting from scratch, this article offers valuable insights into optimizing your Windows network using GPOs.</description>
     </item>
     <item>
       <title>Guide to Monitoring AD DS Sites and Replication using PowerShell</title>
-      <link>https://gavinmassey.net/articles/guide-to-monitoring-ad-ds-sites-and-replication/</link>
+      <link>https://gavinmassey.net/articles/2023/guide-to-monitoring-ad-ds-sites-and-replication/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/guide-to-monitoring-ad-ds-sites-and-replication/</guid>
+      <guid>https://gavinmassey.net/articles/2023/guide-to-monitoring-ad-ds-sites-and-replication/</guid>
       <description>Overview This guide provides PowerShell commands for effective monitoring of Active Directory Domain Services (AD DS) Sites and Replication, ensuring operational health and efficiency.&#xA;Preparing the Environment Initial Setup: Begin on a generic server, for example, Server01. Open Windows PowerShell to execute the following commands. Commands for Monitoring Replication Recalculate Inbound Replication Topology:&#xA;Repadmin /kcc Recalculates the inbound replication topology for Server01. Display Replication Status:&#xA;Repadmin /showrepl Shows the replication status for each domain controller.</description>
     </item>
     <item>
       <title>How to Set Up pfSense on VMware Workstation Pro</title>
-      <link>https://gavinmassey.net/articles/configuring-pfsense-router/</link>
+      <link>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/configuring-pfsense-router/</guid>
+      <guid>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</guid>
       <description>In a virtual lab environment, often you will need a network device to accurately reflect a real-world environment. pfSense is a good option and is easy to use.&#xA;1. Download pfSense Image Visit pfSense Download Page: Go to the pfSense download page. Select Version and Architecture: Choose the latest stable release and select the architecture that matches your system (most likely AMD64). Select Installer Type: Choose the installer type. For VMware, the CD Image (ISO) installer is typically used.</description>
     </item>
     <item>
       <title>How to Set Up VyOS on VMware Workstation Pro</title>
-      <link>https://gavinmassey.net/articles/configuring-vyos-firewalls/</link>
+      <link>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/configuring-vyos-firewalls/</guid>
+      <guid>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</guid>
       <description>1. Download VyOS ISO Visit VyOS Download Page: Go to VyOS download page. Select Version: Choose the latest stable release or a version that suits your needs. Download ISO: Click on the download link for the ISO image and save it to your computer. 2. Create a New Virtual Machine in VMware Open VMware Workstation Pro: Launch the VMware Workstation Pro application. Create New Virtual Machine: Select &amp;ldquo;Create a New Virtual Machine&amp;rdquo; or use &amp;ldquo;File&amp;rdquo; &amp;gt; &amp;ldquo;New Virtual Machine.</description>
     </item>
     <item>
       <title>Introduction to Trusts in Active Directory</title>
-      <link>https://gavinmassey.net/articles/introduction-to-trusts-in-ad/</link>
+      <link>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/introduction-to-trusts-in-ad/</guid>
+      <guid>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</guid>
       <description>In the realm of network security and management, Trusts within Active Directory (AD) are pivotal. They are the backbone of domain interactions, enabling users in one domain to access resources in another. This guide delves into the intricacies of these trusts, outlining their types, implementations, and best practices for secure and efficient network management.&#xA;Types of Trusts in Active Directory Active Directory trusts can be broadly categorized into several types, each serving a unique purpose in the network infrastructure:</description>
     </item>
     <item>
-      <title>Managing Domain Controllers Using PowerShell</title>
-      <link>https://gavinmassey.net/articles/managing-domain-controllers-with-powershell/</link>
+      <title>Managing Domain Controllers With PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/managing-domain-controllers-with-powershell/</guid>
+      <guid>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</guid>
       <description>Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &amp;#34;Domain FSMO Roles:&amp;#34; Write-Host &amp;#34;PDC Emulator: $($domain.</description>
     </item>
     <item>
       <title>Most Common GPO Use Cases</title>
-      <link>https://gavinmassey.net/articles/gpo-use-cases/</link>
+      <link>https://gavinmassey.net/articles/2023/gpo-use-cases/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/gpo-use-cases/</guid>
+      <guid>https://gavinmassey.net/articles/2023/gpo-use-cases/</guid>
       <description>Here is a list of common uses for GPOs to reference when setting up a Windows Environment.&#xA;User Settings Configuration:&#xA;Setting desktop backgrounds, screen savers, and other personalization options. Configuring browser settings, such as home pages, security settings, and bookmarks. Setting restrictions on control panel access, system settings, and software installation. Computer Configuration:&#xA;Managing security settings like password policies, account lockout policies, and Kerberos policies. Configuring Windows Firewall settings and security options.</description>
     </item>
     <item>
-      <title>PowerShell Remoting: A Practical Guide for Remote Administration</title>
-      <link>https://gavinmassey.net/articles/advanced-powershell-remoting/</link>
+      <title>PowerShell Quickstart Guide</title>
+      <link>https://gavinmassey.net/articles/2023/windows-powershell-quickstart-guide/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/advanced-powershell-remoting/</guid>
+      <guid>https://gavinmassey.net/articles/2023/windows-powershell-quickstart-guide/</guid>
+      <description>PowerShell Quickstart Guide 1. Introduction PowerShell is Microsoft&amp;rsquo;s task automation framework, combining command-line speed, the flexibility of scripting, and the power of a GUI-based admin tool. Whether you&amp;rsquo;re automating tasks, extracting and processing data, or managing systems, PowerShell is a versatile tool to know.&#xA;2. Launching PowerShell You can find PowerShell by searching for it in the Windows start menu. For administrative tasks, it&amp;rsquo;s advisable to run PowerShell as an administrator (right-click the application and select &amp;ldquo;Run as administrator&amp;rdquo;).</description>
+    </item>
+    <item>
+      <title>PowerShell Remoting: A Practical Guide for Remote Administration</title>
+      <link>https://gavinmassey.net/articles/2023/advanced-powershell-remoting/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/advanced-powershell-remoting/</guid>
       <description>PowerShell Remoting is a powerful feature for administering remote computers, allowing system administrators to run commands and manage systems from a distance. This guide presents practical exercises to help you leverage PowerShell Remoting for effective network management.&#xA;Exercise 1: Gathering Network Adapter Information Remotely Task: Retrieve Network Adapters from Multiple Computers Initiate from SLC-PC1 VM:&#xA;Begin by logging into the SLC-PC1 virtual machine. Discovering the Command:&#xA;Use the help *adapter* command on SLC-PC1 to find a relevant command for listing network adapters, identifying Get-NetAdapter.</description>
     </item>
     <item>
-      <title>Roles and Responsibilities of Domain Admins and Enterprise Admins in Active Directory</title>
-      <link>https://gavinmassey.net/articles/understanding-roles-of-domain-enterprise-admins-in-ad/</link>
+      <title>PowerShell Scripting: A Concise Guide</title>
+      <link>https://gavinmassey.net/articles/2023/powershell-scripting/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/understanding-roles-of-domain-enterprise-admins-in-ad/</guid>
+      <guid>https://gavinmassey.net/articles/2023/powershell-scripting/</guid>
+      <description>PowerShell, a combination of a command-line shell and scripting language, offers powerful tools to automate tasks across Windows, Linux, and macOS platforms. Let&amp;rsquo;s dive deep into the realm of PowerShell scripting, exploring advanced topics and techniques with extensive code samples.&#xA;1. Introduction to PowerShell Scripting Originally designed for Windows, PowerShell has extended its reach to other OS platforms, making it a must-know for IT professionals.&#xA;Setting Up the Environment&#xA;PowerShell is pre-installed on modern Windows versions.</description>
+    </item>
+    <item>
+      <title>Roles and Responsibilities of Domain Admins and Enterprise Admins in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/understanding-roles-of-domain-enterprise-admins-in-ad/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/understanding-roles-of-domain-enterprise-admins-in-ad/</guid>
       <description>In the intricate structure of an organization&amp;rsquo;s Active Directory, which spans across forests, domains, and organizational units, the roles of Domain Admins and Enterprise Admins are pivotal for maintaining both effective management and robust security.&#xA;Domain Admins: Masters of the Domain Authority and Responsibilities:&#xA;Domain Admins wield complete control within their specific domains. They are responsible for managing everything from user accounts and domain controllers to group policies and various domain-level resources.</description>
     </item>
     <item>
       <title>Securing Active Directory Domain Services</title>
-      <link>https://gavinmassey.net/articles/securing-adds/</link>
+      <link>https://gavinmassey.net/articles/2023/securing-adds/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/securing-adds/</guid>
+      <guid>https://gavinmassey.net/articles/2023/securing-adds/</guid>
       <description>Securing Active Directory Domain Services (ADDS) is a critical component of maintaining the integrity and security of an organization&amp;rsquo;s IT infrastructure. This guide provides a comprehensive overview of key security practices and configurations necessary for safeguarding your ADDS environment.&#xA;Implementing Strong Password Policies with PSO Understanding PSOs (Password Settings Objects): PSOs are essential for defining password policies specific to user or group accounts in Active Directory. They enable the enforcement of unique password policies that may differ from the domain&amp;rsquo;s default settings.</description>
     </item>
     <item>
-      <title>Steps to Add &#34;Open PowerShell as Administrator&#34; to Context Menu</title>
-      <link>https://gavinmassey.net/articles/create-open-powershell-as-admin-context-entry-windows-explorer/</link>
+      <title>Setting up PowerShell Remoting</title>
+      <link>https://gavinmassey.net/articles/2023/setting-up-remote-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/create-open-powershell-as-admin-context-entry-windows-explorer/</guid>
+      <guid>https://gavinmassey.net/articles/2023/setting-up-remote-powershell/</guid>
+      <description>1. On the Remote Host Enable PowerShell Remoting: You can enable PowerShell Remoting on the remote host by running the following command in an elevated PowerShell session (Run as Administrator):&#xA;Enable-PSRemoting -Force Allow Incoming Connections: Ensure that the Windows Firewall (or any other firewall software you may be using) allows incoming connections for PowerShell Remoting. If using the Windows Firewall, this command will help:&#xA;Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any 2. On the Client Machine (from where you want to initiate the connection) Trust the Remote Host: If your remote host is not part of a domain or the certificate used by the remote host is not trusted, you need to add the remote host to your list of trusted hosts:</description>
+    </item>
+    <item>
+      <title>Steps to Add &#34;Open PowerShell as Administrator&#34; to Context Menu</title>
+      <link>https://gavinmassey.net/articles/2023/create-open-powershell-as-admin-context-entry-windows-explorer/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/create-open-powershell-as-admin-context-entry-windows-explorer/</guid>
       <description>Update Registry Open Registry Editor:&#xA;Press Win + R to open the Run dialog. Type regedit and press Enter. If prompted by User Account Control (UAC), click Yes to continue. Navigate to the Context Menu Key:&#xA;In the Registry Editor, navigate to the following key:&#xA;HKEY_CLASSES_ROOT\Directory\Background\shell You can copy and paste this path into the Registry Editor&amp;rsquo;s address bar.&#xA;Create a New Key for the PowerShell Prompt:&#xA;Right-click on shell, select New &amp;gt; Key, and name it Open PowerShell here as Administrator.</description>
     </item>
     <item>
       <title>The Importance of Configuring Sites and Subnets in High-Bandwidth Networks</title>
-      <link>https://gavinmassey.net/articles/the-need-for-sites-and-subnets/</link>
+      <link>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/the-need-for-sites-and-subnets/</guid>
+      <guid>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</guid>
       <description>In the realm of modern network infrastructures, where high-bandwidth connections like 10 Gbps are common, it might seem that the configuration of traditional Active Directory (AD) sites and subnets is less relevant. However, this perception overlooks the myriad of benefits that a well-configured AD environment can bring, even in high-bandwidth scenarios. Here are several key reasons why configuring AD sites remains a crucial practice:&#xA;Enhanced Authentication and Resource Access: By defining AD sites, you ensure that client authentication occurs at the nearest domain controller.</description>
     </item>
     <item>
       <title>Understanding Static vs. Instance Methods and Members in PowerShell</title>
-      <link>https://gavinmassey.net/articles/accessing-static-methods-and-members-with-powershell/</link>
+      <link>https://gavinmassey.net/articles/2023/accessing-static-methods-and-members-with-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/accessing-static-methods-and-members-with-powershell/</guid>
+      <guid>https://gavinmassey.net/articles/2023/accessing-static-methods-and-members-with-powershell/</guid>
       <description>PowerShell&amp;rsquo;s integration with the .NET framework allows for leveraging a variety of functionalities via static and instance members of classes. Grasping the differences between these two types of members is key to proficient scripting and effective system administration.&#xA;Static Methods and Members What Are They? Static methods and members are associated with the class itself rather than any specific object created from the class. They can be accessed directly using the class name, eliminating the need to create an instance of the class.</description>
     </item>
     <item>
-      <title>VMware Virtual Networking Under the Hood</title>
-      <link>https://gavinmassey.net/articles/vmware-virtual-networking-behind-the-scenes/</link>
+      <title>Understanding the `param` Keyword in PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/understanding-param/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/vmware-virtual-networking-behind-the-scenes/</guid>
+      <guid>https://gavinmassey.net/articles/2023/understanding-param/</guid>
+      <description>In PowerShell, the param keyword is used to define parameters that a script or function can accept. Parameters allow you to pass values into scripts and functions, making them more flexible and reusable. By providing different arguments, users can tailor the behavior of a script or function without modifying its actual code.&#xA;Features of the param Block:&#xA;Positional Parameters: By default, parameters are positional, and values are assigned based on the order they appear in the param block.</description>
+    </item>
+    <item>
+      <title>VMware Virtual Networking Under the Hood</title>
+      <link>https://gavinmassey.net/articles/2023/vmware-virtual-networking-behind-the-scenes/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/vmware-virtual-networking-behind-the-scenes/</guid>
       <description>VMware Workstation performs a significant amount of low-level networking operations to manage virtual networks for virtual machines (VMs). To achieve this, it installs special drivers and creates virtual network devices that integrate with the host system&amp;rsquo;s networking stack. Here&amp;rsquo;s how VMware modifies your system to enable its networking capabilities:&#xA;Virtual Network Adapters: VMware installs virtual network adapters for different types of networks (like VMnet1 for Host-Only and VMnet8 for NAT by default).</description>
     </item>
     <item>
       <title>VMware Workstation Pro Networking FAQ</title>
-      <link>https://gavinmassey.net/articles/vmware-virtual-networking-faq/</link>
+      <link>https://gavinmassey.net/articles/2023/vmware-virtual-networking-faq/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/vmware-virtual-networking-faq/</guid>
+      <guid>https://gavinmassey.net/articles/2023/vmware-virtual-networking-faq/</guid>
       <description>Contents What does &amp;ldquo;Connect a Host Virtual Adapter to This Network&amp;rdquo; Mean? What IP Address Will the Host Virtual Adapter Receive? Why Does the Host Adapter Get an IP Outside the DHCP Range? Does a NAT Network Require a Host Virtual Adapter to Function? How Does VMware Handle NAT Without a Host Network Adapter? Does VMware Install Special Networking Drivers or Change the Network Stack? What does &amp;ldquo;Connect a Host Virtual Adapter to This Network&amp;rdquo; Mean?</description>
     </item>
     <item>
       <title>Why are DNS settings configured per interface?</title>
-      <link>https://gavinmassey.net/articles/why-different-dns-per-network-interface/</link>
+      <link>https://gavinmassey.net/articles/2023/why-different-dns-per-network-interface/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/why-different-dns-per-network-interface/</guid>
+      <guid>https://gavinmassey.net/articles/2023/why-different-dns-per-network-interface/</guid>
       <description>It is kind of complicated&amp;hellip;&#xA;In today&amp;rsquo;s interconnected world, efficient network management and configuration are crucial for maintaining robust and secure IT systems. One aspect of network configuration that often raises questions is the rationale behind setting up individual DNS (Domain Name System) configurations for each network interface. This practice, though seemingly complex, caters to the nuanced needs of diverse network environments – from simple home setups to intricate corporate networks.</description>
     </item>
     <item>
       <title>WIM and CIM Lab Exercises</title>
-      <link>https://gavinmassey.net/articles/cim-lab-exercises/</link>
+      <link>https://gavinmassey.net/articles/2023/cim-lab-exercises/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/cim-lab-exercises/</guid>
+      <guid>https://gavinmassey.net/articles/2023/cim-lab-exercises/</guid>
       <description>Lab Exercise 1: System Overview Objective: Get an overview of your computer system&amp;rsquo;s properties.&#xA;Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.&#xA;Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&amp;rsquo;s name, manufacturer, model, and the total physical memory.&#xA;Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.</description>
     </item>
     <item>
       <title>WIM, CIM Guide</title>
-      <link>https://gavinmassey.net/articles/wim-cim-quick-guide/</link>
+      <link>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/wim-cim-quick-guide/</guid>
+      <guid>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</guid>
       <description>1. Retrieve Basic Operating System Information This command fetches basic details about the operating system.&#xA;Get-CimInstance -ClassName CIM_OperatingSystem 2. List All Installed Services Retrieve a list of all services installed on the machine.&#xA;Get-CimInstance -ClassName Win32_Service 3. Get System BIOS Information Displays details about the system&amp;rsquo;s BIOS.&#xA;Get-CimInstance -ClassName Win32_BIOS 4. List All Running Processes Shows all currently running processes on the machine.&#xA;Get-CimInstance -ClassName Win32_Process 5. Check Disk Space Get details about logical disks, including free and used space.</description>
     </item>
     <item>
       <title>Simple VMware Windows Infrastructure Lab</title>
-      <link>https://gavinmassey.net/articles/simple-vmware-windows-infrastructure-lab/</link>
+      <link>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/simple-vmware-windows-infrastructure-lab/</guid>
+      <guid>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</guid>
       <description>Objective This guide provides step-by-step instructions to set up a virtual environment using PowerShell. It includes configuring one Virtual Machine as a Domain Controller (DC), another as an Application Server (APP server), and a Windows 10 Client.&#xA;1. Configure Server2022 as DC To set up the Domain Controller, execute the following commands in PowerShell:&#xA;# Configuring IP address for &amp;#39;Ethernet&amp;#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # Set DNS client server address post AD DS installation Set-DnsClientServerAddress -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -ServerAddresses 127.</description>
     </item>
     <item>
       <title>YAML Basics</title>
-      <link>https://gavinmassey.net/articles/yaml-basics/</link>
+      <link>https://gavinmassey.net/articles/2023/yaml-basics/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/yaml-basics/</guid>
+      <guid>https://gavinmassey.net/articles/2023/yaml-basics/</guid>
       <description>1. Structure:&#xA;YAML uses indentation (spaces, not tabs) to represent the structure, similar to Python. The number of spaces in the indentation is not fixed, but all elements of the list or map must be aligned. 2. Scalars (Strings, Numbers, Booleans):&#xA;Strings can be unquoted or enclosed in single (&#39;) or double quotes (&amp;quot;). Numbers are written as in most programming languages. Booleans are represented with true and false. 3. Lists (Arrays):</description>
     </item>
     <item>
@@ -178,23 +213,23 @@
     </item>
     <item>
       <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
-      <link>https://gavinmassey.net/articles/ad-forests-trees-sites/</link>
+      <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/ad-forests-trees-sites/</guid>
+      <guid>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</guid>
       <description>When navigating the complexities of Microsoft Active Directory (AD), it&amp;rsquo;s crucial to understand the fundamental building blocks of its architecture: forests, trees, and sites. These terms are often used interchangeably, but they refer to distinct elements within an AD environment.&#xA;Active Directory Forest An Active Directory Forest is the topmost level of the AD structure. Think of a forest as a security boundary within which users, computers, groups, and other objects are managed.</description>
     </item>
     <item>
       <title>BIND Troubleshooting Guide (Ubuntu Server)</title>
-      <link>https://gavinmassey.net/articles/bind-troubleshooting-guide/</link>
+      <link>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/bind-troubleshooting-guide/</guid>
+      <guid>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</guid>
       <description>Introduction BIND (Berkeley Internet Name Domain) is a widely used DNS server software. This guide focuses on troubleshooting BIND on Ubuntu Server 20.04. It assumes that BIND is already installed and configured, and you are experiencing issues.&#xA;Troubleshooting Steps 1. Check BIND Status To get an overview of the BIND service status:&#xA;sudo systemctl status bind9 This command helps identify if BIND is active or if there are any service-related errors.</description>
     </item>
     <item>
       <title>Understanding VMware Virtual Network Types and IP Addressing</title>
-      <link>https://gavinmassey.net/articles/about-vmware-workstation-virtual-networks/</link>
+      <link>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/about-vmware-workstation-virtual-networks/</guid>
+      <guid>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</guid>
       <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
     </item>
     <item>
@@ -203,55 +238,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/drafts/example-scripts/setting-up-server-core-dc/</guid>
       <description>Configure Windows Server Core Domain Controller # Install vmware tools if not installed setup64.exe /s /v&amp;#34;/qn REBOOT=R&amp;#34; # Change the hostname and reboot Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.104&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/parameter-binding/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/parameter-binding/</guid>
-      <description>Demystifying PowerShell&amp;rsquo;s Parameter Binding: How Objects Match Up to Cmdlet Parameters PowerShell&amp;rsquo;s true power lies in its object-oriented nature and the ability to pipe objects from one cmdlet to another. Understanding how PowerShell matches piped object data to cmdlet parameters is crucial for writing efficient and effective scripts. This article delves into the algorithm behind this matching process and how you can anticipate it using the Get-Help documentation.&#xA;Understanding Parameter Binding in PowerShell When you pipe data from one cmdlet to another in PowerShell, the system uses a process called parameter binding to match the piped object data to the parameters of the receiving cmdlet.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/powershell-scripting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/powershell-scripting/</guid>
-      <description>PowerShell Scripting Mastering PowerShell Scripting: A Concise Guide&#xA;PowerShell, a combination of a command-line shell and scripting language, offers powerful tools to automate tasks across Windows, Linux, and macOS platforms. Let&amp;rsquo;s dive deep into the realm of PowerShell scripting, exploring advanced topics and techniques with extensive code samples.&#xA;1. Introduction to PowerShell Scripting Originally designed for Windows, PowerShell has extended its reach to other OS platforms, making it a must-know for IT professionals.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/powershell-skill-list/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/powershell-skill-list/</guid>
-      <description>Windows System Admin Skills File system operations get current location test if a path is valid add/edit path change to different directory create file/directory delete file/directory copy file move file display contents of file delete contents of file write contents to file append to content of file list contents of directory recursive search of fs to list files by size, or other property recursive search to find files matching a string recursive search of text file to find string matching a pattern recursive traversal of file system to list permissions recursive traversal of file system to edit permissions list/add/remove psdrives Modules search for modules add/remove modules create a new module add/remove snap-ins System network interface configuration list network adapters list ipv4, ipv6 addresses list dns server address list gateway address list routing table remove/change/add ip address remove/change/add dns server address remove/change/add gateway address ping/tracepath change to dhcp release/renew dhcp address change to static ip add ip route System management - networking enable remote desktop (server) disable remote desktop (server) enable ping show network connections show firewall information disable/enable firewall for troubleshooting reasons Local user and group management list local users list local groups create local user delete local user create local group add/remove user from local group System management - processes and services list processes start process end process list services start/stop/restart service configure service startup type service get information on processes get information on service System management - basics get hostname get current username rename system stop/reboot computer add to domain remove from domain reset domain connection test domain connection get name of domain get list of windows roles add/remove windows role or feature install/remove windows update configure windows update automatic Windows domain controller management promote computer to domain controller demote computer from domain controller list domain controllers list fsmo roles transfer fsmo roles test health of domain test trust relationship between domain computers seize fsmo roles from failed domain controller get domain information get forest information get trust relationship information Windows AD group and user management change user password require password change disable password change requirement add user create user from template list user properties change user properties delete user account add/delete computer account add security or distribution group list security or distribution groups delete security or distribution group add/remove user from security or distribution group list members of security groups list/create/edit/delete ou DNS list/create/edit/delete dns a or aaaa record list/create/edit/delete dns alias record list/create/edit/delete dns mx record list/create/edit/delete dns txt record list/create/edit/delete spf record configure conditional forwarders list cached dns entries clear dns cache DHCP authorize/de-authorize server list/create/edit/delete scopes list/create/edit leases list/create/edit reservations list/create/edit exclusion zone list/create/edit dhcp scope options Other stuff boot to admin powershell instead of sconfig set execution policy and enable psremoting system profile sourcing local system profile for pssession how do use powershell to download external file, or website Manipulating data using Where-Object using Select-Object writing/reading csv format data writing/reading xml files data iterating/looping through list assigning values to variables creating arrays and dictionaries System time get/change time zone update ntp servers Remote management start/end pssession list/delete pssessions invoke command remotely save pssessions to variable and iterate through list executing commands or collecting information exporting a pssession CIM, WMI objects get/set/edit cim objects (wmi is depreciated) DSC, desired state configuration tbd Group policy objects creating new gpos listing gpos editing gpos gpupdate /force and gpresults getting help searching for help (get-help) searching for a command understanding cmdlet options Fix tab-complete Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward Troubleshooting scripts Maybe some scripts to check for common misconfigurations Maybe a script to view event viewer logs &amp;hellip; Some diagnostic tools Network shares list/add/edit/delete network share list/add/edit/delete network share permissions </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/sample-powershell-scripts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/sample-powershell-scripts/</guid>
-      <description>Sample PowerShell Scripts 1. User Information Collection Script&#xA;# User Information Collection Script # This script prompts the user for information and then displays it. # Prompt user for information $name = Read-Host -Prompt &amp;#34;Enter your name&amp;#34; $age = Read-Host -Prompt &amp;#34;Enter your age&amp;#34; $city = Read-Host -Prompt &amp;#34;Enter your city&amp;#34; # Display collected information Write-Output &amp;#34;You entered the following details:&amp;#34; Write-Output &amp;#34;Name: $name&amp;#34; Write-Output &amp;#34;Age: $age&amp;#34; Write-Output &amp;#34;City: $city&amp;#34; 2.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/setting-up-remote-powershell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/setting-up-remote-powershell/</guid>
-      <description>Setting up PowerShell Remoting 1. On the Remote Host Enable PowerShell Remoting: You can enable PowerShell Remoting on the remote host by running the following command in an elevated PowerShell session (Run as Administrator):&#xA;Enable-PSRemoting -Force Allow Incoming Connections: Ensure that the Windows Firewall (or any other firewall software you may be using) allows incoming connections for PowerShell Remoting. If using the Windows Firewall, this command will help:&#xA;Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any 2.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/understanding-param/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/understanding-param/</guid>
-      <description>Understanding the param Keyword in PowerShell In PowerShell, the param keyword is used to define parameters that a script or function can accept. Parameters allow you to pass values into scripts and functions, making them more flexible and reusable. By providing different arguments, users can tailor the behavior of a script or function without modifying its actual code.&#xA;Features of the param Block:&#xA;Positional Parameters: By default, parameters are positional, and values are assigned based on the order they appear in the param block.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell/windows-powershell-quickstart-guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell/windows-powershell-quickstart-guide/</guid>
-      <description>PowerShell Quickstart Guide PowerShell Quickstart Guide 1. Introduction PowerShell is Microsoft&amp;rsquo;s task automation framework, combining command-line speed, the flexibility of scripting, and the power of a GUI-based admin tool. Whether you&amp;rsquo;re automating tasks, extracting and processing data, or managing systems, PowerShell is a versatile tool to know.&#xA;2. Launching PowerShell You can find PowerShell by searching for it in the Windows start menu. For administrative tasks, it&amp;rsquo;s advisable to run PowerShell as an administrator (right-click the application and select &amp;ldquo;Run as administrator&amp;rdquo;).</description>
     </item>
   </channel>
 </rss>

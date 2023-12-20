@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Update Registry Open Registry Editor:
+Press Win &#43; R to open the Run dialog. Type regedit and press Enter. If prompted by User Account Control (UAC), click Yes to continue. Navigate to the Context Menu Key:
+In the Registry Editor, navigate to the following key:
+HKEY_CLASSES_ROOT\Directory\Background\shell You can copy and paste this path into the Registry Editor&rsquo;s address bar.
+Create a New Key for the PowerShell Prompt:
+Right-click on shell, select New &gt; Key, and name it Open PowerShell here as Administrator.">  
+
+  <title>
+    
+      Steps to Add &#34;Open PowerShell as Administrator&#34; to Context Menu
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Steps to Add &#34;Open PowerShell as Administrator&#34; to Context Menu</h1>
+
+    
+
+    <h2 id="update-registry">Update Registry</h2>
+<ol>
+<li>
+<p><strong>Open Registry Editor</strong>:</p>
+<ul>
+<li>Press <code>Win + R</code> to open the Run dialog.</li>
+<li>Type <code>regedit</code> and press Enter.</li>
+<li>If prompted by User Account Control (UAC), click <code>Yes</code> to continue.</li>
+</ul>
+</li>
+<li>
+<p><strong>Navigate to the Context Menu Key</strong>:</p>
+<ul>
+<li>
+<p>In the Registry Editor, navigate to the following key:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>HKEY_CLASSES_ROOT\Directory\Background\shell
+</span></span></code></pre></div></li>
+<li>
+<p>You can copy and paste this path into the Registry Editor&rsquo;s address bar.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Create a New Key for the PowerShell Prompt</strong>:</p>
+<ul>
+<li>Right-click on <code>shell</code>, select <code>New &gt; Key</code>, and name it <code>Open PowerShell here as Administrator</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Command to Open PowerShell as Administrator</strong>:</p>
+<ul>
+<li>
+<p>With the new key (<code>Open PowerShell here as Administrator</code>) selected, right-click and create another new key named <code>command</code>.</p>
+</li>
+<li>
+<p>Select the <code>command</code> key, and in the right pane, double-click on the <code>(Default)</code> value.</p>
+</li>
+<li>
+<p>Set the Value data to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>powershell -windowstyle hidden -Command <span style="color:#e6db74">&#34;Start-Process powershell -ArgumentList &#39;-NoExit&#39;, &#39;-Command&#39;, &#39;cd &#39;&#39;%V&#39;&#39;&#39; -Verb RunAs&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Click <code>OK</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional: Add an Icon</strong>:</p>
+<ul>
+<li>To add an icon to your new context menu item, select the <code>Open PowerShell here as Administrator</code> key.</li>
+<li>In the right pane, right-click and choose <code>New &gt; String Value</code>.</li>
+<li>Name it <code>Icon</code>.</li>
+<li>Double-click on it and set the Value data to <code>powershell.exe</code>.</li>
+<li>Click <code>OK</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Close the Registry Editor</strong> and <strong>Restart</strong> your computer or log off and back on to apply the changes.</p>
+</li>
+</ol>
+<p>After these steps, when you right-click in the blank space of a folder or on the folder itself in Windows Explorer, you should see the option to &ldquo;Open PowerShell here as Administrator.&rdquo;</p>
+<h2 id="important">Important</h2>
+<ul>
+<li>Be cautious while editing the registry. Incorrect changes can cause system issues.</li>
+<li>If you&rsquo;re not comfortable making these changes, it&rsquo;s advisable not to proceed.</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

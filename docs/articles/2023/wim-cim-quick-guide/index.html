@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="1. Retrieve Basic Operating System Information This command fetches basic details about the operating system.
+Get-CimInstance -ClassName CIM_OperatingSystem 2. List All Installed Services Retrieve a list of all services installed on the machine.
+Get-CimInstance -ClassName Win32_Service 3. Get System BIOS Information Displays details about the system&rsquo;s BIOS.
+Get-CimInstance -ClassName Win32_BIOS 4. List All Running Processes Shows all currently running processes on the machine.
+Get-CimInstance -ClassName Win32_Process 5. Check Disk Space Get details about logical disks, including free and used space.">  
+
+  <title>
+    
+      WIM, CIM Guide
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>WIM, CIM Guide</h1>
+
+    
+
+    <h3 id="1-retrieve-basic-operating-system-information">1. Retrieve Basic Operating System Information</h3>
+<p>This command fetches basic details about the operating system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName CIM_OperatingSystem
+</span></span></code></pre></div><h3 id="2-list-all-installed-services">2. List All Installed Services</h3>
+<p>Retrieve a list of all services installed on the machine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Service
+</span></span></code></pre></div><h3 id="3-get-system-bios-information">3. Get System BIOS Information</h3>
+<p>Displays details about the system&rsquo;s BIOS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_BIOS
+</span></span></code></pre></div><h3 id="4-list-all-running-processes">4. List All Running Processes</h3>
+<p>Shows all currently running processes on the machine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Process
+</span></span></code></pre></div><h3 id="5-check-disk-space">5. Check Disk Space</h3>
+<p>Get details about logical disks, including free and used space.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_LogicalDisk
+</span></span></code></pre></div><h3 id="6-retrieve-computer-system-information">6. Retrieve Computer System Information</h3>
+<p>Obtain details like computer name, manufacturer, and model.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_ComputerSystem
+</span></span></code></pre></div><h3 id="7-list-network-adapters-and-status">7. List Network Adapters and Status</h3>
+<p>Displays details about the system&rsquo;s network adapters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_NetworkAdapter | Where-Object { $_.NetConnectionStatus <span style="color:#f92672">-ne</span> $null }
+</span></span></code></pre></div><h3 id="8-fetch-user-account-information">8. Fetch User Account Information</h3>
+<p>Retrieve a list of user accounts on the system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_UserAccount
+</span></span></code></pre></div><h3 id="9-retrieve-details-about-system-memory">9. Retrieve Details about System Memory</h3>
+<p>Get detailed information about physical memory (RAM) modules.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_PhysicalMemory
+</span></span></code></pre></div><h3 id="10-check-uptime">10. Check Uptime</h3>
+<p>Find out how long the system has been up since the last reboot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>(Get-CimInstance -ClassName Win32_OperatingSystem).LastBootUpTime
+</span></span></code></pre></div><h3 id="11-list-installed-software">11. List Installed Software</h3>
+<p>Shows all software installed on the system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Product
+</span></span></code></pre></div><h3 id="12-start-a-remote-service">12. Start a Remote Service</h3>
+<p>Start a service on a remote computer. In this case, we&rsquo;re starting the &ldquo;wuauserv&rdquo; service (Windows Update service) on a remote machine named &ldquo;RemotePC&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-CimMethod -ClassName Win32_Service -MethodName StartService -Filter <span style="color:#e6db74">&#34;Name=&#39;wuauserv&#39;&#34;</span> -ComputerName <span style="color:#e6db74">&#34;RemotePC&#34;</span>
+</span></span></code></pre></div><h3 id="13-get-system-boot-configuration">13. Get System Boot Configuration</h3>
+<p>Displays details about the system&rsquo;s boot configuration.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_BootConfiguration
+</span></span></code></pre></div><h3 id="14-list-all-printers">14. List All Printers</h3>
+<p>Retrieve a list of all printers connected or networked to the system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Printer
+</span></span></code></pre></div><h3 id="15-get-details-of-a-specific-process">15. Get Details of a Specific Process</h3>
+<p>Obtain details about a specific process by its name. Here, we&rsquo;re fetching details about &ldquo;notepad.exe&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Process | Where-Object { $_.Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#39;notepad.exe&#39;</span> }
+</span></span></code></pre></div><h3 id="16-set-a-static-ip-address">16. Set a Static IP Address</h3>
+<p>Configure a network adapter to use a static IP address. Note: Change the <code>InterfaceAlias</code> and IP details accordingly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-CimInstance -ClassName Win32_NetworkAdapterConfiguration -Property @{
+</span></span><span style="display:flex;"><span>    InterfaceAlias = <span style="color:#e6db74">&#39;Ethernet0&#39;</span>
+</span></span><span style="display:flex;"><span>    IPAddress      = <span style="color:#e6db74">&#39;192.168.1.100&#39;</span>
+</span></span><span style="display:flex;"><span>    SubnetMask     = <span style="color:#e6db74">&#39;255.255.255.0&#39;</span>
+</span></span><span style="display:flex;"><span>    DefaultGateway = <span style="color:#e6db74">&#39;192.168.1.1&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="17-list-all-startup-commands">17. List All Startup Commands</h3>
+<p>Retrieve a list of all startup commands set to run when the system starts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_StartupCommand
+</span></span></code></pre></div><h3 id="18-retrieve-environment-variables">18. Retrieve Environment Variables</h3>
+<p>Displays all environment variables on the system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Environment
+</span></span></code></pre></div><h3 id="19-get-detailed-battery-information">19. Get Detailed Battery Information</h3>
+<p>For laptops, this command displays details about the battery, including its status and estimated run time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_Battery
+</span></span></code></pre></div><h3 id="20-retrieve-all-network-protocol-bindings">20. Retrieve All Network Protocol Bindings</h3>
+<p>Displays all network protocol bindings on the system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-CimInstance -ClassName Win32_NetworkProtocol
+</span></span></code></pre></div>
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

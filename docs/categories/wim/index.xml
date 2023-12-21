@@ -15,5 +15,12 @@
       <guid>https://gavinmassey.net/articles/2023/cim-lab-exercises/</guid>
       <description>Lab Exercise 1: System Overview Objective: Get an overview of your computer system&amp;rsquo;s properties.&#xA;Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.&#xA;Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&amp;rsquo;s name, manufacturer, model, and the total physical memory.&#xA;Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.</description>
     </item>
+    <item>
+      <title>WIM, CIM Guide</title>
+      <link>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</guid>
+      <description>1. Retrieve Basic Operating System Information This command fetches basic details about the operating system.&#xA;Get-CimInstance -ClassName CIM_OperatingSystem 2. List All Installed Services Retrieve a list of all services installed on the machine.&#xA;Get-CimInstance -ClassName Win32_Service 3. Get System BIOS Information Displays details about the system&amp;rsquo;s BIOS.&#xA;Get-CimInstance -ClassName Win32_BIOS 4. List All Running Processes Shows all currently running processes on the machine.&#xA;Get-CimInstance -ClassName Win32_Process 5. Check Disk Space Get details about logical disks, including free and used space.</description>
+    </item>
   </channel>
 </rss>

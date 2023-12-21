@@ -240,6 +240,20 @@
       <description>1. Structure:&#xA;YAML uses indentation (spaces, not tabs) to represent the structure, similar to Python. The number of spaces in the indentation is not fixed, but all elements of the list or map must be aligned. 2. Scalars (Strings, Numbers, Booleans):&#xA;Strings can be unquoted or enclosed in single (&#39;) or double quotes (&amp;quot;). Numbers are written as in most programming languages. Booleans are represented with true and false. 3. Lists (Arrays):</description>
     </item>
     <item>
+      <title>AWS Cloud Practitioners Exam, Part 2 - &#34;Skill in&#34; Sections</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</guid>
+      <description>The following compilation includes content exclusively from the &amp;lsquo;Skills in&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.&#xA;Understanding the economies of scale (for example, cost savings) Economies of scale refer to the cost advantage that arises with increased output of a product.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam, Part 3 - &#34;Technologies and Concepts&#34; Section</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</guid>
+      <description>The following compilation includes content exclusively from the &amp;lsquo;Technologies and Concepts&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.&#xA;APIs: APIs in AWS enable applications to interact with AWS services. Key points include understanding RESTful APIs, API Gateway, and how APIs are used for service integration.</description>
+    </item>
+    <item>
       <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>

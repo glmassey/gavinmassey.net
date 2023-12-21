@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GPOs on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/gpos/</link>
+    <description>Recent content in GPOs on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/gpos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPO Management</title>
+      <link>https://gavinmassey.net/articles/2023/group-policy-object-management/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/group-policy-object-management/</guid>
+      <description>Group Policy Objects (GPOs) are a pivotal component in Windows environments for efficient system administration and security management. This comprehensive guide dives into the nuances of GPO management, addressing common questions and providing practical exercises to enhance your understanding and skills.&#xA;From the basics of Active Directory (AD) structure to advanced topics like GPO inheritance and loopback processing, we cover a wide array of subjects critical for IT professionals. Whether you&amp;rsquo;re looking to refine your existing knowledge or starting from scratch, this article offers valuable insights into optimizing your Windows network using GPOs.</description>
+    </item>
+    <item>
+      <title>Most Common GPO Use Cases</title>
+      <link>https://gavinmassey.net/articles/2023/gpo-use-cases/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/gpo-use-cases/</guid>
+      <description>Here is a list of common uses for GPOs to reference when setting up a Windows Environment.&#xA;User Settings Configuration:&#xA;Setting desktop backgrounds, screen savers, and other personalization options. Configuring browser settings, such as home pages, security settings, and bookmarks. Setting restrictions on control panel access, system settings, and software installation. Computer Configuration:&#xA;Managing security settings like password policies, account lockout policies, and Kerberos policies. Configuring Windows Firewall settings and security options.</description>
+    </item>
+  </channel>
+</rss>

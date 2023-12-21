@@ -16,6 +16,13 @@
       <description>PowerShell&amp;rsquo;s true power lies in its object-oriented nature and the ability to pipe objects from one cmdlet to another. Understanding how PowerShell matches piped object data to cmdlet parameters is crucial for writing efficient and effective scripts. This article delves into the algorithm behind this matching process and how you can anticipate it using the Get-Help documentation.&#xA;Understanding Parameter Binding in PowerShell When you pipe data from one cmdlet to another in PowerShell, the system uses a process called parameter binding to match the piped object data to the parameters of the receiving cmdlet.</description>
     </item>
     <item>
+      <title>Guide to Monitoring AD DS Sites and Replication using PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/guide-to-monitoring-ad-ds-sites-and-replication/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/guide-to-monitoring-ad-ds-sites-and-replication/</guid>
+      <description>Overview This guide provides PowerShell commands for effective monitoring of Active Directory Domain Services (AD DS) Sites and Replication, ensuring operational health and efficiency.&#xA;Preparing the Environment Initial Setup: Begin on a generic server, for example, Server01. Open Windows PowerShell to execute the following commands. Commands for Monitoring Replication Recalculate Inbound Replication Topology:&#xA;Repadmin /kcc Recalculates the inbound replication topology for Server01. Display Replication Status:&#xA;Repadmin /showrepl Shows the replication status for each domain controller.</description>
+    </item>
+    <item>
       <title>Managing Domain Controllers With PowerShell</title>
       <link>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
@@ -23,11 +30,25 @@
       <description>Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &amp;#34;Domain FSMO Roles:&amp;#34; Write-Host &amp;#34;PDC Emulator: $($domain.</description>
     </item>
     <item>
+      <title>PowerShell Quickstart Guide</title>
+      <link>https://gavinmassey.net/articles/2023/windows-powershell-quickstart-guide/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/windows-powershell-quickstart-guide/</guid>
+      <description>PowerShell Quickstart Guide 1. Introduction PowerShell is Microsoft&amp;rsquo;s task automation framework, combining command-line speed, the flexibility of scripting, and the power of a GUI-based admin tool. Whether you&amp;rsquo;re automating tasks, extracting and processing data, or managing systems, PowerShell is a versatile tool to know.&#xA;2. Launching PowerShell You can find PowerShell by searching for it in the Windows start menu. For administrative tasks, it&amp;rsquo;s advisable to run PowerShell as an administrator (right-click the application and select &amp;ldquo;Run as administrator&amp;rdquo;).</description>
+    </item>
+    <item>
       <title>PowerShell Remoting: A Practical Guide for Remote Administration</title>
       <link>https://gavinmassey.net/articles/2023/advanced-powershell-remoting/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/advanced-powershell-remoting/</guid>
       <description>PowerShell Remoting is a powerful feature for administering remote computers, allowing system administrators to run commands and manage systems from a distance. This guide presents practical exercises to help you leverage PowerShell Remoting for effective network management.&#xA;Exercise 1: Gathering Network Adapter Information Remotely Task: Retrieve Network Adapters from Multiple Computers Initiate from SLC-PC1 VM:&#xA;Begin by logging into the SLC-PC1 virtual machine. Discovering the Command:&#xA;Use the help *adapter* command on SLC-PC1 to find a relevant command for listing network adapters, identifying Get-NetAdapter.</description>
+    </item>
+    <item>
+      <title>PowerShell Scripting: A Concise Guide</title>
+      <link>https://gavinmassey.net/articles/2023/powershell-scripting/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/powershell-scripting/</guid>
+      <description>PowerShell, a combination of a command-line shell and scripting language, offers powerful tools to automate tasks across Windows, Linux, and macOS platforms. Let&amp;rsquo;s dive deep into the realm of PowerShell scripting, exploring advanced topics and techniques with extensive code samples.&#xA;1. Introduction to PowerShell Scripting Originally designed for Windows, PowerShell has extended its reach to other OS platforms, making it a must-know for IT professionals.&#xA;Setting Up the Environment&#xA;PowerShell is pre-installed on modern Windows versions.</description>
     </item>
     <item>
       <title>Setting up PowerShell Remoting</title>
@@ -51,11 +72,25 @@
       <description>PowerShell&amp;rsquo;s integration with the .NET framework allows for leveraging a variety of functionalities via static and instance members of classes. Grasping the differences between these two types of members is key to proficient scripting and effective system administration.&#xA;Static Methods and Members What Are They? Static methods and members are associated with the class itself rather than any specific object created from the class. They can be accessed directly using the class name, eliminating the need to create an instance of the class.</description>
     </item>
     <item>
+      <title>Understanding the `param` Keyword in PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/understanding-param/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/understanding-param/</guid>
+      <description>In PowerShell, the param keyword is used to define parameters that a script or function can accept. Parameters allow you to pass values into scripts and functions, making them more flexible and reusable. By providing different arguments, users can tailor the behavior of a script or function without modifying its actual code.&#xA;Features of the param Block:&#xA;Positional Parameters: By default, parameters are positional, and values are assigned based on the order they appear in the param block.</description>
+    </item>
+    <item>
       <title>WIM and CIM Lab Exercises</title>
       <link>https://gavinmassey.net/articles/2023/cim-lab-exercises/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/cim-lab-exercises/</guid>
       <description>Lab Exercise 1: System Overview Objective: Get an overview of your computer system&amp;rsquo;s properties.&#xA;Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.&#xA;Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&amp;rsquo;s name, manufacturer, model, and the total physical memory.&#xA;Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.</description>
+    </item>
+    <item>
+      <title>WIM, CIM Guide</title>
+      <link>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</guid>
+      <description>1. Retrieve Basic Operating System Information This command fetches basic details about the operating system.&#xA;Get-CimInstance -ClassName CIM_OperatingSystem 2. List All Installed Services Retrieve a list of all services installed on the machine.&#xA;Get-CimInstance -ClassName Win32_Service 3. Get System BIOS Information Displays details about the system&amp;rsquo;s BIOS.&#xA;Get-CimInstance -ClassName Win32_BIOS 4. List All Running Processes Shows all currently running processes on the machine.&#xA;Get-CimInstance -ClassName Win32_Process 5. Check Disk Space Get details about logical disks, including free and used space.</description>
     </item>
     <item>
       <title>Configure Windows Server Core Domain Controller</title>
@@ -77,6 +112,13 @@
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/configuring-windows-server-with-powershell/</guid>
       <description>Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # It might be necessary to manually remove dhcp added ip configurations Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.101&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.0.77.1&amp;#39; # You will also need to set the DNS address Set-DnsClientServerAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -ServerAddresses &amp;#39;10.</description>
+    </item>
+    <item>
+      <title>Simple VMware Windows Infrastructure Lab</title>
+      <link>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</guid>
+      <description>Objective This guide provides step-by-step instructions to set up a virtual environment using PowerShell. It includes configuring one Virtual Machine as a Domain Controller (DC), another as an Application Server (APP server), and a Windows 10 Client.&#xA;1. Configure Server2022 as DC To set up the Domain Controller, execute the following commands in PowerShell:&#xA;# Configuring IP address for &amp;#39;Ethernet&amp;#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # Set DNS client server address post AD DS installation Set-DnsClientServerAddress -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -ServerAddresses 127.</description>
     </item>
     <item>
       <title>Using PowerShell to Collect Computer Asset Information</title>

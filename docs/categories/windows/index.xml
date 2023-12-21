@@ -23,11 +23,53 @@
       <description>In Microsoft&amp;rsquo;s Active Directory (AD), Domain Controllers (DCs) and Global Catalogs (GCs) are crucial components, each with distinct roles and functions.&#xA;Domain Controller (DC) Primary Role: Handles authentication, authorization, and directory services within its domain. Data Scope: Manages the full Active Directory database for its domain, containing detailed information for each object. Functionality: Responds to security authentication requests, manages user and computer accounts, and enforces security policies. Replication: Every DC can update the directory and replicate changes to other DCs, ensuring network-wide consistency.</description>
     </item>
     <item>
+      <title>GPO Management</title>
+      <link>https://gavinmassey.net/articles/2023/group-policy-object-management/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/group-policy-object-management/</guid>
+      <description>Group Policy Objects (GPOs) are a pivotal component in Windows environments for efficient system administration and security management. This comprehensive guide dives into the nuances of GPO management, addressing common questions and providing practical exercises to enhance your understanding and skills.&#xA;From the basics of Active Directory (AD) structure to advanced topics like GPO inheritance and loopback processing, we cover a wide array of subjects critical for IT professionals. Whether you&amp;rsquo;re looking to refine your existing knowledge or starting from scratch, this article offers valuable insights into optimizing your Windows network using GPOs.</description>
+    </item>
+    <item>
+      <title>Guide to Monitoring AD DS Sites and Replication using PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/guide-to-monitoring-ad-ds-sites-and-replication/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/guide-to-monitoring-ad-ds-sites-and-replication/</guid>
+      <description>Overview This guide provides PowerShell commands for effective monitoring of Active Directory Domain Services (AD DS) Sites and Replication, ensuring operational health and efficiency.&#xA;Preparing the Environment Initial Setup: Begin on a generic server, for example, Server01. Open Windows PowerShell to execute the following commands. Commands for Monitoring Replication Recalculate Inbound Replication Topology:&#xA;Repadmin /kcc Recalculates the inbound replication topology for Server01. Display Replication Status:&#xA;Repadmin /showrepl Shows the replication status for each domain controller.</description>
+    </item>
+    <item>
+      <title>Introduction to Trusts in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</guid>
+      <description>In the realm of network security and management, Trusts within Active Directory (AD) are pivotal. They are the backbone of domain interactions, enabling users in one domain to access resources in another. This guide delves into the intricacies of these trusts, outlining their types, implementations, and best practices for secure and efficient network management.&#xA;Types of Trusts in Active Directory Active Directory trusts can be broadly categorized into several types, each serving a unique purpose in the network infrastructure:</description>
+    </item>
+    <item>
       <title>Managing Domain Controllers With PowerShell</title>
       <link>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</guid>
       <description>Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &amp;#34;Domain FSMO Roles:&amp;#34; Write-Host &amp;#34;PDC Emulator: $($domain.</description>
+    </item>
+    <item>
+      <title>Most Common GPO Use Cases</title>
+      <link>https://gavinmassey.net/articles/2023/gpo-use-cases/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/gpo-use-cases/</guid>
+      <description>Here is a list of common uses for GPOs to reference when setting up a Windows Environment.&#xA;User Settings Configuration:&#xA;Setting desktop backgrounds, screen savers, and other personalization options. Configuring browser settings, such as home pages, security settings, and bookmarks. Setting restrictions on control panel access, system settings, and software installation. Computer Configuration:&#xA;Managing security settings like password policies, account lockout policies, and Kerberos policies. Configuring Windows Firewall settings and security options.</description>
+    </item>
+    <item>
+      <title>PowerShell Scripting: A Concise Guide</title>
+      <link>https://gavinmassey.net/articles/2023/powershell-scripting/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/powershell-scripting/</guid>
+      <description>PowerShell, a combination of a command-line shell and scripting language, offers powerful tools to automate tasks across Windows, Linux, and macOS platforms. Let&amp;rsquo;s dive deep into the realm of PowerShell scripting, exploring advanced topics and techniques with extensive code samples.&#xA;1. Introduction to PowerShell Scripting Originally designed for Windows, PowerShell has extended its reach to other OS platforms, making it a must-know for IT professionals.&#xA;Setting Up the Environment&#xA;PowerShell is pre-installed on modern Windows versions.</description>
+    </item>
+    <item>
+      <title>Roles and Responsibilities of Domain Admins and Enterprise Admins in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/understanding-roles-of-domain-enterprise-admins-in-ad/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/understanding-roles-of-domain-enterprise-admins-in-ad/</guid>
+      <description>In the intricate structure of an organization&amp;rsquo;s Active Directory, which spans across forests, domains, and organizational units, the roles of Domain Admins and Enterprise Admins are pivotal for maintaining both effective management and robust security.&#xA;Domain Admins: Masters of the Domain Authority and Responsibilities:&#xA;Domain Admins wield complete control within their specific domains. They are responsible for managing everything from user accounts and domain controllers to group policies and various domain-level resources.</description>
     </item>
     <item>
       <title>Securing Active Directory Domain Services</title>
@@ -51,6 +93,13 @@
       <description>Update Registry Open Registry Editor:&#xA;Press Win + R to open the Run dialog. Type regedit and press Enter. If prompted by User Account Control (UAC), click Yes to continue. Navigate to the Context Menu Key:&#xA;In the Registry Editor, navigate to the following key:&#xA;HKEY_CLASSES_ROOT\Directory\Background\shell You can copy and paste this path into the Registry Editor&amp;rsquo;s address bar.&#xA;Create a New Key for the PowerShell Prompt:&#xA;Right-click on shell, select New &amp;gt; Key, and name it Open PowerShell here as Administrator.</description>
     </item>
     <item>
+      <title>The Importance of Configuring Sites and Subnets in High-Bandwidth Networks</title>
+      <link>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</guid>
+      <description>In the realm of modern network infrastructures, where high-bandwidth connections like 10 Gbps are common, it might seem that the configuration of traditional Active Directory (AD) sites and subnets is less relevant. However, this perception overlooks the myriad of benefits that a well-configured AD environment can bring, even in high-bandwidth scenarios. Here are several key reasons why configuring AD sites remains a crucial practice:&#xA;Enhanced Authentication and Resource Access: By defining AD sites, you ensure that client authentication occurs at the nearest domain controller.</description>
+    </item>
+    <item>
       <title>Why are DNS settings configured per interface?</title>
       <link>https://gavinmassey.net/articles/2023/why-different-dns-per-network-interface/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
@@ -63,6 +112,13 @@
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/cim-lab-exercises/</guid>
       <description>Lab Exercise 1: System Overview Objective: Get an overview of your computer system&amp;rsquo;s properties.&#xA;Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.&#xA;Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&amp;rsquo;s name, manufacturer, model, and the total physical memory.&#xA;Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.</description>
+    </item>
+    <item>
+      <title>WIM, CIM Guide</title>
+      <link>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</guid>
+      <description>1. Retrieve Basic Operating System Information This command fetches basic details about the operating system.&#xA;Get-CimInstance -ClassName CIM_OperatingSystem 2. List All Installed Services Retrieve a list of all services installed on the machine.&#xA;Get-CimInstance -ClassName Win32_Service 3. Get System BIOS Information Displays details about the system&amp;rsquo;s BIOS.&#xA;Get-CimInstance -ClassName Win32_BIOS 4. List All Running Processes Shows all currently running processes on the machine.&#xA;Get-CimInstance -ClassName Win32_Process 5. Check Disk Space Get details about logical disks, including free and used space.</description>
     </item>
     <item>
       <title>Configure Windows Server Core Domain Controller</title>
@@ -86,11 +142,25 @@
       <description>Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # It might be necessary to manually remove dhcp added ip configurations Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.101&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.0.77.1&amp;#39; # You will also need to set the DNS address Set-DnsClientServerAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -ServerAddresses &amp;#39;10.</description>
     </item>
     <item>
+      <title>Simple VMware Windows Infrastructure Lab</title>
+      <link>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</guid>
+      <description>Objective This guide provides step-by-step instructions to set up a virtual environment using PowerShell. It includes configuring one Virtual Machine as a Domain Controller (DC), another as an Application Server (APP server), and a Windows 10 Client.&#xA;1. Configure Server2022 as DC To set up the Domain Controller, execute the following commands in PowerShell:&#xA;# Configuring IP address for &amp;#39;Ethernet&amp;#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # Set DNS client server address post AD DS installation Set-DnsClientServerAddress -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -ServerAddresses 127.</description>
+    </item>
+    <item>
       <title>Using PowerShell to Collect Computer Asset Information</title>
       <link>https://gavinmassey.net/articles/2023/using-powershell-to-collect-computer-asset-info/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/using-powershell-to-collect-computer-asset-info/</guid>
       <description># Get computer system and BIOS information $ComputerSystem = Get-CimInstance -ClassName CIM_ComputerSystem $Bios = Get-CimInstance -ClassName CIM_BIOSElement # Check if the information was retrieved successfully if ($ComputerSystem -and $Bios) { # Build the results hashtable $Results = @{ &amp;#39;Computer Name&amp;#39; = $ComputerSystem.Name &amp;#39;Model&amp;#39; = $ComputerSystem.Model &amp;#39;Serial Number&amp;#39; = $Bios.SerialNumber } # Convert the hashtable to a custom PowerShell object $Report = [PSCustomObject]$Results # Clear the host (console) and display the report Clear-Host $Report | Format-Table -AutoSize } else { Write-Error &amp;#34;Failed to retrieve system or BIOS information.</description>
+    </item>
+    <item>
+      <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
+      <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</guid>
+      <description>When navigating the complexities of Microsoft Active Directory (AD), it&amp;rsquo;s crucial to understand the fundamental building blocks of its architecture: forests, trees, and sites. These terms are often used interchangeably, but they refer to distinct elements within an AD environment.&#xA;Active Directory Forest An Active Directory Forest is the topmost level of the AD structure. Think of a forest as a security boundary within which users, computers, groups, and other objects are managed.</description>
     </item>
   </channel>
 </rss>

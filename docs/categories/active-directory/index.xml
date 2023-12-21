@@ -23,6 +23,13 @@
       <description>In Microsoft&amp;rsquo;s Active Directory (AD), Domain Controllers (DCs) and Global Catalogs (GCs) are crucial components, each with distinct roles and functions.&#xA;Domain Controller (DC) Primary Role: Handles authentication, authorization, and directory services within its domain. Data Scope: Manages the full Active Directory database for its domain, containing detailed information for each object. Functionality: Responds to security authentication requests, manages user and computer accounts, and enforces security policies. Replication: Every DC can update the directory and replicate changes to other DCs, ensuring network-wide consistency.</description>
     </item>
     <item>
+      <title>Introduction to Trusts in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</guid>
+      <description>In the realm of network security and management, Trusts within Active Directory (AD) are pivotal. They are the backbone of domain interactions, enabling users in one domain to access resources in another. This guide delves into the intricacies of these trusts, outlining their types, implementations, and best practices for secure and efficient network management.&#xA;Types of Trusts in Active Directory Active Directory trusts can be broadly categorized into several types, each serving a unique purpose in the network infrastructure:</description>
+    </item>
+    <item>
       <title>Managing Domain Controllers With PowerShell</title>
       <link>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
@@ -30,11 +37,32 @@
       <description>Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &amp;#34;Domain FSMO Roles:&amp;#34; Write-Host &amp;#34;PDC Emulator: $($domain.</description>
     </item>
     <item>
+      <title>Roles and Responsibilities of Domain Admins and Enterprise Admins in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/understanding-roles-of-domain-enterprise-admins-in-ad/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/understanding-roles-of-domain-enterprise-admins-in-ad/</guid>
+      <description>In the intricate structure of an organization&amp;rsquo;s Active Directory, which spans across forests, domains, and organizational units, the roles of Domain Admins and Enterprise Admins are pivotal for maintaining both effective management and robust security.&#xA;Domain Admins: Masters of the Domain Authority and Responsibilities:&#xA;Domain Admins wield complete control within their specific domains. They are responsible for managing everything from user accounts and domain controllers to group policies and various domain-level resources.</description>
+    </item>
+    <item>
       <title>Securing Active Directory Domain Services</title>
       <link>https://gavinmassey.net/articles/2023/securing-adds/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/securing-adds/</guid>
       <description>Securing Active Directory Domain Services (ADDS) is a critical component of maintaining the integrity and security of an organization&amp;rsquo;s IT infrastructure. This guide provides a comprehensive overview of key security practices and configurations necessary for safeguarding your ADDS environment.&#xA;Implementing Strong Password Policies with PSO Understanding PSOs (Password Settings Objects): PSOs are essential for defining password policies specific to user or group accounts in Active Directory. They enable the enforcement of unique password policies that may differ from the domain&amp;rsquo;s default settings.</description>
+    </item>
+    <item>
+      <title>The Importance of Configuring Sites and Subnets in High-Bandwidth Networks</title>
+      <link>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/the-need-for-sites-and-subnets/</guid>
+      <description>In the realm of modern network infrastructures, where high-bandwidth connections like 10 Gbps are common, it might seem that the configuration of traditional Active Directory (AD) sites and subnets is less relevant. However, this perception overlooks the myriad of benefits that a well-configured AD environment can bring, even in high-bandwidth scenarios. Here are several key reasons why configuring AD sites remains a crucial practice:&#xA;Enhanced Authentication and Resource Access: By defining AD sites, you ensure that client authentication occurs at the nearest domain controller.</description>
+    </item>
+    <item>
+      <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
+      <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</guid>
+      <description>When navigating the complexities of Microsoft Active Directory (AD), it&amp;rsquo;s crucial to understand the fundamental building blocks of its architecture: forests, trees, and sites. These terms are often used interchangeably, but they refer to distinct elements within an AD environment.&#xA;Active Directory Forest An Active Directory Forest is the topmost level of the AD structure. Think of a forest as a security boundary within which users, computers, groups, and other objects are managed.</description>
     </item>
   </channel>
 </rss>

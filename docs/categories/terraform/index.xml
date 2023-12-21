@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/terraform/</link>
+    <description>Recent content in Terraform on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started With Terraform</title>
+      <link>https://gavinmassey.net/articles/2023/getting-started-with-terraform/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/getting-started-with-terraform/</guid>
+      <description>Introduction Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. It codifies cloud APIs into declarative configuration files. This article will guide you through launching an Amazon EC2 instance and configuring its security group using Terraform.&#xA;Pre-requisites Before starting, ensure you have the following:&#xA;Set up AWS Environment: Have an AWS account with necessary permissions. Install Terraform: Download and install the Terraform CLI.</description>
+    </item>
+  </channel>
+</rss>

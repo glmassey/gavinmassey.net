@@ -143,9 +143,9 @@
     </item>
     <item>
       <title>Understanding AWS CloudFormation Template Syntax</title>
-      <link>https://gavinmassey.net/articles/2023/aws-cloud-formation-syntax/</link>
+      <link>https://gavinmassey.net/articles/2023/aws-cloudformation-syntax/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2023/aws-cloud-formation-syntax/</guid>
+      <guid>https://gavinmassey.net/articles/2023/aws-cloudformation-syntax/</guid>
       <description>Introduction AWS CloudFormation is a powerful service for provisioning and managing AWS infrastructure as code (IAC). To effectively use CloudFormation, it&amp;rsquo;s crucial to understand the syntax of CloudFormation templates, as they serve as the blueprints for your infrastructure. In this guide, we&amp;rsquo;ll explore the essential elements and syntax of CloudFormation templates.&#xA;Format Version&#xA;The AWSTemplateFormatVersion field at the beginning of the template specifies the CloudFormation template version you are using. Example:</description>
     </item>
     <item>
@@ -198,11 +198,39 @@
       <description>1. Retrieve Basic Operating System Information This command fetches basic details about the operating system.&#xA;Get-CimInstance -ClassName CIM_OperatingSystem 2. List All Installed Services Retrieve a list of all services installed on the machine.&#xA;Get-CimInstance -ClassName Win32_Service 3. Get System BIOS Information Displays details about the system&amp;rsquo;s BIOS.&#xA;Get-CimInstance -ClassName Win32_BIOS 4. List All Running Processes Shows all currently running processes on the machine.&#xA;Get-CimInstance -ClassName Win32_Process 5. Check Disk Space Get details about logical disks, including free and used space.</description>
     </item>
     <item>
+      <title>Configure Windows Server Core Domain Controller</title>
+      <link>https://gavinmassey.net/articles/2023/setting-up-server-core-dc/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/setting-up-server-core-dc/</guid>
+      <description># Install vmware tools if not installed setup64.exe /s /v&amp;#34;/qn REBOOT=R&amp;#34; # Change the hostname and reboot Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.104&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.0.77.1&amp;#39; # You will also need to set the DNS address Set-DnsClientServerAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -ServerAddresses &amp;#39;10.</description>
+    </item>
+    <item>
+      <title>Configuring a DHCP Scope With Windows PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/configureing-dhcp-with-powershell/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configureing-dhcp-with-powershell/</guid>
+      <description># Define scope parameters $scopeName = &amp;#34;ExampleScope&amp;#34; $startRange = &amp;#34;192.168.1.10&amp;#34; # Starting IP address of the scope $endRange = &amp;#34;192.168.1.100&amp;#34; # Ending IP address of the scope $subnetMask = &amp;#34;255.255.255.0&amp;#34; $gateway = &amp;#34;192.168.1.1&amp;#34; $dnsServers = &amp;#34;192.168.1.2&amp;#34;, &amp;#34;192.168.1.3&amp;#34; # Authorize the DHCP server in Active Directory Add-DhcpServerInDC -DnsName &amp;#34;DhcpServerName&amp;#34; # Add a new DHCP scope Add-DhcpServerv4Scope -Name $scopeName -StartRange $startRange -EndRange $endRange -SubnetMask $subnetMask # Optionally, set additional scope options like default gateway (Router) and DNS servers Set-DhcpServerv4OptionValue -ScopeId $startRange -Router $gateway Set-DhcpServerv4OptionValue -ScopeId $startRange -DnsServer $dnsServers # Note: # - Replace the IP addresses and subnet mask with values appropriate for your network.</description>
+    </item>
+    <item>
+      <title>Configuring Windows Server With PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-windows-server-with-powershell/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-windows-server-with-powershell/</guid>
+      <description>Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # It might be necessary to manually remove dhcp added ip configurations Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.101&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.0.77.1&amp;#39; # You will also need to set the DNS address Set-DnsClientServerAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -ServerAddresses &amp;#39;10.</description>
+    </item>
+    <item>
       <title>Simple VMware Windows Infrastructure Lab</title>
       <link>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</link>
       <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/simple-vmware-windows-infrastructure-lab/</guid>
       <description>Objective This guide provides step-by-step instructions to set up a virtual environment using PowerShell. It includes configuring one Virtual Machine as a Domain Controller (DC), another as an Application Server (APP server), and a Windows 10 Client.&#xA;1. Configure Server2022 as DC To set up the Domain Controller, execute the following commands in PowerShell:&#xA;# Configuring IP address for &amp;#39;Ethernet&amp;#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # Set DNS client server address post AD DS installation Set-DnsClientServerAddress -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -ServerAddresses 127.</description>
+    </item>
+    <item>
+      <title>Using PowerShell to Collect Computer Asset Information</title>
+      <link>https://gavinmassey.net/articles/2023/using-powershell-to-collect-computer-asset-info/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/using-powershell-to-collect-computer-asset-info/</guid>
+      <description># Get computer system and BIOS information $ComputerSystem = Get-CimInstance -ClassName CIM_ComputerSystem $Bios = Get-CimInstance -ClassName CIM_BIOSElement # Check if the information was retrieved successfully if ($ComputerSystem -and $Bios) { # Build the results hashtable $Results = @{ &amp;#39;Computer Name&amp;#39; = $ComputerSystem.Name &amp;#39;Model&amp;#39; = $ComputerSystem.Model &amp;#39;Serial Number&amp;#39; = $Bios.SerialNumber } # Convert the hashtable to a custom PowerShell object $Report = [PSCustomObject]$Results # Clear the host (console) and display the report Clear-Host $Report | Format-Table -AutoSize } else { Write-Error &amp;#34;Failed to retrieve system or BIOS information.</description>
     </item>
     <item>
       <title>YAML Basics</title>
@@ -238,13 +266,6 @@
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</guid>
       <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/drafts/powershell-scripts/setting-up-server-core-dc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell-scripts/setting-up-server-core-dc/</guid>
-      <description>Configure Windows Server Core Domain Controller # Install vmware tools if not installed setup64.exe /s /v&amp;#34;/qn REBOOT=R&amp;#34; # Change the hostname and reboot Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.104&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.</description>
     </item>
   </channel>
 </rss>

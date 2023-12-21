@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="# Get computer system and BIOS information $ComputerSystem = Get-CimInstance -ClassName CIM_ComputerSystem $Bios = Get-CimInstance -ClassName CIM_BIOSElement # Check if the information was retrieved successfully if ($ComputerSystem -and $Bios) { # Build the results hashtable $Results = @{ &#39;Computer Name&#39; = $ComputerSystem.Name &#39;Model&#39; = $ComputerSystem.Model &#39;Serial Number&#39; = $Bios.SerialNumber } # Convert the hashtable to a custom PowerShell object $Report = [PSCustomObject]$Results # Clear the host (console) and display the report Clear-Host $Report | Format-Table -AutoSize } else { Write-Error &#34;Failed to retrieve system or BIOS information.">  
+
+  <title>
+    
+      Using PowerShell to Collect Computer Asset Information
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-19 00:00:00 &#43;0000 UTC">
+            2023-12-19
+        </time>
+    </p>
+
+    <h1>Using PowerShell to Collect Computer Asset Information</h1>
+
+    
+
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Get computer system and BIOS information</span>
+</span></span><span style="display:flex;"><span>$ComputerSystem = Get-CimInstance -ClassName CIM_ComputerSystem
+</span></span><span style="display:flex;"><span>$Bios = Get-CimInstance -ClassName CIM_BIOSElement
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check if the information was retrieved successfully</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($ComputerSystem <span style="color:#f92672">-and</span> $Bios) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Build the results hashtable</span>
+</span></span><span style="display:flex;"><span>    $Results = @{
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Computer Name&#39;</span> = $ComputerSystem.Name
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Model&#39;</span>         = $ComputerSystem.Model
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Serial Number&#39;</span> = $Bios.SerialNumber
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Convert the hashtable to a custom PowerShell object</span>
+</span></span><span style="display:flex;"><span>    $Report = [<span style="color:#66d9ef">PSCustomObject</span>]$Results
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Clear the host (console) and display the report</span>
+</span></span><span style="display:flex;"><span>    Clear-Host
+</span></span><span style="display:flex;"><span>    $Report | Format-Table -AutoSize
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    Write-Error <span style="color:#e6db74">&#34;Failed to retrieve system or BIOS information.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

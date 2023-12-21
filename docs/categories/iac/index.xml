@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IAC on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/iac/</link>
+    <description>Recent content in IAC on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/iac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started With Terraform</title>
+      <link>https://gavinmassey.net/articles/2023/getting-started-with-terraform/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/getting-started-with-terraform/</guid>
+      <description>Introduction Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure. It codifies cloud APIs into declarative configuration files. This article will guide you through launching an Amazon EC2 instance and configuring its security group using Terraform.&#xA;Pre-requisites Before starting, ensure you have the following:&#xA;Set up AWS Environment: Have an AWS account with necessary permissions. Install Terraform: Download and install the Terraform CLI.</description>
+    </item>
+    <item>
+      <title>Understanding AWS CloudFormation Template Syntax</title>
+      <link>https://gavinmassey.net/articles/2023/aws-cloudformation-syntax/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-cloudformation-syntax/</guid>
+      <description>Introduction AWS CloudFormation is a powerful service for provisioning and managing AWS infrastructure as code (IAC). To effectively use CloudFormation, it&amp;rsquo;s crucial to understand the syntax of CloudFormation templates, as they serve as the blueprints for your infrastructure. In this guide, we&amp;rsquo;ll explore the essential elements and syntax of CloudFormation templates.&#xA;Format Version&#xA;The AWSTemplateFormatVersion field at the beginning of the template specifies the CloudFormation template version you are using. Example:</description>
+    </item>
+  </channel>
+</rss>

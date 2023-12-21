@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/powershell/</link>
+    <description>Recent content in PowerShell on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Demystifying PowerShell&#39;s Parameter Binding: How Objects Match Up to Cmdlet Parameters</title>
+      <link>https://gavinmassey.net/articles/2023/parameter-binding/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/parameter-binding/</guid>
+      <description>PowerShell&amp;rsquo;s true power lies in its object-oriented nature and the ability to pipe objects from one cmdlet to another. Understanding how PowerShell matches piped object data to cmdlet parameters is crucial for writing efficient and effective scripts. This article delves into the algorithm behind this matching process and how you can anticipate it using the Get-Help documentation.&#xA;Understanding Parameter Binding in PowerShell When you pipe data from one cmdlet to another in PowerShell, the system uses a process called parameter binding to match the piped object data to the parameters of the receiving cmdlet.</description>
+    </item>
+    <item>
+      <title>Managing Domain Controllers With PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</guid>
+      <description>Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &amp;#34;Domain FSMO Roles:&amp;#34; Write-Host &amp;#34;PDC Emulator: $($domain.</description>
+    </item>
+    <item>
+      <title>PowerShell Remoting: A Practical Guide for Remote Administration</title>
+      <link>https://gavinmassey.net/articles/2023/advanced-powershell-remoting/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/advanced-powershell-remoting/</guid>
+      <description>PowerShell Remoting is a powerful feature for administering remote computers, allowing system administrators to run commands and manage systems from a distance. This guide presents practical exercises to help you leverage PowerShell Remoting for effective network management.&#xA;Exercise 1: Gathering Network Adapter Information Remotely Task: Retrieve Network Adapters from Multiple Computers Initiate from SLC-PC1 VM:&#xA;Begin by logging into the SLC-PC1 virtual machine. Discovering the Command:&#xA;Use the help *adapter* command on SLC-PC1 to find a relevant command for listing network adapters, identifying Get-NetAdapter.</description>
+    </item>
+    <item>
+      <title>Setting up PowerShell Remoting</title>
+      <link>https://gavinmassey.net/articles/2023/setting-up-remote-powershell/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/setting-up-remote-powershell/</guid>
+      <description>1. On the Remote Host Enable PowerShell Remoting: You can enable PowerShell Remoting on the remote host by running the following command in an elevated PowerShell session (Run as Administrator):&#xA;Enable-PSRemoting -Force Allow Incoming Connections: Ensure that the Windows Firewall (or any other firewall software you may be using) allows incoming connections for PowerShell Remoting. If using the Windows Firewall, this command will help:&#xA;Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any 2. On the Client Machine (from where you want to initiate the connection) Trust the Remote Host: If your remote host is not part of a domain or the certificate used by the remote host is not trusted, you need to add the remote host to your list of trusted hosts:</description>
+    </item>
+    <item>
+      <title>Steps to Add &#34;Open PowerShell as Administrator&#34; to Context Menu</title>
+      <link>https://gavinmassey.net/articles/2023/create-open-powershell-as-admin-context-entry-windows-explorer/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/create-open-powershell-as-admin-context-entry-windows-explorer/</guid>
+      <description>Update Registry Open Registry Editor:&#xA;Press Win + R to open the Run dialog. Type regedit and press Enter. If prompted by User Account Control (UAC), click Yes to continue. Navigate to the Context Menu Key:&#xA;In the Registry Editor, navigate to the following key:&#xA;HKEY_CLASSES_ROOT\Directory\Background\shell You can copy and paste this path into the Registry Editor&amp;rsquo;s address bar.&#xA;Create a New Key for the PowerShell Prompt:&#xA;Right-click on shell, select New &amp;gt; Key, and name it Open PowerShell here as Administrator.</description>
+    </item>
+    <item>
+      <title>Understanding Static vs. Instance Methods and Members in PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/accessing-static-methods-and-members-with-powershell/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/accessing-static-methods-and-members-with-powershell/</guid>
+      <description>PowerShell&amp;rsquo;s integration with the .NET framework allows for leveraging a variety of functionalities via static and instance members of classes. Grasping the differences between these two types of members is key to proficient scripting and effective system administration.&#xA;Static Methods and Members What Are They? Static methods and members are associated with the class itself rather than any specific object created from the class. They can be accessed directly using the class name, eliminating the need to create an instance of the class.</description>
+    </item>
+    <item>
+      <title>WIM and CIM Lab Exercises</title>
+      <link>https://gavinmassey.net/articles/2023/cim-lab-exercises/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/cim-lab-exercises/</guid>
+      <description>Lab Exercise 1: System Overview Objective: Get an overview of your computer system&amp;rsquo;s properties.&#xA;Task: Retrieve information about the operating system, including its version, last boot up time, and the number of users currently logged on.&#xA;Command Hint: Get-CimInstance -ClassName CIM_OperatingSystem Task: Fetch the computer&amp;rsquo;s name, manufacturer, model, and the total physical memory.&#xA;Command Hint: Get-CimInstance -ClassName Win32_ComputerSystem Lab Exercise 2: Disk Analysis Objective: Analyze the disk space usage and health.</description>
+    </item>
+    <item>
+      <title>Configure Windows Server Core Domain Controller</title>
+      <link>https://gavinmassey.net/articles/2023/setting-up-server-core-dc/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/setting-up-server-core-dc/</guid>
+      <description># Install vmware tools if not installed setup64.exe /s /v&amp;#34;/qn REBOOT=R&amp;#34; # Change the hostname and reboot Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.104&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.0.77.1&amp;#39; # You will also need to set the DNS address Set-DnsClientServerAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -ServerAddresses &amp;#39;10.</description>
+    </item>
+    <item>
+      <title>Configuring a DHCP Scope With Windows PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/configureing-dhcp-with-powershell/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configureing-dhcp-with-powershell/</guid>
+      <description># Define scope parameters $scopeName = &amp;#34;ExampleScope&amp;#34; $startRange = &amp;#34;192.168.1.10&amp;#34; # Starting IP address of the scope $endRange = &amp;#34;192.168.1.100&amp;#34; # Ending IP address of the scope $subnetMask = &amp;#34;255.255.255.0&amp;#34; $gateway = &amp;#34;192.168.1.1&amp;#34; $dnsServers = &amp;#34;192.168.1.2&amp;#34;, &amp;#34;192.168.1.3&amp;#34; # Authorize the DHCP server in Active Directory Add-DhcpServerInDC -DnsName &amp;#34;DhcpServerName&amp;#34; # Add a new DHCP scope Add-DhcpServerv4Scope -Name $scopeName -StartRange $startRange -EndRange $endRange -SubnetMask $subnetMask # Optionally, set additional scope options like default gateway (Router) and DNS servers Set-DhcpServerv4OptionValue -ScopeId $startRange -Router $gateway Set-DhcpServerv4OptionValue -ScopeId $startRange -DnsServer $dnsServers # Note: # - Replace the IP addresses and subnet mask with values appropriate for your network.</description>
+    </item>
+    <item>
+      <title>Configuring Windows Server With PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-windows-server-with-powershell/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-windows-server-with-powershell/</guid>
+      <description>Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # It might be necessary to manually remove dhcp added ip configurations Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.101&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.0.77.1&amp;#39; # You will also need to set the DNS address Set-DnsClientServerAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -ServerAddresses &amp;#39;10.</description>
+    </item>
+    <item>
+      <title>Using PowerShell to Collect Computer Asset Information</title>
+      <link>https://gavinmassey.net/articles/2023/using-powershell-to-collect-computer-asset-info/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/using-powershell-to-collect-computer-asset-info/</guid>
+      <description># Get computer system and BIOS information $ComputerSystem = Get-CimInstance -ClassName CIM_ComputerSystem $Bios = Get-CimInstance -ClassName CIM_BIOSElement # Check if the information was retrieved successfully if ($ComputerSystem -and $Bios) { # Build the results hashtable $Results = @{ &amp;#39;Computer Name&amp;#39; = $ComputerSystem.Name &amp;#39;Model&amp;#39; = $ComputerSystem.Model &amp;#39;Serial Number&amp;#39; = $Bios.SerialNumber } # Convert the hashtable to a custom PowerShell object $Report = [PSCustomObject]$Results # Clear the host (console) and display the report Clear-Host $Report | Format-Table -AutoSize } else { Write-Error &amp;#34;Failed to retrieve system or BIOS information.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/linux/</link>
+    <description>Recent content in Linux on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up pfSense on VMware Workstation Pro</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</guid>
+      <description>In a virtual lab environment, often you will need a network device to accurately reflect a real-world environment. pfSense is a good option and is easy to use.&#xA;1. Download pfSense Image Visit pfSense Download Page: Go to the pfSense download page. Select Version and Architecture: Choose the latest stable release and select the architecture that matches your system (most likely AMD64). Select Installer Type: Choose the installer type. For VMware, the CD Image (ISO) installer is typically used.</description>
+    </item>
+    <item>
+      <title>How to Set Up VyOS on VMware Workstation Pro</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</guid>
+      <description>1. Download VyOS ISO Visit VyOS Download Page: Go to VyOS download page. Select Version: Choose the latest stable release or a version that suits your needs. Download ISO: Click on the download link for the ISO image and save it to your computer. 2. Create a New Virtual Machine in VMware Open VMware Workstation Pro: Launch the VMware Workstation Pro application. Create New Virtual Machine: Select &amp;ldquo;Create a New Virtual Machine&amp;rdquo; or use &amp;ldquo;File&amp;rdquo; &amp;gt; &amp;ldquo;New Virtual Machine.</description>
+    </item>
+    <item>
+      <title>BIND Troubleshooting Guide (Ubuntu Server)</title>
+      <link>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</guid>
+      <description>Introduction BIND (Berkeley Internet Name Domain) is a widely used DNS server software. This guide focuses on troubleshooting BIND on Ubuntu Server 20.04. It assumes that BIND is already installed and configured, and you are experiencing issues.&#xA;Troubleshooting Steps 1. Check BIND Status To get an overview of the BIND service status:&#xA;sudo systemctl status bind9 This command helps identify if BIND is active or if there are any service-related errors.</description>
+    </item>
+  </channel>
+</rss>

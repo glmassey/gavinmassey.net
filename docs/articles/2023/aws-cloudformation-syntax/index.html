@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction AWS CloudFormation is a powerful service for provisioning and managing AWS infrastructure as code (IAC). To effectively use CloudFormation, it&rsquo;s crucial to understand the syntax of CloudFormation templates, as they serve as the blueprints for your infrastructure. In this guide, we&rsquo;ll explore the essential elements and syntax of CloudFormation templates.
+Format Version
+The AWSTemplateFormatVersion field at the beginning of the template specifies the CloudFormation template version you are using. Example:">  
+
+  <title>
+    
+      Understanding AWS CloudFormation Template Syntax
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-20 00:00:00 &#43;0000 UTC">
+            2023-12-20
+        </time>
+    </p>
+
+    <h1>Understanding AWS CloudFormation Template Syntax</h1>
+
+    
+
+    <h3 id="introduction">Introduction</h3>
+<p>AWS CloudFormation is a powerful service for provisioning and managing AWS infrastructure as code (IAC). To effectively use CloudFormation, it&rsquo;s crucial to understand the syntax of CloudFormation templates, as they serve as the blueprints for your infrastructure. In this guide, we&rsquo;ll explore the essential elements and syntax of CloudFormation templates.</p>
+<ol>
+<li>
+<p><strong>Format Version</strong></p>
+<ul>
+<li>The <code>AWSTemplateFormatVersion</code> field at the beginning of the template specifies the CloudFormation template version you are using.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">AWSTemplateFormatVersion</span>: <span style="color:#e6db74">&#39;2010-09-09&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Description</strong></p>
+<ul>
+<li>The optional <code>Description</code> field allows you to provide a human-readable description of the template&rsquo;s purpose.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Description</span>: <span style="color:#ae81ff">My CloudFormation Template</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Metadata</strong></p>
+<ul>
+<li>The optional <code>Metadata</code> section lets you add key-value pairs for information or organization.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">Author</span>: <span style="color:#ae81ff">John Doe</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Parameters</strong></p>
+<ul>
+<li>The <code>Parameters</code> section defines input values that users can customize when creating a stack from the template.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Parameters</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">InstanceType</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Default</span>: <span style="color:#ae81ff">t2.micro</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">KeyName</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">String</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Mappings</strong></p>
+<ul>
+<li>The <code>Mappings</code> section allows you to create static mappings of values based on keys.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Mappings</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">RegionMap</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">us-east-1</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">AMI</span>: <span style="color:#ae81ff">ami-12345678</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">us-west-2</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">AMI</span>: <span style="color:#ae81ff">ami-87654321</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Conditions</strong></p>
+<ul>
+<li>The <code>Conditions</code> section defines conditions that control the creation of resources based on parameter values and other factors.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Conditions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">CreateProdResources</span>: !<span style="color:#ae81ff">Equals [!Ref EnvType, prod]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Resources</strong></p>
+<ul>
+<li>The <code>Resources</code> section is where you define the AWS resources you want to create and configure.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyEC2Instance</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::EC2::Instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">InstanceType</span>: !<span style="color:#ae81ff">Ref InstanceType</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">KeyName</span>: !<span style="color:#ae81ff">Ref KeyName</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Outputs</strong></p>
+<ul>
+<li>The <code>Outputs</code> section allows you to retrieve and display important information about the stack or its resources.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Outputs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">PublicIP</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Description</span>: <span style="color:#ae81ff">The public IP address of the EC2 instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Value</span>: !<span style="color:#ae81ff">GetAtt MyEC2Instance.PublicIp</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Intrinsic Functions</strong></p>
+<ul>
+<li>CloudFormation templates support intrinsic functions like <code>!Ref</code>, <code>!Fn::GetAtt</code>, <code>!Fn::Sub</code>, and others for dynamic value insertion and manipulation.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">InstanceType</span>: !<span style="color:#ae81ff">Ref MyParameter</span>
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="examples-of-aws-cloudformation-template-syntax">Examples of AWS CloudFormation Template Syntax</h3>
+<p>In this section, we&rsquo;ll provide several examples of AWS CloudFormation template syntax to help you better understand how to structure and define your own templates.</p>
+<p><strong>Example 1: Defining an Amazon EC2 Instance</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyEC2Instance</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::EC2::Instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">InstanceType</span>: <span style="color:#ae81ff">t2.micro</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">ImageId</span>: <span style="color:#ae81ff">ami-12345678</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">KeyName</span>: <span style="color:#ae81ff">my-key-pair</span>
+</span></span></code></pre></div><p><strong>Example 2: Using Parameters for Customization</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Parameters</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">InstanceType</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Default</span>: <span style="color:#ae81ff">t2.micro</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">KeyName</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">String</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyEC2Instance</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::EC2::Instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">InstanceType</span>: !<span style="color:#ae81ff">Ref InstanceType</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">ImageId</span>: <span style="color:#ae81ff">ami-12345678</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">KeyName</span>: !<span style="color:#ae81ff">Ref KeyName</span>
+</span></span></code></pre></div><p><strong>Example 3: Defining an Amazon S3 Bucket</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyS3Bucket</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::S3::Bucket</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">BucketName</span>: <span style="color:#ae81ff">my-unique-bucket-name</span>
+</span></span></code></pre></div><p><strong>Example 4: Using Mappings for Region-Specific Settings</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Mappings</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">RegionMap</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">us-east-1</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">AMI</span>: <span style="color:#ae81ff">ami-12345678</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">us-west-2</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">AMI</span>: <span style="color:#ae81ff">ami-87654321</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyEC2Instance</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::EC2::Instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">InstanceType</span>: <span style="color:#ae81ff">t2.micro</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">ImageId</span>: !<span style="color:#ae81ff">FindInMap [RegionMap, !Ref &#39;AWS::Region&#39;, AMI]</span>
+</span></span></code></pre></div><p><strong>Example 5: Adding Conditions for Resource Creation</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Conditions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">CreateProdResources</span>: !<span style="color:#ae81ff">Equals [!Ref EnvType, prod]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyEC2Instance</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::EC2::Instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Condition</span>: <span style="color:#ae81ff">CreateProdResources</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">InstanceType</span>: <span style="color:#ae81ff">t2.micro</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">ImageId</span>: <span style="color:#ae81ff">ami-12345678</span>
+</span></span></code></pre></div><p><strong>Example 6: Defining Outputs for Stack Information</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Outputs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">PublicIP</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Description</span>: <span style="color:#ae81ff">The public IP address of the EC2 instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Value</span>: !<span style="color:#ae81ff">GetAtt MyEC2Instance.PublicIp</span>
+</span></span></code></pre></div><p><strong>Example 7: Using Intrinsic Functions</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Resources</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">MyEC2Instance</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Type</span>: <span style="color:#ae81ff">AWS::EC2::Instance</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">Properties</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">InstanceType</span>: !<span style="color:#ae81ff">Ref InstanceType</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">ImageId</span>: !<span style="color:#ae81ff">FindInMap [RegionMap, !Ref &#39;AWS::Region&#39;, AMI]</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">KeyName</span>: !<span style="color:#ae81ff">If [CreateProdResources, prod-key, dev-key]</span>
+</span></span></code></pre></div><p><strong>Conclusion</strong></p>
+<p>Understanding the syntax of AWS CloudFormation templates is fundamental to creating, managing, and maintaining infrastructure as code efficiently. With this guide, you have learned the key elements of a CloudFormation template, setting you on the path to effectively provisioning and managing AWS resources with CloudFormation.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VyOS on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/vyos/</link>
+    <description>Recent content in VyOS on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/vyos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up VyOS on VMware Workstation Pro</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</guid>
+      <description>1. Download VyOS ISO Visit VyOS Download Page: Go to VyOS download page. Select Version: Choose the latest stable release or a version that suits your needs. Download ISO: Click on the download link for the ISO image and save it to your computer. 2. Create a New Virtual Machine in VMware Open VMware Workstation Pro: Launch the VMware Workstation Pro application. Create New Virtual Machine: Select &amp;ldquo;Create a New Virtual Machine&amp;rdquo; or use &amp;ldquo;File&amp;rdquo; &amp;gt; &amp;ldquo;New Virtual Machine.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BIND on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/bind/</link>
+    <description>Recent content in BIND on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/bind/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BIND Troubleshooting Guide (Ubuntu Server)</title>
+      <link>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</guid>
+      <description>Introduction BIND (Berkeley Internet Name Domain) is a widely used DNS server software. This guide focuses on troubleshooting BIND on Ubuntu Server 20.04. It assumes that BIND is already installed and configured, and you are experiencing issues.&#xA;Troubleshooting Steps 1. Check BIND Status To get an overview of the BIND service status:&#xA;sudo systemctl status bind9 This command helps identify if BIND is active or if there are any service-related errors.</description>
+    </item>
+  </channel>
+</rss>

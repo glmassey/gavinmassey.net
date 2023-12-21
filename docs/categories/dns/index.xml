@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNS on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/dns/</link>
+    <description>Recent content in DNS on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why are DNS settings configured per interface?</title>
+      <link>https://gavinmassey.net/articles/2023/why-different-dns-per-network-interface/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/why-different-dns-per-network-interface/</guid>
+      <description>It is kind of complicated&amp;hellip;&#xA;In today&amp;rsquo;s interconnected world, efficient network management and configuration are crucial for maintaining robust and secure IT systems. One aspect of network configuration that often raises questions is the rationale behind setting up individual DNS (Domain Name System) configurations for each network interface. This practice, though seemingly complex, caters to the nuanced needs of diverse network environments – from simple home setups to intricate corporate networks.</description>
+    </item>
+    <item>
+      <title>BIND Troubleshooting Guide (Ubuntu Server)</title>
+      <link>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/bind-troubleshooting-guide/</guid>
+      <description>Introduction BIND (Berkeley Internet Name Domain) is a widely used DNS server software. This guide focuses on troubleshooting BIND on Ubuntu Server 20.04. It assumes that BIND is already installed and configured, and you are experiencing issues.&#xA;Troubleshooting Steps 1. Check BIND Status To get an overview of the BIND service status:&#xA;sudo systemctl status bind9 This command helps identify if BIND is active or if there are any service-related errors.</description>
+    </item>
+  </channel>
+</rss>

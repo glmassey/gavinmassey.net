@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VMware on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/vmware/</link>
+    <description>Recent content in VMware on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up pfSense on VMware Workstation Pro</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</guid>
+      <description>In a virtual lab environment, often you will need a network device to accurately reflect a real-world environment. pfSense is a good option and is easy to use.&#xA;1. Download pfSense Image Visit pfSense Download Page: Go to the pfSense download page. Select Version and Architecture: Choose the latest stable release and select the architecture that matches your system (most likely AMD64). Select Installer Type: Choose the installer type. For VMware, the CD Image (ISO) installer is typically used.</description>
+    </item>
+    <item>
+      <title>How to Set Up VyOS on VMware Workstation Pro</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-vyos-firewalls/</guid>
+      <description>1. Download VyOS ISO Visit VyOS Download Page: Go to VyOS download page. Select Version: Choose the latest stable release or a version that suits your needs. Download ISO: Click on the download link for the ISO image and save it to your computer. 2. Create a New Virtual Machine in VMware Open VMware Workstation Pro: Launch the VMware Workstation Pro application. Create New Virtual Machine: Select &amp;ldquo;Create a New Virtual Machine&amp;rdquo; or use &amp;ldquo;File&amp;rdquo; &amp;gt; &amp;ldquo;New Virtual Machine.</description>
+    </item>
+    <item>
+      <title>VMware Virtual Networking Under the Hood</title>
+      <link>https://gavinmassey.net/articles/2023/vmware-virtual-networking-behind-the-scenes/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/vmware-virtual-networking-behind-the-scenes/</guid>
+      <description>VMware Workstation performs a significant amount of low-level networking operations to manage virtual networks for virtual machines (VMs). To achieve this, it installs special drivers and creates virtual network devices that integrate with the host system&amp;rsquo;s networking stack. Here&amp;rsquo;s how VMware modifies your system to enable its networking capabilities:&#xA;Virtual Network Adapters: VMware installs virtual network adapters for different types of networks (like VMnet1 for Host-Only and VMnet8 for NAT by default).</description>
+    </item>
+    <item>
+      <title>VMware Workstation Pro Networking FAQ</title>
+      <link>https://gavinmassey.net/articles/2023/vmware-virtual-networking-faq/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/vmware-virtual-networking-faq/</guid>
+      <description>Contents What does &amp;ldquo;Connect a Host Virtual Adapter to This Network&amp;rdquo; Mean? What IP Address Will the Host Virtual Adapter Receive? Why Does the Host Adapter Get an IP Outside the DHCP Range? Does a NAT Network Require a Host Virtual Adapter to Function? How Does VMware Handle NAT Without a Host Network Adapter? Does VMware Install Special Networking Drivers or Change the Network Stack? What does &amp;ldquo;Connect a Host Virtual Adapter to This Network&amp;rdquo; Mean?</description>
+    </item>
+    <item>
+      <title>Understanding VMware Virtual Network Types and IP Addressing</title>
+      <link>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</guid>
+      <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
+    </item>
+  </channel>
+</rss>

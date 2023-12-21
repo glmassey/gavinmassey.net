@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DHCP on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/dhcp/</link>
+    <description>Recent content in DHCP on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/dhcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring a DHCP Scope With Windows PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/configureing-dhcp-with-powershell/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configureing-dhcp-with-powershell/</guid>
+      <description># Define scope parameters $scopeName = &amp;#34;ExampleScope&amp;#34; $startRange = &amp;#34;192.168.1.10&amp;#34; # Starting IP address of the scope $endRange = &amp;#34;192.168.1.100&amp;#34; # Ending IP address of the scope $subnetMask = &amp;#34;255.255.255.0&amp;#34; $gateway = &amp;#34;192.168.1.1&amp;#34; $dnsServers = &amp;#34;192.168.1.2&amp;#34;, &amp;#34;192.168.1.3&amp;#34; # Authorize the DHCP server in Active Directory Add-DhcpServerInDC -DnsName &amp;#34;DhcpServerName&amp;#34; # Add a new DHCP scope Add-DhcpServerv4Scope -Name $scopeName -StartRange $startRange -EndRange $endRange -SubnetMask $subnetMask # Optionally, set additional scope options like default gateway (Router) and DNS servers Set-DhcpServerv4OptionValue -ScopeId $startRange -Router $gateway Set-DhcpServerv4OptionValue -ScopeId $startRange -DnsServer $dnsServers # Note: # - Replace the IP addresses and subnet mask with values appropriate for your network.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Active Directory on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/active-directory/</link>
+    <description>Recent content in Active Directory on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active Directory Domain Services (ADDS) Management</title>
+      <link>https://gavinmassey.net/articles/2023/adds-management/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/adds-management/</guid>
+      <description>Introduction Active Directory Domain Services (ADDS) is a foundational aspect of managing Windows-based networks, offering robust tools for managing users, computers, and other resources within an organization. This comprehensive guide delves into various key aspects of ADDS management, providing insights and practical instructions on how to efficiently use command line tools, PowerShell, and the Best Practices Analyzer (BPA) to maintain and optimize your Active Directory environment.&#xA;Firstly, we explore how to check for replication errors in your Active Directory environment, using both command line tools like dcdiag and repadmin, and PowerShell commands.</description>
+    </item>
+    <item>
+      <title>Domain Controller vs Global Catalog in Active Directory</title>
+      <link>https://gavinmassey.net/articles/2023/global-catalog/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/global-catalog/</guid>
+      <description>In Microsoft&amp;rsquo;s Active Directory (AD), Domain Controllers (DCs) and Global Catalogs (GCs) are crucial components, each with distinct roles and functions.&#xA;Domain Controller (DC) Primary Role: Handles authentication, authorization, and directory services within its domain. Data Scope: Manages the full Active Directory database for its domain, containing detailed information for each object. Functionality: Responds to security authentication requests, manages user and computer accounts, and enforces security policies. Replication: Every DC can update the directory and replicate changes to other DCs, ensuring network-wide consistency.</description>
+    </item>
+    <item>
+      <title>Managing Domain Controllers With PowerShell</title>
+      <link>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/managing-domain-controllers-with-powershell/</guid>
+      <description>Important considerations Before making any changes to ADDS, make sure dependent network services such as DNS and DHCP will not be affected. Alway create a backup before making any changes. How do you verify which domain controller has the FSMO roles # Verifying FSMO Roles Assignment # Import Active Directory module # This module is necessary to run Active Directory-related cmdlets Import-Module ActiveDirectory # Retrieve domain information # This command gets information about the current domain $domain = Get-ADDomain # Retrieve forest information # This command gets information about the forest $forest = Get-ADForest # Display FSMO roles for the domain # PDCEmulator, RIDMaster, and InfrastructureMaster roles are domain-specific Write-Host &amp;#34;Domain FSMO Roles:&amp;#34; Write-Host &amp;#34;PDC Emulator: $($domain.</description>
+    </item>
+    <item>
+      <title>Securing Active Directory Domain Services</title>
+      <link>https://gavinmassey.net/articles/2023/securing-adds/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/securing-adds/</guid>
+      <description>Securing Active Directory Domain Services (ADDS) is a critical component of maintaining the integrity and security of an organization&amp;rsquo;s IT infrastructure. This guide provides a comprehensive overview of key security practices and configurations necessary for safeguarding your ADDS environment.&#xA;Implementing Strong Password Policies with PSO Understanding PSOs (Password Settings Objects): PSOs are essential for defining password policies specific to user or group accounts in Active Directory. They enable the enforcement of unique password policies that may differ from the domain&amp;rsquo;s default settings.</description>
+    </item>
+  </channel>
+</rss>

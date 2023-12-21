@@ -6,6 +6,147 @@
     <description>Recent content in Categories on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active Directory</title>
+      <link>https://gavinmassey.net/categories/active-directory/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/active-directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>https://gavinmassey.net/categories/aws/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CIM</title>
+      <link>https://gavinmassey.net/categories/cim/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/cim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CloudFormation</title>
+      <link>https://gavinmassey.net/categories/cloudformation/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/cloudformation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>https://gavinmassey.net/categories/dns/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IAC</title>
+      <link>https://gavinmassey.net/categories/iac/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/iac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://gavinmassey.net/categories/linux/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://gavinmassey.net/categories/networking/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pfSense</title>
+      <link>https://gavinmassey.net/categories/pfsense/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/pfsense/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerShell</title>
+      <link>https://gavinmassey.net/categories/powershell/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>https://gavinmassey.net/categories/terraform/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/terraform/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VMware</title>
+      <link>https://gavinmassey.net/categories/vmware/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/vmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VyOS</title>
+      <link>https://gavinmassey.net/categories/vyos/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/vyos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WIM</title>
+      <link>https://gavinmassey.net/categories/wim/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/wim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://gavinmassey.net/categories/windows/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DHCP</title>
+      <link>https://gavinmassey.net/categories/dhcp/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/dhcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://gavinmassey.net/categories/programming/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows Server Core</title>
+      <link>https://gavinmassey.net/categories/windows-server-core/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/windows-server-core/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>YAML</title>
+      <link>https://gavinmassey.net/categories/yaml/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/yaml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BIND</title>
+      <link>https://gavinmassey.net/categories/bind/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/bind/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

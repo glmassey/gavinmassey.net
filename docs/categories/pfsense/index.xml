@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pfSense on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/pfsense/</link>
+    <description>Recent content in pfSense on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/pfsense/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Set Up pfSense on VMware Workstation Pro</title>
+      <link>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/configuring-pfsense-router/</guid>
+      <description>In a virtual lab environment, often you will need a network device to accurately reflect a real-world environment. pfSense is a good option and is easy to use.&#xA;1. Download pfSense Image Visit pfSense Download Page: Go to the pfSense download page. Select Version and Architecture: Choose the latest stable release and select the architecture that matches your system (most likely AMD64). Select Installer Type: Choose the installer type. For VMware, the CD Image (ISO) installer is typically used.</description>
+    </item>
+  </channel>
+</rss>

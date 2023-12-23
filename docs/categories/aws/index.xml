@@ -6,28 +6,56 @@
     <description>Recent content in AWS on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 1 - Introduction</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-1-study-guide-intro/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-1-study-guide-intro/</guid>
+      <description>Welcome to our in-depth guide tailored to help you ace the AWS Cloud Practitioner Exam. This series is dedicated to condensing the vast world of AWS into digestible, focused articles that cover all the crucial topics you need to know for the exam. From cloud fundamentals to the specifics of AWS services, security, and compliance, each section is designed to equip you with a comprehensive understanding of AWS concepts and best practices.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 2 - &#34;Knowledge of&#34; Sections</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-2-knowledge-of/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-2-knowledge-of/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;Knowledge of&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 3 - &#34;Skill in&#34; Sections</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-3-skills-in/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-3-skills-in/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;Skills in&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 4 - Technologies and Concepts</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-4-technologies-and-concepts/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-4-technologies-and-concepts/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;Technologies and Concepts&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 5 - In Scope Services</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-5-in-scope-services/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-5-in-scope-services/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;In Scope Services&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 6 - Summary</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary These relative URLs should work within your Hugo site, assuming your site structure aligns with the directory structure you&amp;rsquo;ve provided. Make sure to double-check that the folder and file names are correct in your Hugo project.</description>
+    </item>
     <item>
       <title>Understanding AWS CloudFormation Template Syntax</title>
       <link>https://gavinmassey.net/articles/2023/aws-cloudformation-syntax/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/aws-cloudformation-syntax/</guid>
       <description>Introduction AWS CloudFormation is a powerful service for provisioning and managing AWS infrastructure as code (IAC). To effectively use CloudFormation, it&amp;rsquo;s crucial to understand the syntax of CloudFormation templates, as they serve as the blueprints for your infrastructure. In this guide, we&amp;rsquo;ll explore the essential elements and syntax of CloudFormation templates.&#xA;Format Version&#xA;The AWSTemplateFormatVersion field at the beginning of the template specifies the CloudFormation template version you are using. Example:</description>
-    </item>
-    <item>
-      <title>AWS Cloud Practitioners Exam, Part 2 - &#34;Skill in&#34; Sections</title>
-      <link>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</link>
-      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</guid>
-      <description>The following compilation includes content exclusively from the &amp;lsquo;Skills in&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.&#xA;Understanding the economies of scale (for example, cost savings) Economies of scale refer to the cost advantage that arises with increased output of a product.</description>
-    </item>
-    <item>
-      <title>AWS Cloud Practitioners Exam, Part 3 - &#34;Technologies and Concepts&#34; Section</title>
-      <link>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</link>
-      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</guid>
-      <description>The following compilation includes content exclusively from the &amp;lsquo;Technologies and Concepts&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.&#xA;APIs: APIs in AWS enable applications to interact with AWS services. Key points include understanding RESTful APIs, API Gateway, and how APIs are used for service integration.</description>
     </item>
   </channel>
 </rss>

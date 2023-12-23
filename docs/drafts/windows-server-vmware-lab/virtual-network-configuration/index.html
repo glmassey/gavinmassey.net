@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Virtual Network Configuration Objective To enable proper communication between the virtual machines and provide them with internet access, the virtual network is configured with NAT. This configuration uses the gateway IP address of 10.0.0.1.
+VMnet8 Configuration NAT Configuration:
+VMnet8 is designated as the NAT network within VMware Workstation Pro. The NAT network allows the virtual machines to communicate with each other and external networks, sharing the host&rsquo;s IP address. Gateway Configuration:">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="virtual-network-configuration">Virtual Network Configuration</h1>
+<h2 id="objective">Objective</h2>
+<p>To enable proper communication between the virtual machines and provide them with internet access, the virtual network is configured with NAT. This configuration uses the gateway IP address of 10.0.0.1.</p>
+<h3 id="vmnet8-configuration">VMnet8 Configuration</h3>
+<ol>
+<li>
+<p><strong>NAT Configuration</strong>:</p>
+<ul>
+<li>VMnet8 is designated as the NAT network within VMware Workstation Pro.</li>
+<li>The NAT network allows the virtual machines to communicate with each other and external networks, sharing the host&rsquo;s IP address.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gateway Configuration</strong>:</p>
+<ul>
+<li>The gateway IP address for VMnet8 is set to 10.0.0.1.</li>
+<li>Virtual machines use this gateway address to route traffic to external networks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Adapter Setup</strong>:</p>
+<ul>
+<li>Each virtual machine must be configured to connect to VMnet8 as its network adapter to be on the same subnet and utilize NAT for communications.</li>
+</ul>
+</li>
+<li>
+<p><strong>DHCP Service</strong>:</p>
+<ul>
+<li>The DHCP service on VMnet8 is disabled to prevent conflicts with the DHCP server configured on the domain controller virtual machine within the lab environment.</li>
+</ul>
+</li>
+<li>
+<p><strong>IP Address Range</strong>:</p>
+<ul>
+<li>The domain controller and other servers should have static IP addresses set to ensure consistent network configuration and avoid potential DHCP conflicts.</li>
+</ul>
+</li>
+<li>
+<p><strong>DNS and Routing</strong>:</p>
+<ul>
+<li>While DNS and routing for external access are handled by the NAT device, internal name resolution is managed by the DNS server role on the domain controller.</li>
+</ul>
+</li>
+</ol>
+<h3 id="applying-configuration">Applying Configuration</h3>
+<p>Before powering on the virtual machines, ensure the network settings are correctly applied. Once the virtual machines are started, they should be able to communicate with each other immediately, and the domain controller will be able to provide DNS and DHCP services to the network.</p>
+<h3 id="additional-considerations">Additional Considerations</h3>
+<ul>
+<li>
+<p><strong>Internet Access</strong>:</p>
+<ul>
+<li>For internet access, verify that the NAT service on the host system is active and configured correctly to allow traffic from VMnet8 to pass to the external network.</li>
+</ul>
+</li>
+<li>
+<p><strong>Firewall Rules</strong>:</p>
+<ul>
+<li>Review any host system firewall rules that might interfere with NAT traffic.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testing Connectivity</strong>:</p>
+<ul>
+<li>Use network testing tools like <code>ping</code> to confirm that the VMs can reach the default gateway (10.0.0.2) and that DNS resolution operates correctly for both internal and external domain names.</li>
+</ul>
+</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

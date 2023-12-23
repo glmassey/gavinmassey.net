@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="AWS Setup for Terraform Before running Terraform to create an AWS EC2 instance, you need to set up your AWS account and credentials.
+1. Create an AWS Account If you don&rsquo;t already have an AWS account, sign up at AWS Management Console. 2. Create an IAM User Log into the AWS Management Console. Navigate to the IAM (Identity and Access Management) service. Create a new IAM user with programmatic access. This provides you with an access key ID and secret access key, which are needed to allow Terraform to manage resources on your behalf.">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="aws-setup-for-terraform">AWS Setup for Terraform</h1>
+<p>Before running Terraform to create an AWS EC2 instance, you need to set up your AWS account and credentials.</p>
+<h2 id="1-create-an-aws-account">1. Create an AWS Account</h2>
+<ul>
+<li>If you don&rsquo;t already have an AWS account, sign up at <a href="https://aws.amazon.com/console/">AWS Management Console</a>.</li>
+</ul>
+<h2 id="2-create-an-iam-user">2. Create an IAM User</h2>
+<ul>
+<li>Log into the AWS Management Console.</li>
+<li>Navigate to the IAM (Identity and Access Management) service.</li>
+<li>Create a new IAM user with programmatic access. This provides you with an access key ID and secret access key, which are needed to allow Terraform to manage resources on your behalf.</li>
+<li>Attach policies granting necessary permissions (e.g., AmazonEC2FullAccess).</li>
+</ul>
+<h2 id="3-find-the-ubuntu-ami">3. Find the Ubuntu AMI</h2>
+<ul>
+<li>Navigate to the EC2 service in the AWS Management Console.</li>
+<li>Click on <code>Launch Instance</code> to find the AMI (Amazon Machine Image) ID for the latest Ubuntu LTS version. Make sure you select an AMI in the region you plan to use.</li>
+<li>Note down the AMI ID as you will need to replace <code>ami-12345678</code> in <code>main.tf</code> with this ID.</li>
+</ul>
+<h2 id="4-install-the-aws-cli">4. Install the AWS CLI</h2>
+<ul>
+<li>Install the AWS Command Line Interface (CLI) as per instructions here: <a href="https://aws.amazon.com/cli/">Installing AWS CLI</a>.</li>
+</ul>
+<h2 id="5-configure-aws-cli">5. Configure AWS CLI</h2>
+<ul>
+<li>Run <code>aws configure</code> in your command line.</li>
+<li>Enter your AWS Access Key ID, Secret Access Key, and default region name.</li>
+</ul>
+<h2 id="6-running-terraform">6. Running Terraform</h2>
+<ul>
+<li>Initialize Terraform in the directory where your <code>main.tf</code> is located by running <code>terraform init</code>.</li>
+<li>Apply the Terraform configuration with <code>terraform apply</code>.</li>
+<li>Confirm the action and Terraform will create the EC2 instance.</li>
+</ul>
+<h2 id="7-accessing-the-instance">7. Accessing the Instance</h2>
+<ul>
+<li>Once the instance is created, you can find its public IP address in the AWS EC2 console.</li>
+<li>To access the instance, you&rsquo;ll need an SSH key pair. You can create this in the EC2 console under <code>Key Pairs</code>.</li>
+</ul>
+<h2 id="8-clean-up-resources">8. Clean Up Resources</h2>
+<ul>
+<li>Remember to run <code>terraform destroy</code> when you&rsquo;re done to avoid ongoing charges for the AWS resources.</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

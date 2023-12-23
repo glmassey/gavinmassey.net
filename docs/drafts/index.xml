@@ -9,10 +9,38 @@
     <atom:link href="https://gavinmassey.net/drafts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://gavinmassey.net/drafts/powershell-scripts/setting-up-server-core-dc/</link>
+      <link>https://gavinmassey.net/drafts/basic-terraform-lab/aws-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/drafts/powershell-scripts/setting-up-server-core-dc/</guid>
-      <description>Configure Windows Server Core Domain Controller # Install vmware tools if not installed setup64.exe /s /v&amp;#34;/qn REBOOT=R&amp;#34; # Change the hostname and reboot Rename-Computer -NewName &amp;#39;NewComputerName&amp;#39; Restart-Computer # Remove the old ip address Remove-NetIPAddress -InterfaceAlias &amp;#39;Ethernet0&amp;#39; # Also you might have to remove the default gateway Remove-NetRoute -InterfaceAlias &amp;#39;Ethernet0&amp;#39; -NextHop 10.0.0.2 # Now you can add the new IP Address New-NetIPAddress ` -InterfaceAlias &amp;#39;Ethernet0&amp;#39; ` -IPAddress &amp;#39;10.0.77.104&amp;#39; ` -PrefixLength 24 ` -DefaultGateway &amp;#39;10.</description>
+      <guid>https://gavinmassey.net/drafts/basic-terraform-lab/aws-setup/</guid>
+      <description>AWS Setup for Terraform Before running Terraform to create an AWS EC2 instance, you need to set up your AWS account and credentials.&#xA;1. Create an AWS Account If you don&amp;rsquo;t already have an AWS account, sign up at AWS Management Console. 2. Create an IAM User Log into the AWS Management Console. Navigate to the IAM (Identity and Access Management) service. Create a new IAM user with programmatic access. This provides you with an access key ID and secret access key, which are needed to allow Terraform to manage resources on your behalf.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/basic-terraform-lab/instructions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/basic-terraform-lab/instructions/</guid>
+      <description>Lab 01: Terraform Hello World with AWS Overview In this lab, we&amp;rsquo;ll use Terraform to deploy the latest Ubuntu LTS server on AWS within a custom VPC. We&amp;rsquo;ll be using an AWS free tier eligible instance type to ensure cost-effectiveness while learning.&#xA;Objectives Set up a basic Terraform configuration with separate files for different resources. Create a custom VPC and deploy an Ubuntu LTS server on AWS within this VPC. Understand the basics of Terraform syntax and AWS resources, including VPCs, EC2 instances, and security groups.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/basic-terraform-lab/setting-up-openssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/basic-terraform-lab/setting-up-openssh/</guid>
+      <description>Configuring OpenSSH on Windows for AWS EC2 Step 1: Create a Key Pair in AWS Console Log in to the AWS Management Console and navigate to the EC2 dashboard. In the navigation pane, under &amp;ldquo;Network &amp;amp; Security&amp;rdquo;, click on Key Pairs. Click on Create Key Pair. Give your key pair a name (e.g., my-aws-key), select &amp;ldquo;pem&amp;rdquo; as the file format, and click Create. The private key file (my-aws-key.pem) will automatically be downloaded.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/windows-server-vmware-lab/server-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/windows-server-vmware-lab/server-configuration/</guid>
+      <description>Configuring Virtual Machines for a Lab Environment Objective Set up 1 Virtual Machine as a Domain Controller (DC), 1 Virtual Machine as an Application Server (APP server), and 1 Windows 10 Client.&#xA;1. Configure Server2012r2 as DC Execute the following commands on the virtual machine DC in the PowerShell console:&#xA;# Configuring the IP address for the &amp;#39;Ethernet&amp;#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # After AD DS installation, set the DNS client server address to the local server # This should be the IP of your newly configured DNS server within the domain Set-DnsClientServerAddress -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -ServerAddresses 127.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/windows-server-vmware-lab/virtual-network-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/windows-server-vmware-lab/virtual-network-configuration/</guid>
+      <description>Virtual Network Configuration Objective To enable proper communication between the virtual machines and provide them with internet access, the virtual network is configured with NAT. This configuration uses the gateway IP address of 10.0.0.1.&#xA;VMnet8 Configuration NAT Configuration:&#xA;VMnet8 is designated as the NAT network within VMware Workstation Pro. The NAT network allows the virtual machines to communicate with each other and external networks, sharing the host&amp;rsquo;s IP address. Gateway Configuration:</description>
     </item>
   </channel>
 </rss>

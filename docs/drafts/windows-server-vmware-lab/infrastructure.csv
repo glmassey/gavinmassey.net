@@ -1,0 +1,10 @@
+network, hostname, ip address, os
+slc, slc-dc1, 10.0.77.101, Server 2022 Core - done
+slc, slc-dc2, 10.0.77.102, Server 2022 Core - done
+slc, slc-admin1, 10.0.77.103, Server 2022 Desktop - done
+slc, slc-srv1, 10.0.77.104, Server 2022 Core - done
+slc, slc-pc1, DHCP, Windows 11 Enterprise - just change name
+boise, boise-dc1, 10.0.69.101, Server 2022 Core
+boise, boise-srv1, 10.0.69.102, Server 2019 Core
+boise, boise-srv2, 10.0.69.103, Server 2016 Core
+boise, boise-pc1, DHCP, Windows 11 Enterprise

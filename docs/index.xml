@@ -6,8 +6,50 @@
     <description>Recent content in www.gavinmassey.net on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 1 - Introduction</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-1-study-guide-intro/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-1-study-guide-intro/</guid>
+      <description>Welcome to our in-depth guide tailored to help you ace the AWS Cloud Practitioner Exam. This series is dedicated to condensing the vast world of AWS into digestible, focused articles that cover all the crucial topics you need to know for the exam. From cloud fundamentals to the specifics of AWS services, security, and compliance, each section is designed to equip you with a comprehensive understanding of AWS concepts and best practices.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 2 - &#34;Knowledge of&#34; Sections</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-2-knowledge-of/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-2-knowledge-of/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;Knowledge of&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 3 - &#34;Skill in&#34; Sections</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-3-skills-in/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-3-skills-in/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;Skills in&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 4 - Technologies and Concepts</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-4-technologies-and-concepts/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-4-technologies-and-concepts/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;Technologies and Concepts&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 5 - In Scope Services</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-5-in-scope-services/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-5-in-scope-services/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary The following compilation includes content exclusively from the &amp;lsquo;In Scope Services&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.</description>
+    </item>
+    <item>
+      <title>AWS Cloud Practitioners Exam Guide, Part 6 - Summary</title>
+      <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</guid>
+      <description>Article Series Index Part 1 - Introduction Part 2 - &amp;ldquo;Knowledge of&amp;rdquo; Sections Part 3 - &amp;ldquo;Skill in&amp;rdquo; Sections Part 4 - Technologies and Concepts Part 5 - In Scope Services Part 6 - Summary These relative URLs should work within your Hugo site, assuming your site structure aligns with the directory structure you&amp;rsquo;ve provided. Make sure to double-check that the folder and file names are correct in your Hugo project.</description>
+    </item>
     <item>
       <title>Active Directory Domain Services (ADDS) Management</title>
       <link>https://gavinmassey.net/articles/2023/adds-management/</link>
@@ -240,20 +282,6 @@
       <description>1. Structure:&#xA;YAML uses indentation (spaces, not tabs) to represent the structure, similar to Python. The number of spaces in the indentation is not fixed, but all elements of the list or map must be aligned. 2. Scalars (Strings, Numbers, Booleans):&#xA;Strings can be unquoted or enclosed in single (&#39;) or double quotes (&amp;quot;). Numbers are written as in most programming languages. Booleans are represented with true and false. 3. Lists (Arrays):</description>
     </item>
     <item>
-      <title>AWS Cloud Practitioners Exam, Part 2 - &#34;Skill in&#34; Sections</title>
-      <link>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</link>
-      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</guid>
-      <description>The following compilation includes content exclusively from the &amp;lsquo;Skills in&amp;rsquo; sections of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.&#xA;Understanding the economies of scale (for example, cost savings) Economies of scale refer to the cost advantage that arises with increased output of a product.</description>
-    </item>
-    <item>
-      <title>AWS Cloud Practitioners Exam, Part 3 - &#34;Technologies and Concepts&#34; Section</title>
-      <link>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</link>
-      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</guid>
-      <description>The following compilation includes content exclusively from the &amp;lsquo;Technologies and Concepts&amp;rsquo; section of the AWS Cloud Practitioners Exam Guide. These sections have been systematically divided and organized into separate articles for your convenience. For comprehensive information, please refer to the corresponding sections in the other parts of this guide.&#xA;APIs: APIs in AWS enable applications to interact with AWS services. Key points include understanding RESTful APIs, API Gateway, and how APIs are used for service integration.</description>
-    </item>
-    <item>
       <title>RICHARD (GAVIN) MASSEY</title>
       <link>https://gavinmassey.net/resume/</link>
       <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
@@ -280,6 +308,41 @@
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</guid>
       <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/basic-terraform-lab/aws-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/basic-terraform-lab/aws-setup/</guid>
+      <description>AWS Setup for Terraform Before running Terraform to create an AWS EC2 instance, you need to set up your AWS account and credentials.&#xA;1. Create an AWS Account If you don&amp;rsquo;t already have an AWS account, sign up at AWS Management Console. 2. Create an IAM User Log into the AWS Management Console. Navigate to the IAM (Identity and Access Management) service. Create a new IAM user with programmatic access. This provides you with an access key ID and secret access key, which are needed to allow Terraform to manage resources on your behalf.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/basic-terraform-lab/instructions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/basic-terraform-lab/instructions/</guid>
+      <description>Lab 01: Terraform Hello World with AWS Overview In this lab, we&amp;rsquo;ll use Terraform to deploy the latest Ubuntu LTS server on AWS within a custom VPC. We&amp;rsquo;ll be using an AWS free tier eligible instance type to ensure cost-effectiveness while learning.&#xA;Objectives Set up a basic Terraform configuration with separate files for different resources. Create a custom VPC and deploy an Ubuntu LTS server on AWS within this VPC. Understand the basics of Terraform syntax and AWS resources, including VPCs, EC2 instances, and security groups.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/basic-terraform-lab/setting-up-openssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/basic-terraform-lab/setting-up-openssh/</guid>
+      <description>Configuring OpenSSH on Windows for AWS EC2 Step 1: Create a Key Pair in AWS Console Log in to the AWS Management Console and navigate to the EC2 dashboard. In the navigation pane, under &amp;ldquo;Network &amp;amp; Security&amp;rdquo;, click on Key Pairs. Click on Create Key Pair. Give your key pair a name (e.g., my-aws-key), select &amp;ldquo;pem&amp;rdquo; as the file format, and click Create. The private key file (my-aws-key.pem) will automatically be downloaded.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/windows-server-vmware-lab/server-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/windows-server-vmware-lab/server-configuration/</guid>
+      <description>Configuring Virtual Machines for a Lab Environment Objective Set up 1 Virtual Machine as a Domain Controller (DC), 1 Virtual Machine as an Application Server (APP server), and 1 Windows 10 Client.&#xA;1. Configure Server2012r2 as DC Execute the following commands on the virtual machine DC in the PowerShell console:&#xA;# Configuring the IP address for the &amp;#39;Ethernet&amp;#39; interface New-NetIPAddress -IPAddress 10.0.0.2 -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -PrefixLength 24 -DefaultGateway 10.0.0.1 # After AD DS installation, set the DNS client server address to the local server # This should be the IP of your newly configured DNS server within the domain Set-DnsClientServerAddress -InterfaceAlias &amp;#34;Ethernet0&amp;#34; -ServerAddresses 127.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://gavinmassey.net/drafts/windows-server-vmware-lab/virtual-network-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/drafts/windows-server-vmware-lab/virtual-network-configuration/</guid>
+      <description>Virtual Network Configuration Objective To enable proper communication between the virtual machines and provide them with internet access, the virtual network is configured with NAT. This configuration uses the gateway IP address of 10.0.0.1.&#xA;VMnet8 Configuration NAT Configuration:&#xA;VMnet8 is designated as the NAT network within VMware Workstation Pro. The NAT network allows the virtual machines to communicate with each other and external networks, sharing the host&amp;rsquo;s IP address. Gateway Configuration:</description>
     </item>
   </channel>
 </rss>

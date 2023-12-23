@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Configuring OpenSSH on Windows for AWS EC2 Step 1: Create a Key Pair in AWS Console Log in to the AWS Management Console and navigate to the EC2 dashboard. In the navigation pane, under &ldquo;Network &amp; Security&rdquo;, click on Key Pairs. Click on Create Key Pair. Give your key pair a name (e.g., my-aws-key), select &ldquo;pem&rdquo; as the file format, and click Create. The private key file (my-aws-key.pem) will automatically be downloaded.">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="configuring-openssh-on-windows-for-aws-ec2">Configuring OpenSSH on Windows for AWS EC2</h1>
+<h2 id="step-1-create-a-key-pair-in-aws-console">Step 1: Create a Key Pair in AWS Console</h2>
+<ol>
+<li><strong>Log in to the AWS Management Console</strong> and navigate to the EC2 dashboard.</li>
+<li>In the navigation pane, under &ldquo;Network &amp; Security&rdquo;, click on <strong>Key Pairs</strong>.</li>
+<li>Click on <strong>Create Key Pair</strong>.</li>
+<li>Give your key pair a name (e.g., <code>my-aws-key</code>), select &ldquo;pem&rdquo; as the file format, and click <strong>Create</strong>.</li>
+<li>The private key file (<code>my-aws-key.pem</code>) will automatically be downloaded. Save this file; it&rsquo;s used to securely access your EC2 instances.</li>
+</ol>
+<h2 id="step-2-save-the-key-on-windows">Step 2: Save the Key on Windows</h2>
+<ol>
+<li><strong>Create a Directory for SSH Keys</strong>:
+<ul>
+<li>It&rsquo;s a good practice to store all your SSH keys in one place. You can create a folder named <code>.ssh</code> in your user directory (e.g., <code>C:\Users\YourUsername\.ssh\</code>).</li>
+<li>Move the downloaded <code>.pem</code> file to this folder.</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-3-configure-openssh">Step 3: Configure OpenSSH</h2>
+<ol>
+<li>
+<p><strong>Install OpenSSH</strong> (if not already installed):</p>
+<ul>
+<li>Windows 10 and newer versions have OpenSSH client installed by default. You can verify its installation by opening the Command Prompt or PowerShell and running <code>ssh -V</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Permissions for the Key File</strong>:</p>
+<ul>
+<li>Right-click on the <code>.pem</code> file, select &ldquo;Properties&rdquo;, then go to the &ldquo;Security&rdquo; tab.</li>
+<li>Click &ldquo;Edit&rdquo; and set permissions so that only your user account has read access.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create an SSH Config File</strong>:</p>
+<ul>
+<li>In the same <code>.ssh</code> directory, create a file named <code>config</code> (no file extension).</li>
+<li>Open this file with a text editor (like Notepad).</li>
+</ul>
+</li>
+<li>
+<p><strong>Edit the Config File</strong>:</p>
+<ul>
+<li>
+<p>Add the following lines to the <code>config</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Host *
+</span></span><span style="display:flex;"><span>    IdentityFile C:\Users\YourUsername\.ssh\my-aws-key.pem
+</span></span></code></pre></div></li>
+<li>
+<p>Replace <code>YourUsername</code> with your Windows username and <code>my-aws-key.pem</code> with the name of your private key file.</p>
+</li>
+<li>
+<p>This configuration tells SSH to use this key for all hosts you connect to.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Connecting to Your EC2 Instance</strong>:</p>
+<ul>
+<li>
+<p>To connect to an instance, open Windows Terminal or Command Prompt and use the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ssh ec2-user@your-instance-ip
+</span></span></code></pre></div></li>
+<li>
+<p>Replace <code>ec2-user</code> with the appropriate username for your AMI (e.g., <code>ubuntu</code> for Ubuntu AMIs) and <code>your-instance-ip</code> with the public IP address of your EC2 instance.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="important-security-notes">Important Security Notes</h2>
+<ul>
+<li>Keep your private key secure and do not share it.</li>
+<li>Regularly check and update your SSH configurations for any changes or security enhancements.</li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

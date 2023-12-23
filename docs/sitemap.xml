@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://gavinmassey.net/articles/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/aws/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-1-study-guide-intro/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-2-knowledge-of/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-3-skills-in/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-4-technologies-and-concepts/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-5-in-scope-services/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/certifications/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gavinmassey.net/categories/active-directory/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/adds-management/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/aws/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/cim/</loc>
@@ -140,9 +164,6 @@
     <loc>https://gavinmassey.net/categories/windows/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/articles/2023/setting-up-server-core-dc/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -173,15 +194,6 @@
     <loc>https://gavinmassey.net/articles/2023/yaml-basics/</loc>
     <lastmod>2023-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02-part-2-skills-in/</loc>
-    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/2023/aws-clf-c02-part-3-technologies-and-concepts/</loc>
-    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/certifications/</loc>
-    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/resume/</loc>
     <lastmod>2023-12-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -196,6 +208,18 @@
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/basic-terraform-lab/aws-setup/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/basic-terraform-lab/instructions/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/basic-terraform-lab/setting-up-openssh/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/windows-server-vmware-lab/server-configuration/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/windows-server-vmware-lab/virtual-network-configuration/</loc>
+  </url><url>
+    <loc>https://gavinmassey.net/drafts/</loc>
   </url><url>
     <loc>https://gavinmassey.net/tags/</loc>
   </url>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Lab 01: Terraform Hello World with AWS Overview In this lab, we&rsquo;ll use Terraform to deploy the latest Ubuntu LTS server on AWS within a custom VPC. We&rsquo;ll be using an AWS free tier eligible instance type to ensure cost-effectiveness while learning.
+Objectives Set up a basic Terraform configuration with separate files for different resources. Create a custom VPC and deploy an Ubuntu LTS server on AWS within this VPC. Understand the basics of Terraform syntax and AWS resources, including VPCs, EC2 instances, and security groups.">  
+
+  <title>
+    
+      
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+            0001-01-01
+        </time>
+    </p>
+
+    <h1></h1>
+
+    
+
+    <h1 id="lab-01-terraform-hello-world-with-aws">Lab 01: Terraform Hello World with AWS</h1>
+<h2 id="overview">Overview</h2>
+<p>In this lab, we&rsquo;ll use Terraform to deploy the latest Ubuntu LTS server on AWS within a custom VPC. We&rsquo;ll be using an AWS free tier eligible instance type to ensure cost-effectiveness while learning.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>Set up a basic Terraform configuration with separate files for different resources.</li>
+<li>Create a custom VPC and deploy an Ubuntu LTS server on AWS within this VPC.</li>
+<li>Understand the basics of Terraform syntax and AWS resources, including VPCs, EC2 instances, and security groups.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>AWS account with free tier eligibility.</li>
+<li>Basic knowledge of AWS services, especially EC2 and VPC.</li>
+<li>Terraform installed on your machine. <a href="https://www.terraform.io/downloads.html">Download Terraform</a></li>
+<li>AWS CLI installed and configured. <a href="https://aws.amazon.com/cli/">AWS CLI Installation</a></li>
+</ul>
+<h2 id="lab-setup">Lab Setup</h2>
+<ol>
+<li>
+<p><strong>Initialize Your Workspace</strong>:</p>
+<ul>
+<li>Clone this repository to your local machine.</li>
+<li>Navigate to the <code>lab-01-terraform-hello-world</code> directory.</li>
+</ul>
+</li>
+<li>
+<p><strong>AWS Credentials</strong>:</p>
+<ul>
+<li>Ensure your AWS credentials are configured. This typically involves setting up the AWS CLI with <code>aws configure</code>.</li>
+<li><strong>Security Note</strong>: Never hardcode your AWS credentials in your Terraform files.</li>
+</ul>
+</li>
+<li>
+<p><strong>Terraform Files</strong>:</p>
+<ul>
+<li>You will be working with several files:
+<ul>
+<li><code>vpc.tf</code>: Contains the Terraform configuration for creating a custom VPC.</li>
+<li><code>ec2.tf</code>: Contains the Terraform configuration for deploying an EC2 instance within the new VPC.</li>
+<li><code>outputs.tf</code>: Defines the output variables like the public IP address of the EC2 instance.</li>
+<li><code>variables.tf</code>: Contains the variable definitions used in other Terraform files.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Terraform Initialization</strong>:</p>
+<ul>
+<li>Run <code>terraform init</code> in your project directory. This command initializes Terraform and downloads the necessary providers.</li>
+</ul>
+</li>
+</ol>
+<h2 id="deployment-steps">Deployment Steps</h2>
+<ol>
+<li>
+<p><strong>Review the Configuration</strong>:</p>
+<ul>
+<li>Examine the contents of <code>vpc.tf</code>, <code>ec2.tf</code>, <code>variables.tf</code>, and <code>outputs.tf</code>. Understand the resources being created and their configurations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Plan Your Deployment</strong>:</p>
+<ul>
+<li>Run <code>terraform plan</code> to preview the changes Terraform will make.</li>
+</ul>
+</li>
+<li>
+<p><strong>Apply the Configuration</strong>:</p>
+<ul>
+<li>Execute <code>terraform apply</code> to create the resources. Confirm the action when prompted.</li>
+<li>Once applied, Terraform will output the public IP address of the newly created Ubuntu server.</li>
+</ul>
+</li>
+<li>
+<p><strong>Access the Server</strong>:</p>
+<ul>
+<li>Connect to the server via SSH. You will need the private key corresponding to the key pair used in the EC2 instance setup.</li>
+</ul>
+</li>
+<li>
+<p><strong>Clean Up Resources</strong>:</p>
+<ul>
+<li>After you are done, make sure to destroy the resources to avoid any charges. Run <code>terraform destroy</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://www.terraform.io/docs">Terraform Documentation</a></li>
+<li><a href="https://docs.aws.amazon.com/ec2/">AWS EC2 Documentation</a></li>
+<li><a href="https://docs.aws.amazon.com/vpc/">AWS VPC Documentation</a></li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Be mindful of AWS usage to avoid charges. Regularly check your AWS Console to monitor running services.</li>
+<li>Always follow best practices for security, such as minimal privilege IAM roles and secure key management.</li>
+</ul>
+<h2 id="installing-terraform">Installing Terraform</h2>
+<ol>
+<li>
+<p>Download the binary from Hashicorp.</p>
+</li>
+<li>
+<p>Extract and place in a suitable location.</p>
+</li>
+<li>
+<p>Add location to system path, the following command may be used depending on where you put it. You will need to execute the following command from an administrative PowerShell session.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$path = [<span style="color:#66d9ef">System.Environment</span>]::GetEnvironmentVariable(<span style="color:#e6db74">&#34;Path&#34;</span>, [<span style="color:#66d9ef">System.EnvironmentVariableTarget</span>]::Machine)
+</span></span><span style="display:flex;"><span>$newPath = <span style="color:#e6db74">&#34;</span>$path<span style="color:#e6db74">;C:\Program Files\HashiCorp\Terraform\terraform_1.6.5_windows_amd64&#34;</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">System.Environment</span>]::SetEnvironmentVariable(<span style="color:#e6db74">&#34;Path&#34;</span>, $newPath, [<span style="color:#66d9ef">System.EnvironmentVariableTarget</span>]::Machine)
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="aws-setup.md">AWS Setup</a></li>
+<li><a href="setting-up-openssh.md">Setting up OpenSSH</a></li>
+</ul>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

@@ -6,8 +6,15 @@
     <description>Recent content in www.gavinmassey.net on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VMware A Brief Guide to the VMware Ecosystem: Understanding Key Products and Technologies</title>
+      <link>https://gavinmassey.net/articles/2023/vmware-ecosystem/</link>
+      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/vmware-ecosystem/</guid>
+      <description>vSphere VMware vSphere stands as a pivotal solution in data center management, offering advanced virtualization capabilities with a focus on scalability, performance, and efficiency. vSphere achieves this by abstracting and pooling the underlying hardware resources of physical servers, allowing for the creation and management of multiple virtual machines (VMs) on a single physical host.&#xA;Central to vSphere&amp;rsquo;s functionality is the ESXi hypervisor, which directly interacts with the hardware and is responsible for allocating resources to VMs.</description>
+    </item>
     <item>
       <title>AWS Cloud Practitioners Exam Guide, Part 1 - Introduction</title>
       <link>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-1-study-guide-intro/</link>

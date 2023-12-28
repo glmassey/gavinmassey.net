@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gavinmassey.net/articles/</loc>
-    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/</loc>
+    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/virtualization/</loc>
+    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/vmware/</loc>
+    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2023/vmware-ecosystem/</loc>
+    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/aws/</loc>
     <lastmod>2023-12-22T00:00:00+00:00</lastmod>
@@ -26,13 +41,7 @@
     <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</loc>
     <lastmod>2023-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/categories/</loc>
-    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/categories/certifications/</loc>
-    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/</loc>
     <lastmod>2023-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/active-directory/</loc>
@@ -135,9 +144,6 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/understanding-param/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/vmware/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/vmware-virtual-networking-behind-the-scenes/</loc>

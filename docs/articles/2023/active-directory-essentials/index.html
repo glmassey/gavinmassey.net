@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.
+Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.
+Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.
+Security vs.">  
+
+  <title>
+    
+      Active Directory Essentials: Groups, Powershell, and Delegation
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">home</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2023-12-01 00:00:00 &#43;0000 UTC">
+            2023-12-01
+        </time>
+    </p>
+
+    <h1>Active Directory Essentials: Groups, Powershell, and Delegation</h1>
+
+    
+
+    <h2 id="simplifying-active-directory-group-scopes">Simplifying Active Directory Group Scopes</h2>
+<h3 id="understanding-group-types">Understanding Group Types</h3>
+<ol>
+<li>
+<p><strong>Domain Local Groups</strong>: Restricted to a single domain. They manage access within their domain, but not in other domains.</p>
+</li>
+<li>
+<p><strong>Global Groups</strong>: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.</p>
+</li>
+<li>
+<p><strong>Universal Groups</strong>: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.</p>
+</li>
+</ol>
+<h3 id="security-vs-distribution-groups">Security vs. Distribution Groups</h3>
+<ul>
+<li>
+<p><strong>Security Groups</strong>: Used for assigning permissions to resources. They can be Domain Local, Global, or Universal.</p>
+</li>
+<li>
+<p><strong>Distribution Groups</strong>: Mainly for email distribution; they don&rsquo;t control resource access.</p>
+</li>
+</ul>
+<h3 id="choosing-the-right-group">Choosing the Right Group</h3>
+<ul>
+<li><strong>Domain Local Groups</strong>: Best for managing resources within one domain.</li>
+<li><strong>Global Groups</strong>: Good for organizing users in one domain and accessing resources in other domains within the forest.</li>
+<li><strong>Universal Groups</strong>: Best for complex, multi-domain environments for broad access.</li>
+</ul>
+<h2 id="rejoining-a-computer-to-the-domain-with-powershell">Rejoining a Computer to the Domain with PowerShell</h2>
+<p>To rejoin a broken trust relationship between a domain and a computer:</p>
+<ol>
+<li>
+<p><strong>Open PowerShell as Administrator</strong>: Right-click on Start and choose &ldquo;Windows PowerShell (Admin)&rdquo;.</p>
+</li>
+<li>
+<p><strong>Repair Command</strong>: Type <code>Test-ComputerSecureChannel -Repair</code> and hit Enter. Restart the PC if the command returns <code>True</code>.</p>
+</li>
+<li>
+<p><strong>Alternative Method</strong>: If the command fails, use <code>Remove-Computer</code> and <code>Add-Computer</code> cmdlets for a full rejoin.</p>
+</li>
+</ol>
+<h2 id="delegating-control-password-reset-example">Delegating Control: Password Reset Example</h2>
+<h3 id="delegate-control-to-a-user">Delegate Control to a User</h3>
+<ol>
+<li>
+<p><strong>Access Active Directory Users and Computers</strong>: Press <code>Windows Key + R</code>, type <code>dsa.msc</code>, and press Enter.</p>
+</li>
+<li>
+<p><strong>Right-Click on the OU</strong>: Select &ldquo;Delegate Control&rdquo;.</p>
+</li>
+<li>
+<p><strong>Use the Delegation Wizard</strong>: Follow the steps to add a user and set permissions for password resets.</p>
+</li>
+</ol>
+<h3 id="creating-a-custom-mmc-for-delegated-user">Creating a Custom MMC for Delegated User</h3>
+<ol>
+<li>
+<p><strong>Open MMC</strong>: Press <code>Windows Key + R</code>, type <code>mmc</code>, and press Enter.</p>
+</li>
+<li>
+<p><strong>Add Snap-in</strong>: Choose &ldquo;Active Directory Users and Computers&rdquo;, focusing on the specific OU.</p>
+</li>
+<li>
+<p><strong>Save the Customized MMC</strong>: Save and distribute to the delegated user.</p>
+</li>
+</ol>
+<h3 id="important-notes">Important Notes</h3>
+<ul>
+<li>Ensure the user has the necessary permissions to use the MMC.</li>
+<li>Admin privileges are required for these tasks.</li>
+</ul>
+<p>This guide simplifies the core concepts of Active Directory groups and provides straightforward steps for common administrative tasks, making it easier for beginners and intermediate users alike.</p>
+
+</article>
+
+            </div>
+        </main>
+    </body>
+</html>

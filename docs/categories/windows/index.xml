@@ -156,6 +156,13 @@
       <description># Get computer system and BIOS information $ComputerSystem = Get-CimInstance -ClassName CIM_ComputerSystem $Bios = Get-CimInstance -ClassName CIM_BIOSElement # Check if the information was retrieved successfully if ($ComputerSystem -and $Bios) { # Build the results hashtable $Results = @{ &amp;#39;Computer Name&amp;#39; = $ComputerSystem.Name &amp;#39;Model&amp;#39; = $ComputerSystem.Model &amp;#39;Serial Number&amp;#39; = $Bios.SerialNumber } # Convert the hashtable to a custom PowerShell object $Report = [PSCustomObject]$Results # Clear the host (console) and display the report Clear-Host $Report | Format-Table -AutoSize } else { Write-Error &amp;#34;Failed to retrieve system or BIOS information.</description>
     </item>
     <item>
+      <title>Active Directory Essentials: Groups, Powershell, and Delegation</title>
+      <link>https://gavinmassey.net/articles/2023/active-directory-essentials/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/active-directory-essentials/</guid>
+      <description>Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.&#xA;Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.&#xA;Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.&#xA;Security vs.</description>
+    </item>
+    <item>
       <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>

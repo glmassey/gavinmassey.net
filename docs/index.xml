@@ -296,6 +296,13 @@
       <description>TARGET ROLE: System Administrator&#xA;gavin@gavinmassey.net&#xA;linkedin.com/in/gavin-massey/&#xA;SUMMARY Dynamic Infrastructure Administrator with 12+ years of experience in enhancing IT infrastructure efficiency, security, and performance. Expert in complex integrations, project management, and data protection. Adept at troubleshooting, innovative solution implementation, and team leadership. Committed to high-quality infrastructure services and staying abreast of evolving technologies.&#xA;CORE COMPETENCIES IT Infrastructure Management | Cloud Computing | Virtualization | Information Systems Integration | Enterprise &amp;amp; IT Security | Network Security | Security Policies and Procedures | Workflow Management Systems | Active Directory | User Account Management | System Administration | Vendor Management | Web Server Management | Software Deployment | Enterprise Networking</description>
     </item>
     <item>
+      <title>Active Directory Essentials: Groups, Powershell, and Delegation</title>
+      <link>https://gavinmassey.net/articles/2023/active-directory-essentials/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/active-directory-essentials/</guid>
+      <description>Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.&#xA;Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.&#xA;Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.&#xA;Security vs.</description>
+    </item>
+    <item>
       <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>

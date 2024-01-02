@@ -289,6 +289,13 @@
       <description>1. Structure:&#xA;YAML uses indentation (spaces, not tabs) to represent the structure, similar to Python. The number of spaces in the indentation is not fixed, but all elements of the list or map must be aligned. 2. Scalars (Strings, Numbers, Booleans):&#xA;Strings can be unquoted or enclosed in single (&#39;) or double quotes (&amp;quot;). Numbers are written as in most programming languages. Booleans are represented with true and false. 3. Lists (Arrays):</description>
     </item>
     <item>
+      <title>Active Directory Essentials: Groups, Powershell, and Delegation</title>
+      <link>https://gavinmassey.net/articles/2023/active-directory-essentials/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/active-directory-essentials/</guid>
+      <description>Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.&#xA;Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.&#xA;Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.&#xA;Security vs.</description>
+    </item>
+    <item>
       <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>

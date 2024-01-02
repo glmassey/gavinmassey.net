@@ -58,6 +58,13 @@
       <description>In the realm of modern network infrastructures, where high-bandwidth connections like 10 Gbps are common, it might seem that the configuration of traditional Active Directory (AD) sites and subnets is less relevant. However, this perception overlooks the myriad of benefits that a well-configured AD environment can bring, even in high-bandwidth scenarios. Here are several key reasons why configuring AD sites remains a crucial practice:&#xA;Enhanced Authentication and Resource Access: By defining AD sites, you ensure that client authentication occurs at the nearest domain controller.</description>
     </item>
     <item>
+      <title>Active Directory Essentials: Groups, Powershell, and Delegation</title>
+      <link>https://gavinmassey.net/articles/2023/active-directory-essentials/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2023/active-directory-essentials/</guid>
+      <description>Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.&#xA;Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.&#xA;Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.&#xA;Security vs.</description>
+    </item>
+    <item>
       <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>

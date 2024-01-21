@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VCSA on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/vcsa/</link>
+    <description>Recent content in VCSA on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/vcsa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a Nested vSphere 7 / VCMA 7 Lab</title>
+      <link>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</guid>
+      <description>Introduction Welcome to this tutorial on establishing a VMware vSphere 7 and vCenter Server Appliance (VCMA) 7 lab on a Windows 11 system. Our aim is to create a functional virtual lab environment using VMware Player 17, focusing primarily on VMware&amp;rsquo;s virtualization technologies. We will set up two ESXi 7 hosts, providing a hands-on experience with VMware&amp;rsquo;s advanced virtualization platform in a nested virtualization context.&#xA;In this lab, we will configure the following key components:</description>
+    </item>
+  </channel>
+</rss>

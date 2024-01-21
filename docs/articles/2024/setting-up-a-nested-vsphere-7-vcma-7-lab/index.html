@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction Welcome to this tutorial on establishing a VMware vSphere 7 and vCenter Server Appliance (VCMA) 7 lab on a Windows 11 system. Our aim is to create a functional virtual lab environment using VMware Player 17, focusing primarily on VMware&rsquo;s virtualization technologies. We will set up two ESXi 7 hosts, providing a hands-on experience with VMware&rsquo;s advanced virtualization platform in a nested virtualization context.
+In this lab, we will configure the following key components:">  
+
+  <title>
+    
+      Setting up a Nested vSphere 7 / VCMA 7 Lab
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">[Home]</a>
+<a href="#" onclick="window.history.back(); return false;">[Back]</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-01-17 00:00:00 &#43;0000 UTC">
+            2024-01-17
+        </time>
+    </p>
+
+    <h1>Setting up a Nested vSphere 7 / VCMA 7 Lab</h1>
+
+    
+
+    <h2 id="introduction">Introduction</h2>
+<p>Welcome to this tutorial on establishing a VMware vSphere 7 and vCenter Server Appliance (VCMA) 7 lab on a Windows 11 system. Our aim is to create a functional virtual lab environment using VMware Player 17, focusing primarily on VMware&rsquo;s virtualization technologies. We will set up two ESXi 7 hosts, providing a hands-on experience with VMware&rsquo;s advanced virtualization platform in a nested virtualization context.</p>
+<p>In this lab, we will configure the following key components:</p>
+<ul>
+<li>Two ESXi 7 Hosts, these serve as the foundation of our lab, allowing us to delve into the capabilities of ESXi 7.</li>
+<li>A Windows Server 2016 VM, this VM will function as a domain controller, handling Active Directory, DNS, and DHCP services within our virtual network.</li>
+<li>Another Windows Server 2016 VM, for iSCSI Storage Configured as an iSCSI target, this VM will provide network-based storage solutions for our ESXi hosts.</li>
+<li>A vCenter Server Appliance (VCMA) 7, this is essential for the centralized management of our virtual setup, enhancing administrative efficiency.</li>
+<li>A pfSense Firewall/Router VM, to manage and secure network traffic within our lab environment.</li>
+</ul>
+<p>Given the lab&rsquo;s emphasis on VMware, we will provide only high-level instructions for setting up the Windows infrastructure and the Linux firewall. The main focus will be on the VMware components to ensure you gain substantial experience and understanding of VMware’s virtualization ecosystem.</p>
+<p>Please note, while setting up this lab on Windows 11, you might encounter compatibility issues between VMware and Hyper-V. It may be necessary to disable the &ldquo;Virtual Machine Platform&rdquo; and &ldquo;Windows Hypervisor Platform&rdquo; in the system settings. However, this action could affect the functionality of the Windows Subsystem for Linux (WSL) and Hyper-V.</p>
+<p>By the end of this tutorial, you will have a robust VMware-based virtual lab environment, ideal for exploring and learning the nuances of vSphere and VCMA functionalities.</p>
+<h3 id="here-is-the-process-in-brief">Here is the process in brief</h3>
+<ul>
+<li>Step 1: Configure Virtual Networking</li>
+<li>Step 2: Create Two ESXi 7 Virtual Machines (esxi1 and esxi2)</li>
+<li>Step 3: Create a Windows Server 2016 Virtual Machine to Act as a Domain Controller (dc1)</li>
+<li>Step 4: Configure Active Directory, DNS, and DHCP on the Domain Controller</li>
+<li>Step 5: Create a Windows Server 2016 Virtual Machine to Act as an iSCSI Datastore (iscsi1)</li>
+<li>Step 6: Set Up the iSCSI Datastore and Connect the ESXi Hosts to It</li>
+<li>Step 7: Install the vCenter Server Virtual Appliance 7 (VCSA 7)</li>
+<li>Step 8: Add the ESXi 7 Hosts to vSphere 7</li>
+<li>Step 9: Create a Linux-Based Firewall (Optional)</li>
+</ul>
+<h3 id="vm-configuration">VM Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Hostname</th>
+<th>IP Address</th>
+<th>Additional Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pfSense Firewall/Router</td>
+<td>fw1</td>
+<td>10.0.0.1</td>
+<td>Firewall/Router</td>
+</tr>
+<tr>
+<td>ESXi Host 1</td>
+<td>esxi1</td>
+<td>10.0.0.2</td>
+<td>VM Host</td>
+</tr>
+<tr>
+<td>ESXi Host 2</td>
+<td>esxi2</td>
+<td>10.0.0.3</td>
+<td>VM Host</td>
+</tr>
+<tr>
+<td>vCenter Server Appliance 7</td>
+<td>vcenter</td>
+<td>10.0.0.6</td>
+<td>Management</td>
+</tr>
+<tr>
+<td>Windows Server 2016 (iSCSI Target)</td>
+<td>iscsi1</td>
+<td>10.0.0.4</td>
+<td>Storage</td>
+</tr>
+<tr>
+<td>Windows Server (Domain Controller)</td>
+<td>dc1</td>
+<td>10.0.0.5</td>
+<td>DNS, DHCP, AD Domain</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-hardware-resources">Recommended Hardware Resources</h3>
+<p>Before diving into the setup of our nested vSphere 7 and VCMA 7 lab, it&rsquo;s important to consider the hardware resources required for a smooth and efficient operation. Given the nature of nested virtualization and the components we will be deploying, here are the minimum and recommended hardware specifications:</p>
+<ul>
+<li>
+<p>RAM: At a minimum, your system should have 40 GB of RAM. However, for optimal performance, especially when running multiple virtual machines simultaneously, 64 GB of RAM is recommended.</p>
+</li>
+<li>
+<p>Storage: An SSD is highly recommended for storage due to its faster read/write speeds compared to traditional HDDs. A minimum of 400 GB of SSD storage is suggested to accommodate the various installations and data requirements of the lab environment.</p>
+</li>
+<li>
+<p>CPU: The processor is crucial for handling the computational demands of nested virtualization. A multi-core CPU (preferably with at least 6 cores) is advisable. More cores will provide better performance, particularly when managing multiple virtual machines and ensuring smooth operation of the lab.</p>
+</li>
+</ul>
+<h3 id="minimum-resource-recomendations">Minimum Resource Recomendations</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>RAM</th>
+<th>Disk Space</th>
+<th>CPU Cores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pfSense Firewall/Router (fw1)</td>
+<td>1 GB</td>
+<td>20 GB</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ESXi Host 1 (esxi1)</td>
+<td>20 GB</td>
+<td>150 GB</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ESXi Host 2 (esxi2)</td>
+<td>20 GB</td>
+<td>150 GB</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Windows Server 2016 (iSCSI Target)</td>
+<td>2 GB</td>
+<td>40 GB</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Windows Server (Domain Controller)</td>
+<td>2 GB</td>
+<td>40 GB</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-1-configure-virtual-networking">Step 1: Configure Virtual Networking</h2>
+<p>Create a host-only private network (VMnet0) with the following settings:</p>
+<ul>
+<li>Network 10.0.0.0/24</li>
+<li>Add a virtual host adapter</li>
+<li>Ensure no DHCP server or NAT is configured on this network</li>
+</ul>
+<p>Configure the virtual host adapter for local access to these VMs:</p>
+<ul>
+<li>Static IP address 10.0.0.8/25</li>
+<li>Gateway 10.0.0.1</li>
+</ul>
+<p>Make sure to edit the virtual machine settings accordingly.</p>
+<h2 id="step-2-create-two-esxi-7-virtual-machines-esxi1-and-esxi2">Step 2: Create Two ESXi 7 Virtual Machines (esxi1 and esxi2)</h2>
+<h3 id="perform-the-following-for-both-esxi-hosts">Perform the following for both ESXi hosts</h3>
+<ul>
+<li>Mount the ESXi 7 installer ISO to the CD drive.</li>
+<li>Complete the installation wizard.</li>
+<li>Update the IP settings and hostname as per the above table.</li>
+<li>Optionally, enable SSH.</li>
+<li>Restart the machine, ensuring the installer ISO is disconnected and the virtual network adapter is connected.</li>
+</ul>
+<p>If the virtual host adapter is configured correctly, you should be able to log into the hosts using their configured IP addresses and the root password you set. If not, troubleshoot until you achieve connectivity.</p>
+<h2 id="step-3-create-a-windows-server-2016-virtual-machine-to-act-as-a-domain-controller-dc1">Step 3: Create a Windows Server 2016 Virtual Machine to Act as a Domain Controller (dc1)</h2>
+<h3 id="perform-the-following">Perform the following</h3>
+<ul>
+<li>Install Windows Server 2016 Standard as a Virtual Machine.</li>
+<li>Configure the correct static IP address; the DNS server should be the same.</li>
+<li>Change the hostname.</li>
+<li>Install VMware tools.</li>
+<li>Restart the server.</li>
+<li>Update the time zone.</li>
+</ul>
+<h2 id="step-4-configure-active-directory-dns-and-dhcp-on-the-domain-controller">Step 4: Configure Active Directory, DNS, and DHCP on the Domain Controller</h2>
+<ul>
+<li>Install the Active Directory Feature and the DHCP role.</li>
+<li>Restart the server again.</li>
+<li>Promote the server to a domain controller, creating a new forest with your chosen domain name (mine is docodo.local as I own the domain name docodo.io, but you can use Contoso or another name).</li>
+<li>Create a domain admin account.</li>
+<li>Configure a DHCP scope.</li>
+<li>Add DNS entries for all servers.</li>
+<li>Add a forward and reverse lookup DNS zone, and ensure all hosts are added accordingly.</li>
+</ul>
+<h2 id="step-5-create-a-windows-server-2016-virtual-machine-to-act-as-an-iscsi-datastore-iscsi1">Step 5: Create a Windows Server 2016 Virtual Machine to Act as an iSCSI Datastore (iscsi1)</h2>
+<ul>
+<li>Configure the host&rsquo;s static IP address, using fw1&rsquo;s IP address for the default gateway, and the domain controller&rsquo;s IP address for the DNS server.</li>
+<li>Set the hostname.</li>
+<li>Update the time zone.</li>
+<li>Join the server to the domain.</li>
+</ul>
+<h2 id="step-6-set-up-the-iscsi-datastore-and-connect-the-esxi-hosts-to-it">Step 6: Set Up the iSCSI Datastore and Connect the ESXi Hosts to It</h2>
+<h3 id="setting-up-a-windows-server-iscsi-target">Setting up a Windows Server iSCSI Target</h3>
+<ol>
+<li>
+<p>Power Off the VM</p>
+<ul>
+<li>Ensure the virtual machine (that will be the iSCSI target) is powered off in VMware Workstation.</li>
+</ul>
+</li>
+<li>
+<p>Add a New NVMe Virtual Disk</p>
+<ul>
+<li>In VMware Workstation, right-click on the VM and select &lsquo;Settings&rsquo;.</li>
+<li>Click &lsquo;Add&rsquo; to open the &lsquo;Add Hardware Wizard&rsquo;.</li>
+<li>Select &lsquo;Hard Disk&rsquo; and click &lsquo;Next&rsquo;.</li>
+<li>Choose the NVMe disk type and click &lsquo;Next&rsquo;.</li>
+<li>Select &lsquo;Create a new virtual disk&rsquo; and click &lsquo;Next&rsquo;.</li>
+<li>Specify the disk size and whether you want to allocate all space now or allow the file to grow.</li>
+<li>Choose the filename and location for the new disk and click &lsquo;Finish&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p>Power On the VM and Initialize the Disk</p>
+<ul>
+<li>Power on the VM.</li>
+<li>In the VM, open &lsquo;Disk Management&rsquo;.</li>
+<li>The new disk should appear as &lsquo;Not Initialized&rsquo;.</li>
+<li>Right-click on the disk and choose &lsquo;Initialize Disk&rsquo;.</li>
+<li>Select &lsquo;GPT&rsquo; (recommended for modern hardware and large disks) or &lsquo;MBR&rsquo; as the partition style.</li>
+</ul>
+</li>
+<li>
+<p>Format the Disk</p>
+<ul>
+<li>Right-click on the unallocated space on the new disk.</li>
+<li>Select &lsquo;New Simple Volume&rsquo; and follow the wizard.</li>
+<li>Assign a drive letter.</li>
+<li>Choose &lsquo;NTFS&rsquo; as the file system and complete the wizard.</li>
+</ul>
+</li>
+<li>
+<p>Install iSCSI Target Role</p>
+<ul>
+<li>With the NVMe disk added and initialized, install the iSCSI Target Server role on your Windows Server 2016 VM.</li>
+<li>Open &lsquo;Server Manager&rsquo;, go to &lsquo;Manage&rsquo;, then &lsquo;Add Roles and Features&rsquo;.</li>
+<li>Navigate to &lsquo;Roles&rsquo; and select &lsquo;File and Storage Services&rsquo;.</li>
+<li>Check &lsquo;iSCSI Target Server&rsquo; under &lsquo;File and iSCSI Services&rsquo;.</li>
+<li>Complete the installation process.</li>
+</ul>
+</li>
+<li>
+<p>Configure iSCSI Target</p>
+<ul>
+<li>After installing the role, go to &lsquo;File and Storage Services&rsquo; in &lsquo;Server Manager&rsquo; and select &lsquo;iSCSI&rsquo;.</li>
+<li>Create a new iSCSI virtual disk on the NVMe drive.</li>
+<li>Set up an iSCSI target (&lsquo;iscsi1&rsquo;), and specify the initiators (ESXi hosts) that can connect to it.</li>
+</ul>
+</li>
+</ol>
+<p>Your VM is now configured with an NVMe disk, which is set up as an iSCSI target. This disk can be used to provide storage for connected ESXi hosts.</p>
+<h3 id="configuring-iscsi-on-esxi-hosts-and-creating-a-datastore">Configuring iSCSI on ESXi Hosts and Creating a Datastore</h3>
+<h4 id="for-the-first-esxi-host-esxi1">For the First ESXi Host (&rsquo;esxi1&rsquo;)</h4>
+<ol>
+<li>
+<p>Log into the ESXi Web Interface</p>
+<ul>
+<li>Open a web browser, navigate to the IP of &rsquo;esxi1&rsquo;, and log in.</li>
+</ul>
+</li>
+<li>
+<p>Add iSCSI Software Adapter</p>
+<ul>
+<li>Go to &lsquo;Host&rsquo; &gt; &lsquo;Storage&rsquo; &gt; &lsquo;Adapters&rsquo;.</li>
+<li>Click &lsquo;Add Software Adapter&rsquo;.</li>
+<li>The new iSCSI adapter (vmhba#) will appear in the list.</li>
+</ul>
+</li>
+<li>
+<p>Configure iSCSI Adapter</p>
+<ul>
+<li>Select the newly added iSCSI adapter.</li>
+<li>Under &lsquo;iSCSI Initiator&rsquo;, set the iSCSI Initiator Name (IQN) if not already set.</li>
+<li>In the &lsquo;Network Port Binding&rsquo; tab, bind the appropriate VMkernel NIC(s) to the iSCSI adapter.</li>
+<li>In the &lsquo;Dynamic Targets&rsquo; tab, add the IP address and port (default 3260) of your iSCSI target server.</li>
+<li>Click &lsquo;Rescan Storage&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p>Create New Datastore on iSCSI Storage</p>
+<ul>
+<li>Navigate to &lsquo;Storage&rsquo; &gt; &lsquo;Datastores&rsquo;.</li>
+<li>Click &lsquo;New Datastore&rsquo; and select &lsquo;Create new VMFS datastore&rsquo;.</li>
+<li>Choose the iSCSI storage device and follow the prompts to name the datastore and select the VMFS version.</li>
+<li>The wizard will partition and format the storage with VMFS.</li>
+<li>Click &lsquo;Finish&rsquo; to complete.</li>
+</ul>
+</li>
+</ol>
+<h4 id="for-the-second-esxi-host-esxi2">For the Second ESXi Host (&rsquo;esxi2&rsquo;)</h4>
+<ol>
+<li>
+<p>Log into the ESXi Web Interface</p>
+<ul>
+<li>Repeat the steps to log into the web interface for &rsquo;esxi2&rsquo;.</li>
+</ul>
+</li>
+<li>
+<p>Add iSCSI Software Adapter</p>
+<ul>
+<li>Follow the same steps as for &rsquo;esxi1&rsquo; to add and configure the iSCSI software adapter.</li>
+</ul>
+</li>
+<li>
+<p>Rescan for Datastores</p>
+<ul>
+<li>After configuring the iSCSI adapter, perform a rescan.</li>
+<li>The datastore created on &rsquo;esxi1&rsquo; will be discovered and available for use on &rsquo;esxi2&rsquo;, so you don&rsquo;t need to create it again.</li>
+</ul>
+</li>
+</ol>
+<p>By following these steps, you will set up iSCSI on both ESXi hosts and create a shared datastore on the first host, which will also be accessible from the second host. This allows for shared storage capabilities such as vMotion in a VMware environment.</p>
+<h2 id="step-7-install-the-vcenter-server-virtual-appliance-7-vcsa-7">Step 7: Install the vCenter Server Virtual Appliance 7 (VCSA 7)</h2>
+<p>Installing the vCenter Server Virtual Appliance 7 (VCSA 7) is an essential step in setting up your nested vSphere lab. Proper DNS configuration is crucial before starting the installation, which includes setting up forward and reverse lookup entries for VCSA 7 to ensure seamless connectivity and management. Here are the steps for the installation:</p>
+<h3 id="pre-installation-checklist">Pre-installation Checklist</h3>
+<ul>
+<li>DNS Configuration: Ensure that your DNS server has forward and reverse lookup zones properly configured for VCSA 7. The DNS should correctly resolve the FQDN to the IP address assigned to VCSA 7.</li>
+</ul>
+<h3 id="installation-steps">Installation Steps</h3>
+<ol>
+<li>
+<p>Download the VCSA 7 Installer: Obtain the VCSA 7 installer from the official VMware website, choosing the version that matches your lab setup.</p>
+</li>
+<li>
+<p>Launch the Installer: Run the installer on a machine that has network access to your ESXi hosts and the DNS server, I used dc1 for this, but you can probably run it from your host machine.</p>
+</li>
+<li>
+<p>Start the Deployment Wizard: Begin the installer and follow the prompts for the deployment process in VCSA 7.</p>
+</li>
+<li>
+<p>Connect to an ESXi Host: Enter the details of the ESXi host where you plan to deploy VCSA 7, including the host IP address, username, and password.  I installed it on esxi1, so I used that IP address.</p>
+</li>
+<li>
+<p>Configure VCSA 7 VM Settings: Set the VM options for VCSA 7, such as the appliance name (vcsa1) and root password.</p>
+</li>
+<li>
+<p>Select Deployment Size: For most lab environments, the &lsquo;Tiny&rsquo; option is usually sufficient.</p>
+</li>
+<li>
+<p>Network Configuration: Enter the network settings, including the system FQDN, IP address, subnet mask, gateway, and DNS servers. Ensure these align with your DNS configuration.</p>
+</li>
+<li>
+<p>Initiate the Deployment: Start the deployment and wait for VCSA 7 to install and configure itself. This process may take some time.</p>
+</li>
+<li>
+<p>Complete Post-Deployment Setup: After deployment, access the VCSA 7 setup through a web browser to finish the configuration, including setting up the Single Sign-On (SSO) domain and joining VCSA 7 to your vSphere environment.</p>
+</li>
+</ol>
+<h3 id="post-installation-checks">Post-Installation Checks</h3>
+<ul>
+<li>Access the vSphere Web Client: Confirm that you can access the newly installed VCSA 7 through the vSphere web client using its FQDN.</li>
+<li>Service Verification: Check that all services related to VCSA 7 are running correctly.</li>
+</ul>
+<p>By following these steps, you will successfully install and integrate VCSA 7 into your nested virtualization lab, providing centralized management for your ESXi hosts.</p>
+<h2 id="step-8-add-the-esxi-7-hosts-to-vsphere-7">Step 8: Add the ESXi 7 Hosts to vSphere 7</h2>
+<p>After successfully installing the vCenter Server Virtual Appliance 7 (VCSA 7) and ensuring it&rsquo;s operational, the next step is to add your ESXi 7 hosts to the vSphere 7 environment. This process is crucial for centralized management and operation of your virtual machines and resources. Here are the steps to add your ESXi 7 hosts:</p>
+<ol>
+<li>
+<p>Access VCSA 7 Web Interface: Open a web browser and navigate to the VCSA 7&rsquo;s FQDN or IP address. Log in with your administrator credentials to access the vSphere Web Client.</p>
+</li>
+<li>
+<p>Navigate to Hosts and Clusters: In the vSphere Web Client, go to the &ldquo;Hosts and Clusters&rdquo; view. This area allows you to manage the ESXi hosts and clusters within your vSphere environment.</p>
+</li>
+<li>
+<p>Add New Host: Find and select the cluster or datacenter where you want to add your ESXi hosts. Right-click on the cluster or datacenter and choose &ldquo;Add Host&rdquo; from the context menu.</p>
+</li>
+<li>
+<p>Enter Host Details: In the dialog that appears, enter the IP address or FQDN of the ESXi host you want to add, along with the root username and password for the host. This information is necessary for VCSA 7 to communicate and manage the ESXi host.</p>
+</li>
+<li>
+<p>Review and Accept the Host&rsquo;s SSL Certificate: Upon connecting to the ESXi host, you&rsquo;ll be prompted to review and accept its SSL certificate. This step is crucial for ensuring secure communication between VCSA 7 and the ESXi host.</p>
+</li>
+<li>
+<p>Assign a License: If you have a specific license key for your ESXi host, you can enter it during this process. Otherwise, you can continue with the evaluation mode until you apply a license.</p>
+</li>
+<li>
+<p>Configure Lockdown Mode (Optional): You can choose to enable or disable lockdown mode for added security.</p>
+</li>
+<li>
+<p>Finish Adding Host: Review all settings and complete the wizard to add the host to your vSphere environment.</p>
+</li>
+<li>
+<p>Repeat for Additional Hosts: Repeat the above steps for each additional ESXi 7 host you wish to add to your vSphere 7 environment.</p>
+</li>
+</ol>
+<p>Once all ESXi 7 hosts are added, they will be managed centrally via VCSA 7, allowing you to deploy and manage virtual machines, set up networking, and configure storage across your virtual infrastructure.</p>
+<h2 id="step-9-set-up-the-firewall-optional">Step 9: Set Up the Firewall (Optional)</h2>
+<p>Setting up a firewall in our nested virtual lab is an optional step. For detailed guidance on this process, I recommend referring to my previous article on setting up a virtual pfSense firewall.</p>
+<p>For those who opt to include a firewall, a key step involves using the virtual network editor in VMware Player 17 to create a bridged network. This network will connect to the firewall&rsquo;s WAN interface, facilitating effective network management and security within your virtual lab environment. Here are the steps to create a bridged network:</p>
+<ol>
+<li>
+<p>Open the Virtual Network Editor: Launch the virtual network editor from VMware Player 17. This tool is crucial for configuring and customizing your virtual network settings.</p>
+</li>
+<li>
+<p>Create a Bridged Network: Within the network editor, choose to create a new network and select the &lsquo;Bridged&rsquo; type. This setup allows your virtual firewall to directly communicate with the physical network, offering a realistic network environment.</p>
+</li>
+<li>
+<p>Connect the Firewall&rsquo;s WAN Interface: Assign the bridged network to your firewall VM&rsquo;s WAN interface. This connection is essential for the firewall to manage traffic between your lab&rsquo;s virtual machines and the external network.</p>
+</li>
+</ol>
+<p>Remember, the firewall setup is an advanced step and is best suited for users who are comfortable with network configuration and management. If you&rsquo;re new to virtual firewalls, reviewing my previous article on setting up a virtual pfSense firewall can provide you with the necessary background and instructions.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>As you conclude setting up your nested virtualization lab, it&rsquo;s important to keep in mind that the performance of your lab is inherently tied to the capabilities of the underlying hardware. Nested virtualization can be resource-intensive, and as such, the responsiveness and efficiency of your virtual environment may vary depending on the specifications of your physical setup.</p>
+<p>This lab provides a robust platform for exploring and learning the functionalities of VMware vSphere 7 and VCMA 7. Whether your goal is to gain practical experience, prepare for certifications, or test configurations in a controlled environment, this setup offers a valuable and versatile learning tool.</p>
+<p>As you progress, remember that the world of virtualization is vast and ever-evolving. Continuously exploring, experimenting, and updating your skills is key to staying proficient in this dynamic field.</p>
+
+</article>
+
+
+            </div>
+        </main>
+    </body></html>

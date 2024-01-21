@@ -6,20 +6,55 @@
     <description>Recent content in Categories on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Virtualization</title>
-      <link>https://gavinmassey.net/categories/virtualization/</link>
-      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/virtualization/</guid>
+      <title>ESXi</title>
+      <link>https://gavinmassey.net/categories/esxi/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/esxi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lab</title>
+      <link>https://gavinmassey.net/categories/lab/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/lab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VCSA</title>
+      <link>https://gavinmassey.net/categories/vcsa/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/vcsa/</guid>
       <description></description>
     </item>
     <item>
       <title>VMware</title>
       <link>https://gavinmassey.net/categories/vmware/</link>
-      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/categories/vmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vSphere</title>
+      <link>https://gavinmassey.net/categories/vsphere/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/vsphere/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JS Test</title>
+      <link>https://gavinmassey.net/categories/js-test/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/js-test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>https://gavinmassey.net/categories/virtualization/</link>
+      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/virtualization/</guid>
       <description></description>
     </item>
     <item>
@@ -76,13 +111,6 @@
       <link>https://gavinmassey.net/categories/iac/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/categories/iac/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Lab</title>
-      <link>https://gavinmassey.net/categories/lab/</link>
-      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/lab/</guid>
       <description></description>
     </item>
     <item>

@@ -3,21 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gavinmassey.net/articles/</loc>
-    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
-    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/esxi/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/lab/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/vcsa/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/vmware/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/vsphere/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/js-test-flashcard/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/js-test/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/js-test-blink-red/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/virtualization/</loc>
     <lastmod>2023-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/categories/vmware/</loc>
-    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/articles/2023/vmware-ecosystem/</loc>
-    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/</loc>
     <lastmod>2023-12-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/aws/</loc>
@@ -87,9 +111,6 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/introduction-to-trusts-in-ad/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/lab/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/linux/</loc>
@@ -217,6 +238,8 @@
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/temp/</loc>
   </url><url>
     <loc>https://gavinmassey.net/drafts/basic-terraform-lab/aws-setup/</loc>
   </url><url>

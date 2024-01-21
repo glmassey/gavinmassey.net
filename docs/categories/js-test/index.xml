@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JS Test on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/js-test/</link>
+    <description>Recent content in JS Test on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/js-test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flashcard test page</title>
+      <link>https://gavinmassey.net/articles/2024/js-test-flashcard/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/js-test-flashcard/</guid>
+      <description>Test page for flashcard.js development </description>
+    </item>
+    <item>
+      <title>JS Test, blink red</title>
+      <link>https://gavinmassey.net/articles/2024/js-test-blink-red/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/js-test-blink-red/</guid>
+      <description>This is a test, you should see the background change from red to black every three seconds </description>
+    </item>
+  </channel>
+</rss>

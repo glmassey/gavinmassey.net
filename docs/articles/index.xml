@@ -6,8 +6,15 @@
     <description>Recent content in Articles on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VTCA-DCV Certification Study Guide</title>
+      <link>https://gavinmassey.net/articles/2024/vcta-dcv-2024-certification-exam/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/vcta-dcv-2024-certification-exam/</guid>
+      <description>Introduction to the Study Guide Welcome to this streamlined version of the study guide for the VMware Certified Technical Associate (VCTA) Exam 1V0-21.20. This guide is based on the comprehensive work of Valerio Passeri in his unofficial study guide. Leveraging the capabilities of generative AI, I have succinctly summarized each key section to provide a focused and efficient review. Please note that while I have strived for accuracy, this material does not carry any official endorsement or guarantee of accuracy.</description>
+    </item>
     <item>
       <title>Setting up a Nested vSphere 7 / VCMA 7 Lab</title>
       <link>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</link>
@@ -336,13 +343,6 @@
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/about-vmware-workstation-virtual-networks/</guid>
       <description>When working with VMware Workstation Pro, setting up your network correctly is crucial for ensuring that your virtual machines (VMs) communicate properly with the host machine and among themselves. VMware provides various types of virtual networks, each serving different needs. This article will cover the three main types: Bridged, NAT, and Host-Only networking.&#xA;Bridged Networking Overview Bridged networking connects a VM directly to the host machine&amp;rsquo;s network, using the host&amp;rsquo;s physical network adapter.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://gavinmassey.net/articles/2024/temp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2024/temp/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

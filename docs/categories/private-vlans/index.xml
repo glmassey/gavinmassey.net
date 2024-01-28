@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Private VLANs on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/private-vlans/</link>
+    <description>Recent content in Private VLANs on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/private-vlans/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding and Implementing Private VLANs in Cisco Networks</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-and-implementing-private-vlans.md/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-and-implementing-private-vlans.md/</guid>
+      <description>Introduction Private VLANs (PVLANs) are an advanced feature in VLAN technology, offering enhanced network segmentation and security. They are particularly useful in environments where there is a need for isolation between devices within the same VLAN. This article explores the use cases, theoretical background, and practical implementation of Private VLANs, with a focus on Cisco switch configurations.&#xA;Use Cases for Private VLANs Private VLANs are ideal in scenarios where you need to restrict communication between devices on the same traditional VLAN.</description>
+    </item>
+  </channel>
+</rss>

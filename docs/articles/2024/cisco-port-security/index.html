@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction Cisco Port Security is a feature on Cisco switches that enhances the security of the network by controlling access to switch ports. It limits the devices that can connect to a switch port, thus preventing unauthorized network access.
+Use Cases for Cisco Port Security Preventing Unauthorized Network Access: Restricts access to a network by allowing only known MAC addresses to connect. Protecting Against MAC Address Spoofing: Prevents potential attackers from impersonating other devices on the network.">  
+
+  <title>
+    
+      Cisco Port Security
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">[Home]</a>
+<a href="#" onclick="window.history.back(); return false;">[Back]</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-01-27 00:00:00 &#43;0000 UTC">
+            2024-01-27
+        </time>
+    </p>
+
+    <h1>Cisco Port Security</h1>
+
+    
+
+    <h2 id="introduction">Introduction</h2>
+<p>Cisco Port Security is a feature on Cisco switches that enhances the security of the network by controlling access to switch ports. It limits the devices that can connect to a switch port, thus preventing unauthorized network access.</p>
+<h2 id="use-cases-for-cisco-port-security">Use Cases for Cisco Port Security</h2>
+<ul>
+<li>Preventing Unauthorized Network Access: Restricts access to a network by allowing only known MAC addresses to connect.</li>
+<li>Protecting Against MAC Address Spoofing: Prevents potential attackers from impersonating other devices on the network.</li>
+<li>Managing Network Access: Controls which devices are allowed to connect to certain parts of the network.</li>
+</ul>
+<h2 id="theory-of-cisco-port-security">Theory of Cisco Port Security</h2>
+<p>Port security works by limiting the MAC addresses that are allowed to communicate on a particular switch port. When a port is secured, only devices with specific MAC addresses can access the network through that port. Key aspects include:</p>
+<ul>
+<li>Secure MAC Addresses: These can be either statically defined or dynamically learned by the switch.</li>
+<li>Security Violation Modes: Determines the action when a security violation occurs. Options include Protect, Restrict, and Shutdown.</li>
+<li>Maximum MAC Addresses: Sets the number of MAC addresses allowed on a port.</li>
+</ul>
+<h2 id="implementing-cisco-port-security">Implementing Cisco Port Security</h2>
+<p>Here are the basic steps to configure port security on a Cisco switch:</p>
+<ol>
+<li>
+<p>Enable Port Security:</p>
+<pre tabindex="0"><code>interface [interface_type/number]
+switchport mode access
+switchport port-security
+</code></pre><p>This sets the switch port to access mode and enables port security.</p>
+</li>
+<li>
+<p>Specify Secure MAC Addresses:</p>
+<ul>
+<li>
+<p>Statically:</p>
+<pre tabindex="0"><code>switchport port-security mac-address [mac_address]
+</code></pre></li>
+<li>
+<p>Dynamically:</p>
+<p>Enable port security and set the maximum number of MAC addresses. The switch will learn the MAC addresses dynamically.</p>
+<pre tabindex="0"><code>switchport port-security
+switchport port-security maximum [number]
+</code></pre></li>
+<li>
+<p>Sticky MAC Addresses (Optional):</p>
+<p>For the switch to remember dynamically learned MAC addresses.</p>
+<pre tabindex="0"><code>switchport port-security mac-address sticky
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>Configure Violation Modes:</p>
+<pre tabindex="0"><code>switchport port-security violation {protect | restrict | shutdown}
+</code></pre></li>
+<li>
+<p>Verify Port Security Configuration:</p>
+<pre tabindex="0"><code>show port-security interface [interface_type/number]
+</code></pre></li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Cisco Port Security is an essential feature for securing network access on a switch. By properly implementing port security, network administrators can effectively control physical access to the network, enhancing the overall security posture.</p>
+
+</article>
+
+
+            </div>
+        </main>
+    </body></html>

@@ -3,10 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gavinmassey.net/articles/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/cdp/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/cisco/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/cisco-port-security/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/networking/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/port-security/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/private-vlans/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/security/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/stp/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/switching/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/understanding-and-implementing-private-vlans.md/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/understanding-cisco-discovery-protocol-cdp.md/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/understanding-spanning-tree/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/understanding-vtp-in-cisco-networks/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/understanding-vlans/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/vlans/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/vtp/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/certification/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
@@ -20,16 +71,16 @@
     <loc>https://gavinmassey.net/articles/2024/vcta-dcv-2024-certification-exam/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/categories/esxi/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/lab/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</loc>
+    <loc>https://gavinmassey.net/articles/2024/lab1-vsphere-7-on-vmware-workstation-lab-setup/</loc>
+    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/lab2-creating-esxi-cluster-with-vcenter/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/vcsa/</loc>
@@ -37,15 +88,6 @@
   </url><url>
     <loc>https://gavinmassey.net/categories/vsphere/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/2024/js-test-flashcard/</loc>
-    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/js-test/</loc>
-    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/articles/2024/js-test-blink-red/</loc>
-    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/virtualization/</loc>
     <lastmod>2023-12-28T00:00:00+00:00</lastmod>
@@ -129,9 +171,6 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/gpo-use-cases/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/networking/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/pfsense/</loc>

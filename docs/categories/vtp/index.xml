@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VTP on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/vtp/</link>
+    <description>Recent content in VTP on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/vtp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding VLAN Trunking Protocol (VTP) in Cisco Networks</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-vtp-in-cisco-networks/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-vtp-in-cisco-networks/</guid>
+      <description>Introduction VLAN Trunking Protocol (VTP) is a Cisco-proprietary protocol that simplifies the management of VLAN configurations across a network. It is particularly useful in large networks with numerous switches, helping to manage VLANs more efficiently and ensuring consistent configurations.&#xA;Use Cases for VTP Simplifying VLAN management across multiple switches. Ensuring consistent VLAN configuration and avoiding mismatches. Reducing administrative tasks related to VLAN maintenance. Theory of VTP VTP operates within a designated domain, with switches set to different modes:</description>
+    </item>
+  </channel>
+</rss>

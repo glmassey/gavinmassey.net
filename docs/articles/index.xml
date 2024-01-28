@@ -6,8 +6,50 @@
     <description>Recent content in Articles on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cisco Port Security</title>
+      <link>https://gavinmassey.net/articles/2024/cisco-port-security/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/cisco-port-security/</guid>
+      <description>Introduction Cisco Port Security is a feature on Cisco switches that enhances the security of the network by controlling access to switch ports. It limits the devices that can connect to a switch port, thus preventing unauthorized network access.&#xA;Use Cases for Cisco Port Security Preventing Unauthorized Network Access: Restricts access to a network by allowing only known MAC addresses to connect. Protecting Against MAC Address Spoofing: Prevents potential attackers from impersonating other devices on the network.</description>
+    </item>
+    <item>
+      <title>Understanding and Implementing Private VLANs in Cisco Networks</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-and-implementing-private-vlans.md/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-and-implementing-private-vlans.md/</guid>
+      <description>Introduction Private VLANs (PVLANs) are an advanced feature in VLAN technology, offering enhanced network segmentation and security. They are particularly useful in environments where there is a need for isolation between devices within the same VLAN. This article explores the use cases, theoretical background, and practical implementation of Private VLANs, with a focus on Cisco switch configurations.&#xA;Use Cases for Private VLANs Private VLANs are ideal in scenarios where you need to restrict communication between devices on the same traditional VLAN.</description>
+    </item>
+    <item>
+      <title>Understanding Cisco Discovery Protocol (CDP)</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-cisco-discovery-protocol-cdp.md/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-cisco-discovery-protocol-cdp.md/</guid>
+      <description>Introduction Cisco Discovery Protocol (CDP) is a network layer protocol used in Cisco devices to share information about directly connected devices. As a proprietary protocol of Cisco, CDP plays a crucial role in network management and troubleshooting by allowing network devices to discover and learn about each other.&#xA;Use Cases for CDP CDP is particularly useful in:&#xA;Network Mapping: Automatically discovering Cisco devices within the network, helping in creating a network topology map.</description>
+    </item>
+    <item>
+      <title>Understanding Spanning Tree Protocol (STP) in Network Engineering</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-spanning-tree/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-spanning-tree/</guid>
+      <description>Introduction Spanning Tree Protocol (STP) is a network protocol that ensures a loop-free topology for any bridged Ethernet local area network. The fundamental purpose of STP is to prevent network disruptions caused by loops, which are common in redundant network topologies.&#xA;Use Cases for STP STP is critical in networks where redundancy is essential for reliability. Key applications include:&#xA;Preventing Network Loops: Automatically identifies and disables redundant paths in a network, preventing loops that can cause broadcast storms and network failures.</description>
+    </item>
+    <item>
+      <title>Understanding VLAN Trunking Protocol (VTP) in Cisco Networks</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-vtp-in-cisco-networks/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-vtp-in-cisco-networks/</guid>
+      <description>Introduction VLAN Trunking Protocol (VTP) is a Cisco-proprietary protocol that simplifies the management of VLAN configurations across a network. It is particularly useful in large networks with numerous switches, helping to manage VLANs more efficiently and ensuring consistent configurations.&#xA;Use Cases for VTP Simplifying VLAN management across multiple switches. Ensuring consistent VLAN configuration and avoiding mismatches. Reducing administrative tasks related to VLAN maintenance. Theory of VTP VTP operates within a designated domain, with switches set to different modes:</description>
+    </item>
+    <item>
+      <title>Understanding VLANs</title>
+      <link>https://gavinmassey.net/articles/2024/understanding-vlans/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/understanding-vlans/</guid>
+      <description>Introduction Virtual Local Area Networks (VLANs) are a fundamental concept in modern network design, offering a powerful tool for network administrators to segment and manage network traffic effectively. At its core, a VLAN is a logical subdivision of a network, distinguished from a traditional LAN by its ability to separate devices regardless of their physical location. This separation is crucial for several reasons, primarily enhancing network efficiency, security, and scalability.</description>
+    </item>
     <item>
       <title>VTCA-DCV Certification Study Guide</title>
       <link>https://gavinmassey.net/articles/2024/vcta-dcv-2024-certification-exam/</link>
@@ -16,25 +58,18 @@
       <description>Introduction to the Study Guide Welcome to this streamlined version of the study guide for the VMware Certified Technical Associate (VCTA) Exam 1V0-21.20. This guide is based on the comprehensive work of Valerio Passeri in his unofficial study guide. Leveraging the capabilities of generative AI, I have succinctly summarized each key section to provide a focused and efficient review. Please note that while I have strived for accuracy, this material does not carry any official endorsement or guarantee of accuracy.</description>
     </item>
     <item>
-      <title>Setting up a Nested vSphere 7 / VCMA 7 Lab</title>
-      <link>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</link>
+      <title>Lab 1: vSphere 7 on VMware Workstation Lab Setup</title>
+      <link>https://gavinmassey.net/articles/2024/lab1-vsphere-7-on-vmware-workstation-lab-setup/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2024/setting-up-a-nested-vsphere-7-vcma-7-lab/</guid>
+      <guid>https://gavinmassey.net/articles/2024/lab1-vsphere-7-on-vmware-workstation-lab-setup/</guid>
       <description>Introduction Welcome to this tutorial on establishing a VMware vSphere 7 and vCenter Server Appliance (VCMA) 7 lab on a Windows 11 system. Our aim is to create a functional virtual lab environment using VMware Player 17, focusing primarily on VMware&amp;rsquo;s virtualization technologies. We will set up two ESXi 7 hosts, providing a hands-on experience with VMware&amp;rsquo;s advanced virtualization platform in a nested virtualization context.&#xA;In this lab, we will configure the following key components:</description>
     </item>
     <item>
-      <title>Flashcard test page</title>
-      <link>https://gavinmassey.net/articles/2024/js-test-flashcard/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2024/js-test-flashcard/</guid>
-      <description>Test page for flashcard.js development </description>
-    </item>
-    <item>
-      <title>JS Test, blink red</title>
-      <link>https://gavinmassey.net/articles/2024/js-test-blink-red/</link>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2024/js-test-blink-red/</guid>
-      <description>This is a test, you should see the background change from red to black every three seconds </description>
+      <title>Lab 2: Creating an ESXi Cluster and Integrating with vCenter</title>
+      <link>https://gavinmassey.net/articles/2024/lab2-creating-esxi-cluster-with-vcenter/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/lab2-creating-esxi-cluster-with-vcenter/</guid>
+      <description>Introduction and Purpose In a virtualized environment, clustering is a powerful technique that dramatically enhances resource management, availability, and scalability. An ESXi cluster, managed by vCenter, is a collection of ESXi hosts aggregated to provide a robust, shared infrastructure for virtual machines. This setup allows for:&#xA;High Availability (HA): In case of a host failure, HA automatically restarts the VMs on other hosts within the cluster, minimizing downtime and ensuring continuous availability of services.</description>
     </item>
     <item>
       <title>VMware A Brief Guide to the VMware Ecosystem: Understanding Key Products and Technologies</title>
@@ -324,7 +359,7 @@
       <description>Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.&#xA;Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.&#xA;Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.&#xA;Security vs.</description>
     </item>
     <item>
-      <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
+      <title>Active Directory Forests, Trees, and Sites, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</guid>

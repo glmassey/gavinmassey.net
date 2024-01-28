@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Port Security on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/port-security/</link>
+    <description>Recent content in Port Security on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/port-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cisco Port Security</title>
+      <link>https://gavinmassey.net/articles/2024/cisco-port-security/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/cisco-port-security/</guid>
+      <description>Introduction Cisco Port Security is a feature on Cisco switches that enhances the security of the network by controlling access to switch ports. It limits the devices that can connect to a switch port, thus preventing unauthorized network access.&#xA;Use Cases for Cisco Port Security Preventing Unauthorized Network Access: Restricts access to a network by allowing only known MAC addresses to connect. Protecting Against MAC Address Spoofing: Prevents potential attackers from impersonating other devices on the network.</description>
+    </item>
+  </channel>
+</rss>

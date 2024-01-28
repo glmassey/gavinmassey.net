@@ -163,7 +163,7 @@
       <description>Simplifying Active Directory Group Scopes Understanding Group Types Domain Local Groups: Restricted to a single domain. They manage access within their domain, but not in other domains.&#xA;Global Groups: Span across all domains in a forest. Useful for organizing users within a domain and granting them resource access across the forest.&#xA;Universal Groups: Operate across the entire Active Directory forest. Ideal for large-scale environments needing access across multiple domains.&#xA;Security vs.</description>
     </item>
     <item>
-      <title>Active Directory Forest, Tree, and Site, Understanding the Differences</title>
+      <title>Active Directory Forests, Trees, and Sites, Understanding the Differences</title>
       <link>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2023/ad-forests-trees-sites/</guid>

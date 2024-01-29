@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction nslookup is a network administration command-line tool available in most operating systems, including Windows, macOS, and Linux. It is used for querying the Domain Name System (DNS) to obtain domain name or IP address mapping information. This tool is essential for network diagnostics and troubleshooting DNS issues.
+Key Features of nslookup Query DNS Records: nslookup can query specific DNS record types, such as A (address), MX (mail exchange), NS (name server), and TXT (text) records.">  
+
+  <title>
+    
+      Nslookup Quick Reference Guide
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">[Home]</a>
+<a href="#" onclick="window.history.back(); return false;">[Back]</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-01-28 00:00:00 &#43;0000 UTC">
+            2024-01-28
+        </time>
+    </p>
+
+    <h1>Nslookup Quick Reference Guide</h1>
+
+    
+
+    <h2 id="introduction">Introduction</h2>
+<p><code>nslookup</code> is a network administration command-line tool available in most operating systems, including Windows, macOS, and Linux. It is used for querying the Domain Name System (DNS) to obtain domain name or IP address mapping information. This tool is essential for network diagnostics and troubleshooting DNS issues.</p>
+<h2 id="key-features-of-nslookup">Key Features of nslookup</h2>
+<ol>
+<li>
+<p>Query DNS Records: <code>nslookup</code> can query specific DNS record types, such as A (address), MX (mail exchange), NS (name server), and TXT (text) records.</p>
+</li>
+<li>
+<p>Diagnose DNS Servers: It&rsquo;s useful for testing and troubleshooting DNS server responses to ensure they are correctly resolving domain names.</p>
+</li>
+<li>
+<p>Reverse DNS Lookups: Besides standard queries (domain to IP), <code>nslookup</code> can perform reverse lookups (IP to domain).</p>
+</li>
+<li>
+<p>Check Domain Information: Provides detailed information about domains, including the registrar, name server, and other DNS records.</p>
+</li>
+</ol>
+<h2 id="using-nslookup">Using nslookup</h2>
+<ol>
+<li>
+<p>Standard DNS Query:</p>
+<pre tabindex="0"><code>nslookup example.com
+</code></pre><p>This command queries the DNS records for <code>example.com</code>, returning its IP address.</p>
+</li>
+<li>
+<p>Query Specific DNS Record Types:</p>
+<pre tabindex="0"><code>nslookup -type=mx example.com
+</code></pre><p>Queries the MX records for <code>example.com</code>, which are used for email.</p>
+</li>
+<li>
+<p>Reverse DNS Lookup:</p>
+<pre tabindex="0"><code>nslookup 93.184.216.34
+</code></pre><p>Performs a reverse DNS lookup on the IP address to find its associated domain name.</p>
+</li>
+<li>
+<p>Specify a DNS Server for the Query:</p>
+<pre tabindex="0"><code>nslookup example.com 8.8.8.8
+</code></pre><p>Queries <code>example.com</code> using Google’s DNS server (8.8.8.8).</p>
+</li>
+<li>
+<p>Interactive Mode:</p>
+<pre tabindex="0"><code>nslookup
+&gt; set type=ns
+&gt; example.com
+</code></pre><p>Enters interactive mode, sets the query type to NS (Name Server), and then queries the name servers for <code>example.com</code>.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p><code>nslookup</code> is a powerful tool for network administrators and IT professionals for diagnosing and resolving DNS-related issues. Whether it&rsquo;s verifying the correct resolution of domain names, investigating mail server problems, or gathering information about domains, <code>nslookup</code> provides a straightforward and effective way to interact with the DNS system.</p>
+
+</article>
+
+
+            </div>
+        </main>
+    </body></html>

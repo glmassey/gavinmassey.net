@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction Netstat, a command-line tool available in Windows Server, is a powerful utility for network diagnostics and statistics. It provides detailed information about network connections, routing tables, interface statistics, and more. This tool is essential for network administrators and IT professionals to monitor, diagnose, and troubleshoot network-related issues on a Windows Server. Below is a list of common usages of Netstat on Windows Server.
+List of Netstat Usages on Windows Server Display All Active Connections:">  
+
+  <title>
+    
+      Netstat Quick Reference
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">[Home]</a>
+<a href="#" onclick="window.history.back(); return false;">[Back]</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-01-28 00:00:00 &#43;0000 UTC">
+            2024-01-28
+        </time>
+    </p>
+
+    <h1>Netstat Quick Reference</h1>
+
+    
+
+    <h2 id="introduction">Introduction</h2>
+<p>Netstat, a command-line tool available in Windows Server, is a powerful utility for network diagnostics and statistics. It provides detailed information about network connections, routing tables, interface statistics, and more. This tool is essential for network administrators and IT professionals to monitor, diagnose, and troubleshoot network-related issues on a Windows Server. Below is a list of common usages of Netstat on Windows Server.</p>
+<h2 id="list-of-netstat-usages-on-windows-server">List of Netstat Usages on Windows Server</h2>
+<ol>
+<li>
+<p><strong>Display All Active Connections</strong>:</p>
+<pre tabindex="0"><code>netstat -a
+</code></pre><p>Lists all active TCP and UDP connections and listening ports.</p>
+</li>
+<li>
+<p><strong>Show Listening Ports</strong>:</p>
+<pre tabindex="0"><code>netstat -an | findstr &#34;LISTENING&#34;
+</code></pre><p>Lists all ports on which the server is listening, filtering to show only those in a LISTENING state.</p>
+</li>
+<li>
+<p><strong>Identify Open Ports</strong>:</p>
+<pre tabindex="0"><code>netstat -an
+</code></pre><p>Shows all ports that are currently open, including listening, established, and other states.</p>
+</li>
+<li>
+<p><strong>Show Network Statistics for Each Protocol</strong>:</p>
+<pre tabindex="0"><code>netstat -s
+</code></pre><p>Displays detailed statistics by protocol, including TCP, UDP, ICMP, and IP.</p>
+</li>
+<li>
+<p><strong>Display Routing Table Information</strong>:</p>
+<pre tabindex="0"><code>netstat -r
+</code></pre><p>Shows the routing table, equivalent to the &lsquo;route print&rsquo; command.</p>
+</li>
+<li>
+<p><strong>Show Interface Statistics</strong>:</p>
+<pre tabindex="0"><code>netstat -e
+</code></pre><p>Provides statistics for each network interface, including bytes, unicast packets, non-unicast packets, discards, errors, and unknown protocols.</p>
+</li>
+<li>
+<p><strong>Check for Listening Services or Daemons</strong>:</p>
+<pre tabindex="0"><code>netstat -ab
+</code></pre><p>Lists ports in listening state along with the executable involved. This is helpful for identifying which application is listening on a particular port.</p>
+</li>
+<li>
+<p><strong>Find Programs Using Network Sockets</strong>:</p>
+<pre tabindex="0"><code>netstat -o
+</code></pre><p>Shows active connections and listening ports with the process ID (PID) of each process.</p>
+</li>
+<li>
+<p><strong>Filter Network Information for a Specific Protocol (e.g., TCP)</strong>:</p>
+<pre tabindex="0"><code>netstat -at
+</code></pre><p>Filters the output to show only TCP protocol connections and listening ports.</p>
+</li>
+<li>
+<p><strong>Troubleshoot Network Issues (e.g., Show Statistics Every 5 Seconds)</strong>:</p>
+<pre tabindex="0"><code>netstat -e 5
+</code></pre><p>Refreshes and displays Ethernet statistics every 5 seconds. Useful for monitoring network activity in real time.</p>
+</li>
+</ol>
+<p>These commands should be run in a Command Prompt or PowerShell window, and some might require elevated privileges (Run as Administrator) to display complete information. The examples are tailored for use on Windows Server environments for various network monitoring and troubleshooting tasks.</p>
+
+</article>
+
+
+            </div>
+        </main>
+    </body></html>

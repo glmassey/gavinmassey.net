@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Net on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/net/</link>
+    <description>Recent content in Net on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using the &#39;net&#39; command in Windows</title>
+      <link>https://gavinmassey.net/articles/2024/using-the-net-command/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/using-the-net-command/</guid>
+      <description>Introduction The net command in Windows is a versatile utility used for a wide array of network and system management tasks. This command-line tool can manage user accounts, network resources, services, and more, making it an essential tool for administrators. This guide delves into the use of the net command with detailed examples and background information on each functionality.&#xA;Managing User Accounts and Groups Create a New User:&#xA;net user Emily StrongP@ssword123 /add This command creates a new user named Emily with a specified password.</description>
+    </item>
+  </channel>
+</rss>

@@ -6,8 +6,50 @@
     <description>Recent content in Categories on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DNS</title>
+      <link>https://gavinmassey.net/categories/dns/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Net</title>
+      <link>https://gavinmassey.net/categories/net/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Netstat</title>
+      <link>https://gavinmassey.net/categories/netstat/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/netstat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://gavinmassey.net/categories/networking/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>nslookup</title>
+      <link>https://gavinmassey.net/categories/nslookup/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/nslookup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://gavinmassey.net/categories/windows/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/windows/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CDP</title>
       <link>https://gavinmassey.net/categories/cdp/</link>
@@ -20,13 +62,6 @@
       <link>https://gavinmassey.net/categories/cisco/</link>
       <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/categories/cisco/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Networking</title>
-      <link>https://gavinmassey.net/categories/networking/</link>
-      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/networking/</guid>
       <description></description>
     </item>
     <item>
@@ -79,10 +114,10 @@
       <description></description>
     </item>
     <item>
-      <title>Certification</title>
-      <link>https://gavinmassey.net/categories/certification/</link>
+      <title>Certifications</title>
+      <link>https://gavinmassey.net/categories/certifications/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/certification/</guid>
+      <guid>https://gavinmassey.net/categories/certifications/</guid>
       <description></description>
     </item>
     <item>
@@ -142,13 +177,6 @@
       <description></description>
     </item>
     <item>
-      <title>Certifications</title>
-      <link>https://gavinmassey.net/categories/certifications/</link>
-      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/certifications/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Active Directory</title>
       <link>https://gavinmassey.net/categories/active-directory/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
@@ -167,13 +195,6 @@
       <link>https://gavinmassey.net/categories/cloudformation/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/categories/cloudformation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DNS</title>
-      <link>https://gavinmassey.net/categories/dns/</link>
-      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/dns/</guid>
       <description></description>
     </item>
     <item>
@@ -230,13 +251,6 @@
       <link>https://gavinmassey.net/categories/wim/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/categories/wim/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>https://gavinmassey.net/categories/windows/</link>
-      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/windows/</guid>
       <description></description>
     </item>
     <item>

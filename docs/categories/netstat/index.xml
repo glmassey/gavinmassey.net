@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netstat on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/netstat/</link>
+    <description>Recent content in Netstat on gavinmassey.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://gavinmassey.net/categories/netstat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Netstat Quick Reference</title>
+      <link>https://gavinmassey.net/articles/2024/netstat-quick-reference/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/netstat-quick-reference/</guid>
+      <description>Introduction Netstat, a command-line tool available in Windows Server, is a powerful utility for network diagnostics and statistics. It provides detailed information about network connections, routing tables, interface statistics, and more. This tool is essential for network administrators and IT professionals to monitor, diagnose, and troubleshoot network-related issues on a Windows Server. Below is a list of common usages of Netstat on Windows Server.&#xA;List of Netstat Usages on Windows Server Display All Active Connections:</description>
+    </item>
+  </channel>
+</rss>

@@ -6,8 +6,29 @@
     <description>Recent content in Articles on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Netstat Quick Reference</title>
+      <link>https://gavinmassey.net/articles/2024/netstat-quick-reference/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/netstat-quick-reference/</guid>
+      <description>Introduction Netstat, a command-line tool available in Windows Server, is a powerful utility for network diagnostics and statistics. It provides detailed information about network connections, routing tables, interface statistics, and more. This tool is essential for network administrators and IT professionals to monitor, diagnose, and troubleshoot network-related issues on a Windows Server. Below is a list of common usages of Netstat on Windows Server.&#xA;List of Netstat Usages on Windows Server Display All Active Connections:</description>
+    </item>
+    <item>
+      <title>Nslookup Quick Reference Guide</title>
+      <link>https://gavinmassey.net/articles/2024/nslookup-quick-reference-guide/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/nslookup-quick-reference-guide/</guid>
+      <description>Introduction nslookup is a network administration command-line tool available in most operating systems, including Windows, macOS, and Linux. It is used for querying the Domain Name System (DNS) to obtain domain name or IP address mapping information. This tool is essential for network diagnostics and troubleshooting DNS issues.&#xA;Key Features of nslookup Query DNS Records: nslookup can query specific DNS record types, such as A (address), MX (mail exchange), NS (name server), and TXT (text) records.</description>
+    </item>
+    <item>
+      <title>Using the &#39;net&#39; command in Windows</title>
+      <link>https://gavinmassey.net/articles/2024/using-the-net-command/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/using-the-net-command/</guid>
+      <description>Introduction The net command in Windows is a versatile utility used for a wide array of network and system management tasks. This command-line tool can manage user accounts, network resources, services, and more, making it an essential tool for administrators. This guide delves into the use of the net command with detailed examples and background information on each functionality.&#xA;Managing User Accounts and Groups Create a New User:&#xA;net user Emily StrongP@ssword123 /add This command creates a new user named Emily with a specified password.</description>
+    </item>
     <item>
       <title>Cisco Port Security</title>
       <link>https://gavinmassey.net/articles/2024/cisco-port-security/</link>

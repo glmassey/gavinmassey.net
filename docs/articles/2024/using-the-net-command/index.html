@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Introduction The net command in Windows is a versatile utility used for a wide array of network and system management tasks. This command-line tool can manage user accounts, network resources, services, and more, making it an essential tool for administrators. This guide delves into the use of the net command with detailed examples and background information on each functionality.
+Managing User Accounts and Groups Create a New User:
+net user Emily StrongP@ssword123 /add This command creates a new user named Emily with a specified password.">  
+
+  <title>
+    
+      Using the &#39;net&#39; command in Windows
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.c5af9bae99b4a3d315b9f39305ffff27e9c3383fbbfd8b5fcaf2237667021a333a982fb958d1813a720b0a660b14022337553ae1ca93ef2ee17c4ae628ac19cb.css" integrity="sha512-xa&#43;brpm0o9MVufOTBf//J&#43;nDOD&#43;7/YtfyvIjdmcCGjM6mC&#43;5WNGBOnILCmYLFAIjN1U64cqT7y7hfErmKKwZyw==" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">[Home]</a>
+<a href="#" onclick="window.history.back(); return false;">[Back]</a>
+
+
+<article>
+    <p class="post-meta">
+        <time datetime="2024-01-28 00:00:00 &#43;0000 UTC">
+            2024-01-28
+        </time>
+    </p>
+
+    <h1>Using the &#39;net&#39; command in Windows</h1>
+
+    
+
+    <h2 id="introduction">Introduction</h2>
+<p>The <code>net</code> command in Windows is a versatile utility used for a wide array of network and system management tasks. This command-line tool can manage user accounts, network resources, services, and more, making it an essential tool for administrators. This guide delves into the use of the <code>net</code> command with detailed examples and background information on each functionality.</p>
+<h2 id="managing-user-accounts-and-groups">Managing User Accounts and Groups</h2>
+<ol>
+<li>
+<p>Create a New User:</p>
+<pre tabindex="0"><code>net user Emily StrongP@ssword123 /add
+</code></pre><p>This command creates a new user named Emily with a specified password.</p>
+</li>
+<li>
+<p>Delete a User:</p>
+<pre tabindex="0"><code>net user Emily /delete
+</code></pre><p>Removes Emily from the system&rsquo;s user accounts.</p>
+</li>
+<li>
+<p>Add a User to a Local Group:</p>
+<pre tabindex="0"><code>net localgroup Administrators Emily /add
+</code></pre><p>Adds the user Emily to the local group &lsquo;Administrators&rsquo;, granting her administrative privileges.</p>
+</li>
+</ol>
+<h2 id="managing-network-resources">Managing Network Resources</h2>
+<ol>
+<li>
+<p>Create a Shared Folder:</p>
+<pre tabindex="0"><code>net share SharedDocs=C:\Documents
+</code></pre><p>Shares the folder located at C:\Documents under the share name &lsquo;SharedDocs&rsquo;.</p>
+</li>
+<li>
+<p>Remove a Shared Folder:</p>
+<pre tabindex="0"><code>net share SharedDocs /delete
+</code></pre><p>Stops sharing the &lsquo;SharedDocs&rsquo; folder.</p>
+</li>
+<li>
+<p>Map a Network Drive:</p>
+<pre tabindex="0"><code>net use X: \\ServerName\SharedDocs
+</code></pre><p>Maps the shared folder &lsquo;SharedDocs&rsquo; on &lsquo;ServerName&rsquo; to the drive letter X:.</p>
+</li>
+<li>
+<p>Disconnect a Mapped Drive:</p>
+<pre tabindex="0"><code>net use X: /delete
+</code></pre><p>Disconnects the mapped drive X:.</p>
+</li>
+</ol>
+<h2 id="controlling-services">Controlling Services</h2>
+<ol>
+<li>
+<p>Start a Service:</p>
+<pre tabindex="0"><code>net start Audiosrv
+</code></pre><p>Starts the Windows Audio service.</p>
+</li>
+<li>
+<p>Stop a Service:</p>
+<pre tabindex="0"><code>net stop Audiosrv
+</code></pre><p>Stops the Windows Audio service.</p>
+</li>
+</ol>
+<h2 id="managing-network-sessions">Managing Network Sessions</h2>
+<ol>
+<li>
+<p>List Network Sessions:</p>
+<pre tabindex="0"><code>net session
+</code></pre><p>Shows all active sessions connected to the computer.</p>
+</li>
+<li>
+<p>Disconnect a Network Session:</p>
+<pre tabindex="0"><code>net session \\192.168.1.25 /delete
+</code></pre><p>Ends the session with the computer at IP address 192.168.1.25.</p>
+</li>
+</ol>
+<h2 id="configuring-network-protocols">Configuring Network Protocols</h2>
+<ol>
+<li>
+<p>Configure Workstation Service:</p>
+<pre tabindex="0"><code>net config workstation
+</code></pre><p>Displays settings and status of the Workstation service, handling client network connections to servers.</p>
+</li>
+<li>
+<p>Configure Server Service:</p>
+<pre tabindex="0"><code>net config server
+</code></pre><p>Shows configuration of the Server service, which manages this computer&rsquo;s shared resources.</p>
+</li>
+</ol>
+<h2 id="displaying-network-statistics">Displaying Network Statistics</h2>
+<ol>
+<li>
+<p>Display Statistics for Workstation Service:</p>
+<pre tabindex="0"><code>net statistics workstation
+</code></pre><p>Reports statistics on the client-side network connections made by this computer.</p>
+</li>
+<li>
+<p>Display Statistics for Server Service:</p>
+<pre tabindex="0"><code>net statistics server
+</code></pre><p>Provides data on the use of shared resources this computer provides to others.</p>
+</li>
+</ol>
+<h2 id="managing-workstation-and-domain-settings">Managing Workstation and Domain Settings</h2>
+<ol>
+<li>
+<p>Manage User Account and Password Settings:</p>
+<pre tabindex="0"><code>net accounts
+</code></pre><p>Reviews or changes settings related to user accounts and passwords.</p>
+</li>
+<li>
+<p>Add a Computer to Domain Database:</p>
+<pre tabindex="0"><code>net computer \\NewPC /add
+</code></pre><p>Registers &lsquo;NewPC&rsquo; in the domain&rsquo;s computer list.</p>
+</li>
+<li>
+<p>Remove a Computer from Domain Database:</p>
+<pre tabindex="0"><code>net computer \\OldPC /delete
+</code></pre><p>Removes &lsquo;OldPC&rsquo; from the domain&rsquo;s computer database.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The <code>net</code> command in Windows is invaluable for network and system administrators, offering a wide range of functions for managing various aspects of Windows networks and systems. Its versatility and comprehensive scope make it a key tool for effective network management.</p>
+
+</article>
+
+
+            </div>
+        </main>
+    </body></html>

@@ -3,10 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gavinmassey.net/articles/</loc>
-    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
-    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/dns/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/net/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/netstat/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/netstat-quick-reference/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/networking/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/nslookup/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/nslookup-quick-reference-guide/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/using-the-net-command/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/windows/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/cdp/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
@@ -15,9 +45,6 @@
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2024/cisco-port-security/</loc>
-    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/networking/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/port-security/</loc>
@@ -56,10 +83,7 @@
     <loc>https://gavinmassey.net/categories/vtp/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/</loc>
-    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/certification/</loc>
+    <loc>https://gavinmassey.net/categories/certifications/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/vcta-dcv/</loc>
@@ -116,9 +140,6 @@
     <loc>https://gavinmassey.net/articles/2023/aws-clf-c02/aws-clf-c02-part-6-summary/</loc>
     <lastmod>2023-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/categories/certifications/</loc>
-    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/categories/active-directory/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -132,9 +153,6 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/parameter-binding/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/dns/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/global-catalog/</loc>
@@ -234,9 +252,6 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/wim-cim-quick-guide/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/windows/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/setting-up-server-core-dc/</loc>

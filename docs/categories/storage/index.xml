@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Virtualization on gavinmassey.net</title>
-    <link>https://gavinmassey.net/categories/virtualization/</link>
-    <description>Recent content in Virtualization on gavinmassey.net</description>
+    <title>Storage on gavinmassey.net</title>
+    <link>https://gavinmassey.net/categories/storage/</link>
+    <description>Recent content in Storage on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://gavinmassey.net/categories/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gavinmassey.net/categories/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comprehensive Guide to Storage in Datacenters and VMware</title>
       <link>https://gavinmassey.net/articles/2024/comprehensive-guide-to-storage-in-datacenters-and-vmware/</link>
       <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/articles/2024/comprehensive-guide-to-storage-in-datacenters-and-vmware/</guid>
       <description>Introduction In the dynamic and ever-evolving field of data center technologies and VMware storage solutions, understanding the foundational concepts and terminologies is crucial for anyone embarking on a journey in this domain. This article serves as a starting point, aiming to demystify the complex landscape of storage technologies and their integration in virtualized environments, particularly focusing on VMware.&#xA;SCSI and iSCSI Topics SCSI Fundamentals SCSI, standing for Small Computer System Interface, is a set of standards for physically connecting and transferring data between computers and peripheral devices.</description>
-    </item>
-    <item>
-      <title>VMware A Brief Guide to the VMware Ecosystem: Understanding Key Products and Technologies</title>
-      <link>https://gavinmassey.net/articles/2023/vmware-ecosystem/</link>
-      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/articles/2023/vmware-ecosystem/</guid>
-      <description>vSphere VMware vSphere stands as a pivotal solution in data center management, offering advanced virtualization capabilities with a focus on scalability, performance, and efficiency. vSphere achieves this by abstracting and pooling the underlying hardware resources of physical servers, allowing for the creation and management of multiple virtual machines (VMs) on a single physical host.&#xA;Central to vSphere&amp;rsquo;s functionality is the ESXi hypervisor, which directly interacts with the hardware and is responsible for allocating resources to VMs.</description>
     </item>
   </channel>
 </rss>

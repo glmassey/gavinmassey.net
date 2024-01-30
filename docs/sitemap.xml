@@ -3,9 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gavinmassey.net/articles/</loc>
-    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/</loc>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/asd/</loc>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/powershell/</loc>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/qucik-access-commands-for-windows-administration/</loc>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/</loc>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/categories/windows/</loc>
+    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gavinmassey.net/articles/2024/comprehensive-guide-to-storage-in-datacenters-and-vmware/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/dns/</loc>
@@ -29,13 +47,16 @@
     <loc>https://gavinmassey.net/articles/2024/nslookup-quick-reference-guide/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://gavinmassey.net/categories/storage/</loc>
+    <lastmod>2024-01-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://gavinmassey.net/articles/2024/using-the-net-command/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/</loc>
+    <loc>https://gavinmassey.net/categories/virtualization/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/categories/windows/</loc>
+    <loc>https://gavinmassey.net/categories/vmware/</loc>
     <lastmod>2024-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/cdp/</loc>
@@ -89,9 +110,6 @@
     <loc>https://gavinmassey.net/categories/vcta-dcv/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://gavinmassey.net/categories/vmware/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://gavinmassey.net/articles/2024/vcta-dcv-2024-certification-exam/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -112,9 +130,6 @@
   </url><url>
     <loc>https://gavinmassey.net/categories/vsphere/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/virtualization/</loc>
-    <lastmod>2023-12-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/vmware-ecosystem/</loc>
     <lastmod>2023-12-28T00:00:00+00:00</lastmod>
@@ -192,9 +207,6 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/categories/pfsense/</loc>
-    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gavinmassey.net/categories/powershell/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://gavinmassey.net/articles/2023/windows-powershell-quickstart-guide/</loc>

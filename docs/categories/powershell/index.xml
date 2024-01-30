@@ -6,8 +6,15 @@
     <description>Recent content in PowerShell on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maximizing PowerShell Efficiency With A Customized Profile</title>
+      <link>https://gavinmassey.net/articles/2024/asd/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/asd/</guid>
+      <description>Introduction PowerShell is an indispensable tool for Windows system administrators and power users. Customizing your PowerShell profile can significantly enhance your command-line experience, making it more efficient and user-friendly. This article provides a tailored PowerShell profile script with explanations for each customization, and guides you through setting up this profile on your system.&#xA;Custom PowerShell Profile Script with Explanations Here&amp;rsquo;s a PowerShell profile script, complete with comments explaining the functionality of each part:</description>
+    </item>
     <item>
       <title>Demystifying PowerShell&#39;s Parameter Binding: How Objects Match Up to Cmdlet Parameters</title>
       <link>https://gavinmassey.net/articles/2023/parameter-binding/</link>

@@ -6,8 +6,15 @@
     <description>Recent content in VMware on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprehensive Guide to Storage in Datacenters and VMware</title>
+      <link>https://gavinmassey.net/articles/2024/comprehensive-guide-to-storage-in-datacenters-and-vmware/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/comprehensive-guide-to-storage-in-datacenters-and-vmware/</guid>
+      <description>Introduction In the dynamic and ever-evolving field of data center technologies and VMware storage solutions, understanding the foundational concepts and terminologies is crucial for anyone embarking on a journey in this domain. This article serves as a starting point, aiming to demystify the complex landscape of storage technologies and their integration in virtualized environments, particularly focusing on VMware.&#xA;SCSI and iSCSI Topics SCSI Fundamentals SCSI, standing for Small Computer System Interface, is a set of standards for physically connecting and transferring data between computers and peripheral devices.</description>
+    </item>
     <item>
       <title>VTCA-DCV Certification Study Guide</title>
       <link>https://gavinmassey.net/articles/2024/vcta-dcv-2024-certification-exam/</link>

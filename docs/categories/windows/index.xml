@@ -6,8 +6,22 @@
     <description>Recent content in Windows on gavinmassey.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gavinmassey.net/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maximizing PowerShell Efficiency With A Customized Profile</title>
+      <link>https://gavinmassey.net/articles/2024/asd/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/asd/</guid>
+      <description>Introduction PowerShell is an indispensable tool for Windows system administrators and power users. Customizing your PowerShell profile can significantly enhance your command-line experience, making it more efficient and user-friendly. This article provides a tailored PowerShell profile script with explanations for each customization, and guides you through setting up this profile on your system.&#xA;Custom PowerShell Profile Script with Explanations Here&amp;rsquo;s a PowerShell profile script, complete with comments explaining the functionality of each part:</description>
+    </item>
+    <item>
+      <title>Quick Access Commands for Efficient Windows Administration</title>
+      <link>https://gavinmassey.net/articles/2024/qucik-access-commands-for-windows-administration/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/articles/2024/qucik-access-commands-for-windows-administration/</guid>
+      <description>Introduction Streamline your system administration tasks with these quick-launch commands. Utilizing the Win + R shortcut, you can instantly access essential Windows tools, bypassing complex menus and saving valuable time. This guide offers a comprehensive list of commands for fast and efficient system management, perfect for any administrator or power user seeking to enhance productivity.&#xA;Command List Command Description appwiz.cpl Opens &amp;lsquo;Programs and Features&amp;rsquo; for uninstalling or changing programs. ncpa.cpl Opens &amp;lsquo;Network Connections&amp;rsquo; to manage network adapters.</description>
+    </item>
     <item>
       <title>Netstat Quick Reference</title>
       <link>https://gavinmassey.net/articles/2024/netstat-quick-reference/</link>

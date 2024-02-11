@@ -58,27 +58,6 @@
       <description></description>
     </item>
     <item>
-      <title>Storage</title>
-      <link>https://gavinmassey.net/categories/storage/</link>
-      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/storage/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Virtualization</title>
-      <link>https://gavinmassey.net/categories/virtualization/</link>
-      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/virtualization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>VMware</title>
-      <link>https://gavinmassey.net/categories/vmware/</link>
-      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://gavinmassey.net/categories/vmware/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>CDP</title>
       <link>https://gavinmassey.net/categories/cdp/</link>
       <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
@@ -156,6 +135,13 @@
       <description></description>
     </item>
     <item>
+      <title>VMware</title>
+      <link>https://gavinmassey.net/categories/vmware/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/vmware/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>ESXi</title>
       <link>https://gavinmassey.net/categories/esxi/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
@@ -181,6 +167,13 @@
       <link>https://gavinmassey.net/categories/vsphere/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://gavinmassey.net/categories/vsphere/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>https://gavinmassey.net/categories/virtualization/</link>
+      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://gavinmassey.net/categories/virtualization/</guid>
       <description></description>
     </item>
     <item>
